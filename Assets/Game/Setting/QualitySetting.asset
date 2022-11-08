@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbb49debacb40e9aeefe446ed770c93, type: 3}
+  m_Name: QualitySetting
+  m_EditorClassIdentifier: 
+  testFrameRate: 60
+  testConfigIndex: -1
+  disableQualityDegrade: 0
+  configs:
+  - targetFrameRate: 45
+    resolution: 1080
+    enableHDR: 1
+    enableSoftShadow: 1
+    enableShadow: 1
+  - targetFrameRate: 35
+    resolution: 720
+    enableHDR: 0
+    enableSoftShadow: 0
+    enableShadow: 1
+  - targetFrameRate: 1
+    resolution: 360
+    enableHDR: 0
+    enableSoftShadow: 0
+    enableShadow: 0
+  qualityDegradeCheckTimeThreshold: 20

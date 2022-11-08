@@ -1,0 +1,498 @@
+// using System;
+// using System.Collections.Generic;
+// using System.IO;
+// using System.Reflection;
+// using System.Text;
+// using FlatNode.Runtime;
+// using UnityEditor;
+// using UnityEngine;
+// using VisualProcedure.Runtime.Node;
+//
+// namespace VisualProcedure.Editor.Scripts
+// {
+//     /// <summary>
+//     /// 生成节点的一些代码，避免反射
+//     /// </summary>
+//     public class GraphCodeGenerator
+//     {
+//         [MenuItem("FlatNode/生成节点静态代码", priority = 2)]
+//         public static void GenerateGraphNodeCode()
+//         {
+//             var nodeTypeList = Utility.GetNodeTypeList();
+//             var graphCodeGenerator = new GraphCodeGenerator(nodeTypeList);
+//
+//             graphCodeGenerator.Generate();
+//
+//             EditorUtility.DisplayDialog("完成", "静态代码生成完成。\n " + OutputFilePath, "确定");
+//             AssetDatabase.Refresh();
+//         }
+//
+//         [MenuItem("FlatNode/清除生成的静态代码", priority = 3)]
+//         public static void ClearGraphNodeCode()
+//         {
+//             if (File.Exists(OutputFilePath))
+//             {
+//                 var graphCodeGenerator = new GraphCodeGenerator();
+//                 graphCodeGenerator.GenerateBaseCode();
+//
+//                 EditorUtility.DisplayDialog("完成", "清除静态代码完成", "确定");
+//                 AssetDatabase.Refresh();
+//             }
+//         }
+//
+//
+//         private List<Type> nodeTypeList;
+//
+//         /// <summary>
+//         /// 输出文件路径
+//         /// </summary>
+//         private static readonly string OutputFilePath =
+//             Application.dataPath + "/FlatNode/Runtime/GenerateCode/NodeGenerateCode.cs";
+//
+//         private StringBuilder sb;
+//         private int indent;
+//
+//         public GraphCodeGenerator()
+//         {
+//             sb = new StringBuilder(1024);
+//         }
+//
+//         public GraphCodeGenerator(List<Type> nodeTypeList)
+//         {
+//             this.nodeTypeList = nodeTypeList;
+//             sb = new StringBuilder(1024);
+//         }
+//
+//         private void Generate()
+//         {
+//             WriteNameSpace();
+//             GenerateNodeFactoryDictionaryCode(true);
+//             WriteLine("");
+//             GenerateNodeInputParseCode(true);
+//             WriteLine("");
+//             GenerateOutputFuncInitCode(true);
+//             WriteTail();
+//             FlushToFile();
+//         }
+//
+//         /// <summary>
+//         /// 只生成最基础的代码结构，不生成任何和节点相关的静态代码
+//         /// 如果修改了节点的一些代码（比如增删了一些借口方法等），生成的代码会报错，这时候需要先清除代码完成编译，再生成新的代码
+//         /// </summary>
+//         private void GenerateBaseCode()
+//         {
+//             WriteNameSpace();
+//             GenerateNodeFactoryDictionaryCode(false);
+//             WriteLine("");
+//             GenerateNodeInputParseCode(false);
+//             WriteLine("");
+//             GenerateOutputFuncInitCode(false);
+//             WriteTail();
+//             FlushToFile();
+//         }
+//
+//
+//         private void WriteNameSpace()
+//         {
+//             WriteLine("//自动生成代码，不要修改");
+//             WriteLine("using System;");
+//             WriteLine("using System.Collections.Generic;");
+//             WriteLine("using FlatNode.Runtime.Flat;");
+//             WriteLine("");
+//             WriteLine("namespace FlatNode.Runtime");
+//             WriteLine("{");
+//             AddIndent(4);
+//
+//             WriteLine("public static partial class FlatNodeUtility");
+//             WriteLine("{");
+//
+//             AddIndent(4);
+//         }
+//
+//         private void WriteTail()
+//         {
+//             AddIndent(-4);
+//             WriteLine("}");
+//             AddIndent(-4);
+//             WriteLine("}");
+//         }
+//
+//         /// <summary>
+//         /// 生成一个可以通过类型名称直接返回节点实例的字典
+//         /// </summary>
+//         private void GenerateNodeFactoryDictionaryCode(bool generateNodeCode)
+//         {
+//             WriteLine("private static Dictionary<string, Func<NodeBase>> nodeFactoryDictionary;");
+//
+//             WriteLine("");
+//
+//             WriteLine("private static void InitNodeFactoryDictionary()");
+//             WriteLine("{");
+//             AddIndent(4);
+//
+//             WriteLine("if (nodeFactoryDictionary != null){return;}");
+//             WriteLine("");
+//
+//             WriteLine("nodeFactoryDictionary = new Dictionary<string, Func<NodeBase>>");
+//             WriteLine("{");
+//             AddIndent(4);
+//
+//             if (generateNodeCode)
+//             {
+//                 for (var i = 0; i < nodeTypeList.Count; i++)
+//                 {
+//                     var nodeType = nodeTypeList[i];
+//                     WriteLine(string.Format("{{\"{0}\",()=> new {1}()}},", nodeType.FullName, nodeType.Name));
+//                 }
+//             }
+//
+//             AddIndent(-4);
+//             WriteLine("};");
+//
+//             AddIndent(-4);
+//             WriteLine("}");
+//         }
+//
+//         /// <summary>
+//         /// 生成parse input端口信息的代码
+//         /// </summary>
+//         private void GenerateNodeInputParseCode(bool generateNodeCode)
+//         {
+//             WriteLine("private static Dictionary<Type, Action<NodeBase, NodeInputFieldInfo>> inputPortParseFuncDictionary;");
+//             WriteLine("");
+//
+//             WriteLine("private static void InitInputPortParseFuncsDictionary()");
+//             WriteLine("{");
+//             AddIndent(4);
+//
+//             WriteLine("if (inputPortParseFuncDictionary != null){return;}");
+//             WriteLine("");
+//
+//             WriteLine("inputPortParseFuncDictionary = new Dictionary<Type, Action<NodeBase, NodeInputFieldInfo>>");
+//             WriteLine("{");
+//             AddIndent(4);
+//
+//             if (generateNodeCode)
+//             {
+//                 for (var i = 0; i < nodeTypeList.Count; i++)
+//                 {
+//                     var nodeType = nodeTypeList[i];
+//                     var nodeInputPortFieldInfos = GetNodeInputPortFieldInfo(nodeType);
+//                     var nodeTypeName = nodeType.Name;
+//                     var camelClassName = FirstCharacterToLower(nodeTypeName);
+//                     if (nodeInputPortFieldInfos == null || nodeInputPortFieldInfos.Length == 0)
+//                     {
+//                         continue;
+//                     }
+//
+//                     WriteLine("{");
+//                     AddIndent(4);
+//
+//                     WriteLine(string.Format("typeof({0}),(nodeInstance, inputFieldInfo) =>", nodeTypeName));
+//
+//                     WriteLine("{");
+//                     AddIndent(4);
+//
+//                     WriteLine(string.Format("{0} {1} = nodeInstance as {0};", nodeTypeName, camelClassName));
+//                     WriteLine("string inputPortFieldName = inputFieldInfo.FieldName;");
+//                     WriteLine("int targetNodeId = inputFieldInfo.TargetNodeId;");
+//                     WriteLine("int targetPortId = inputFieldInfo.TargetPortId;");
+//                     WriteLine("string valueString = inputFieldInfo.ValueString;");
+//
+//                     WriteLine("");
+//
+//                     for (var j = 0; j < nodeInputPortFieldInfos.Length; j++)
+//                     {
+//                         var fieldName = nodeInputPortFieldInfos[j].fieldName;
+//                         var valueType = nodeInputPortFieldInfos[j].valueType;
+//                         var beautifyValueTypeName = Utility.BeautifyTypeName(valueType, true);
+//
+//                         if (j == 0)
+//                         {
+//                             WriteLine(string.Format("if (inputPortFieldName == \"{0}\")", fieldName));
+//                         }
+//                         else
+//                         {
+//                             WriteLine(string.Format("else if (inputPortFieldName == \"{0}\")", fieldName));
+//                         }
+//
+//                         WriteLine("{");
+//                         AddIndent(4);
+//
+//                         WriteLine("if (targetNodeId >= 0 && targetPortId >= 0)");
+//                         WriteLine("{");
+//                         AddIndent(4);
+//
+//                         WriteLine(string.Format("{0}.{1} = new NodeInputVariable<{2}>();", camelClassName, fieldName,
+//                             beautifyValueTypeName));
+//                         WriteLine(string.Format("{0}.{1}.targetNodeId = targetNodeId;", camelClassName, fieldName));
+//                         WriteLine(string.Format("{0}.{1}.targetPortId = targetPortId;", camelClassName, fieldName));
+//
+//                         AddIndent(-4);
+//                         WriteLine("}");
+//
+//                         if (valueType == typeof(float) || valueType == typeof(int) || valueType == typeof(string) ||
+//                             valueType == typeof(bool) || valueType.IsEnum || valueType == typeof(List<int>) ||
+//                             valueType == typeof(LayerMaskWrapper) || valueType == typeof(VariableWrapper))
+//                         {
+//                             WriteLine("else");
+//                             WriteLine("{");
+//                             AddIndent(4);
+//
+//                             WriteLine(string.Format("{0}.{1} = new NodeInputVariable<{2}>();", camelClassName, fieldName,
+//                                 beautifyValueTypeName));
+//
+//                             if (valueType == typeof(float))
+//                             {
+//                                 WriteLine(string.Format("{0}.{1}.value = float.Parse(valueString);", camelClassName, fieldName));
+//                             }
+//                             else if (valueType == typeof(int))
+//                             {
+//                                 WriteLine(string.Format("{0}.{1}.value = int.Parse(valueString);", camelClassName, fieldName));
+//                             }
+//                             else if (valueType == typeof(string))
+//                             {
+//                                 WriteLine(string.Format("{0}.{1}.value = valueString;", camelClassName, fieldName));
+//                             }
+//                             else if (valueType == typeof(bool))
+//                             {
+//                                 WriteLine(string.Format("{0}.{1}.value = Boolean.Parse(valueString);", camelClassName,
+//                                     fieldName));
+//                             }
+//                             else if (valueType.IsEnum)
+//                             {
+//                                 WriteLine(string.Format("{0}.{1}.value = ({2})Enum.Parse(typeof({2}), valueString);",
+//                                     camelClassName, fieldName, beautifyValueTypeName));
+//                             }
+//                             else if (valueType == typeof(List<int>))
+//                             {
+//                                 WriteLine(string.Format("{0}.{1}.value = ParseIntList(valueString);", camelClassName, fieldName));
+//                             }
+//                             else if (valueType == typeof(LayerMaskWrapper))
+//                             {
+//                                 WriteLine("LayerMaskWrapper layerMaskWrapper = valueString;");
+//                                 WriteLine(string.Format("{0}.{1}.value = layerMaskWrapper;", camelClassName, fieldName));
+//                             }
+//                             else if (valueType == typeof(VariableWrapper))
+//                             {
+//                                 WriteLine("int variableId = int.Parse(valueString);");
+//                                 WriteLine("VariableWrapper variableWrapper = variableId;");
+//                                 WriteLine(string.Format("{0}.{1}.value = variableWrapper;", camelClassName, fieldName));
+//                             }
+//
+//                             AddIndent(-4);
+//                             WriteLine("}");
+//                         }
+//
+//                         AddIndent(-4);
+//                         WriteLine("}");
+//                     }
+//
+//
+//                     AddIndent(-4);
+//                     WriteLine("}");
+//
+//                     AddIndent(-4);
+//                     WriteLine("},");
+//                 }
+//             }
+//
+//             AddIndent(-4);
+//             WriteLine("};");
+//
+//             AddIndent(-4);
+//             WriteLine("}");
+//         }
+//
+//         /// <summary>
+//         /// 生出初始化输出函数数组的代码
+//         /// </summary>
+//         private void GenerateOutputFuncInitCode(bool generateNodeCode)
+//         {
+//             WriteLine("private static Dictionary<Type, Action<NodeBase>> nodeOutputInitFuncDictionary;");
+//             WriteLine("private static void InitOutputFuncsDictionary()");
+//             WriteLine("{");
+//             AddIndent(4);
+//
+//             WriteLine("if (nodeOutputInitFuncDictionary != null)");
+//             WriteLine("{");
+//             AddIndent(4);
+//             WriteLine("return;");
+//             AddIndent(-4);
+//             WriteLine("}");
+//
+//             WriteLine("");
+//             WriteLine("nodeOutputInitFuncDictionary = new Dictionary<Type, Action<NodeBase>>");
+//             WriteLine("{");
+//             AddIndent(4);
+//
+//             if (generateNodeCode)
+//             {
+//                 for (var i = 0; i < nodeTypeList.Count; i++)
+//                 {
+//                     var nodeType = nodeTypeList[i];
+//                     var outputMethodInfos = GetSortedOutputMethod(nodeType);
+//                     if (outputMethodInfos == null || outputMethodInfos.Length == 0)
+//                     {
+//                         continue;
+//                     }
+//
+//                     WriteLine("{");
+//                     AddIndent(4);
+//                     var typeName = nodeType.Name;
+//                     WriteLine(string.Format("typeof({0}),nodeInstance =>", nodeType.Name));
+//                     WriteLine("{");
+//
+//                     AddIndent(4);
+//
+//                     var camelClassName = FirstCharacterToLower(typeName);
+//                     WriteLine(string.Format("{0} {1} = nodeInstance as {0};", nodeType.Name, camelClassName));
+//                     WriteLine(string.Format("{0}.outputPortFuncs = new Func<NodeVariable>[]", camelClassName));
+//                     WriteLine("{");
+//                     AddIndent(4);
+//
+//                     //把所有的方法名写进去
+//                     for (var j = 0; j < outputMethodInfos.Length; j++)
+//                     {
+//                         WriteLine(string.Format("{0}.{1},", camelClassName, outputMethodInfos[j].methodInfo.Name));
+//                     }
+//
+//                     AddIndent(-4);
+//                     WriteLine("};");
+//
+//                     AddIndent(-4);
+//
+//                     WriteLine("}");
+//                     AddIndent(-4);
+//                     WriteLine("},");
+//                 }
+//             }
+//
+//             AddIndent(-4);
+//             WriteLine("};");
+//             AddIndent(-4);
+//             WriteLine("}");
+//         }
+//
+//         private void FlushToFile()
+//         {
+//             if (sb.Length == 0)
+//             {
+//                 return;
+//             }
+//
+//             var fileDirectoryPath = Directory.GetParent(OutputFilePath).FullName;
+//             Debug.Log(fileDirectoryPath);
+//             if (!Directory.Exists(fileDirectoryPath))
+//             {
+//                 Directory.CreateDirectory(fileDirectoryPath);
+//             }
+//
+//             File.WriteAllText(OutputFilePath, sb.ToString());
+//         }
+//
+//         private void WriteLine(string line)
+//         {
+//             for (var i = 0; i < indent; i++)
+//             {
+//                 sb.Append(" ");
+//             }
+//
+//             sb.Append(line);
+//             sb.AppendLine();
+//         }
+//
+//         private void AddIndent(int value)
+//         {
+//             indent += value;
+//             indent = Mathf.Max(0, indent);
+//         }
+//
+//         private static string FirstCharacterToLower(string str)
+//         {
+//             if (string.IsNullOrEmpty(str) || char.IsLower(str, 0))
+//                 return str;
+//
+//             return char.ToLowerInvariant(str[0]) + str.Substring(1);
+//         }
+//
+//         private static NodeOutputMethodInfo[] GetSortedOutputMethod(Type nodeType)
+//         {
+//             if (!nodeType.IsSubclassOf(typeof(ProcedureNodeBase)))
+//             {
+//                 return null;
+//             }
+//
+//             var nodeOutputMethodList = new List<NodeOutputMethodInfo>();
+//
+//             var methodInfos = nodeType.GetMethods(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
+//             for (var i = 0; i < methodInfos.Length; i++)
+//             {
+//                 var methodInfo = methodInfos[i];
+//
+//                 var attributeObjects = methodInfo.GetCustomAttributes(typeof(NodeOutputPortAttribute), false);
+//                 if (attributeObjects.Length > 0)
+//                 {
+//                     nodeOutputMethodList.Add(new NodeOutputMethodInfo(methodInfo,
+//                         attributeObjects[0] as NodeOutputPortAttribute));
+//                 }
+//             }
+//
+//             nodeOutputMethodList.Sort((a, b) => a.attribute.portId - b.attribute.portId);
+//             return nodeOutputMethodList.ToArray();
+//         }
+//
+//         private struct NodeOutputMethodInfo
+//         {
+//             public MethodInfo methodInfo;
+//             public NodeOutputPortAttribute attribute;
+//
+//             public NodeOutputMethodInfo(MethodInfo methodInfo, NodeOutputPortAttribute attribute)
+//             {
+//                 this.methodInfo = methodInfo;
+//                 this.attribute = attribute;
+//             }
+//         }
+//
+//         private static NodeInputPortFieldInfo[] GetNodeInputPortFieldInfo(Type nodeType)
+//         {
+//             var resultList = new List<NodeInputPortFieldInfo>();
+//
+//             var fieldInfos = nodeType.GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
+//             for (var i = 0; i < fieldInfos.Length; i++)
+//             {
+//                 var fieldInfo = fieldInfos[i];
+//
+//                 var attributeObjects = fieldInfo.GetCustomAttributes(typeof(NodeInputPortAttribute), false);
+//
+//                 if (attributeObjects.Length == 0)
+//                 {
+//                     continue;
+//                 }
+//
+//                 var valueType = fieldInfo.FieldType.GetGenericArguments()[0];
+//
+//                 resultList.Add(new NodeInputPortFieldInfo(fieldInfo.Name, valueType));
+//             }
+//
+//             if (resultList.Count > 0)
+//             {
+//                 return resultList.ToArray();
+//             }
+//
+//             return null;
+//         }
+//
+//         private struct NodeInputPortFieldInfo
+//         {
+//             public string fieldName;
+//             public Type valueType;
+//
+//             public NodeInputPortFieldInfo(string fieldName, Type valueType)
+//             {
+//                 this.fieldName = fieldName;
+//                 this.valueType = valueType;
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameFramework>
+  <ResourceCollection>
+    <Resources>
+      <Resource Name="Entity/Camera" LoadType="0" Packed="False" />
+      <Resource Name="Entity/Character" LoadType="0" Packed="False" />
+      <Resource Name="Entity/Motorcycle" LoadType="0" Packed="False" />
+      <Resource Name="Entity/Road" LoadType="0" Packed="False" />
+      <Resource Name="Entity_base" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/0" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/1" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/10" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/100" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/101" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/102" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/103" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/104" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/105" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/106" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/107" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/108" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/109" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/11" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/110" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/111" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/112" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/113" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/114" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/115" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/116" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/117" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/118" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/119" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/12" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/120" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/121" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/122" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/123" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/124" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/125" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/126" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/127" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/128" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/129" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/13" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/130" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/131" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/132" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/14" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/15" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/16" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/17" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/18" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/19" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/2" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/20" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/21" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/22" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/23" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/24" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/25" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/26" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/27" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/28" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/29" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/3" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/30" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/31" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/32" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/33" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/34" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/35" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/36" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/37" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/38" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/39" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/4" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/40" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/41" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/42" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/43" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/44" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/45" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/46" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/47" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/48" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/49" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/5" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/50" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/51" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/52" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/53" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/54" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/55" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/56" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/57" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/58" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/59" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/6" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/60" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/61" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/62" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/63" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/64" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/65" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/66" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/67" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/68" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/69" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/7" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/70" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/71" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/72" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/73" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/74" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/75" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/76" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/77" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/78" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/79" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/8" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/80" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/81" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/82" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/83" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/84" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/85" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/86" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/87" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/88" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/89" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/9" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/90" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/91" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/92" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/93" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/94" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/95" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/96" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/97" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/98" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/99" LoadType="0" Packed="False" />
+      <Resource Name="Scene/ConfigurableTest" LoadType="0" Packed="False" />
+      <Resource Name="Scene/FixRoadTest" LoadType="0" Packed="False" />
+      <Resource Name="Scene/MatchScene" LoadType="0" Packed="False" />
+      <Resource Name="Scene_base" LoadType="0" Packed="False" />
+      <Resource Name="Setting" LoadType="0" Packed="False" />
+      <Resource Name="Shader" LoadType="0" Packed="False" />
+      <Resource Name="Sound" LoadType="0" Packed="False" />
+      <Resource Name="Table" LoadType="0" Packed="False" />
+      <Resource Name="UI/Font/Materials" LoadType="0" Packed="False" />
+      <Resource Name="UI/Font_base" LoadType="0" Packed="False" />
+      <Resource Name="UI/Form" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Battel" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Common" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Control" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Flag" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Guide" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Home" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/InMatch" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Popup" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Race" LoadType="0" Packed="False" />
+      <Resource Name="UI/Sprites/Shop" LoadType="0" Packed="False" />
+      <Resource Name="Variants/SecondUI/Entity/Motorcycle" LoadType="0" Packed="False" />
+      <Resource Name="Variants/SecondUI/Table" LoadType="0" Packed="False" />
+      <Resource Name="Variants/SecondUI/UI/Form" LoadType="0" Packed="False" />
+      <Resource Name="Variants/SecondUI_base" LoadType="0" Packed="False" />
+      <Resource Name="Variants/ThirdUI/Table" LoadType="0" Packed="False" />
+      <Resource Name="Variants/ThirdUI/UI/Form" LoadType="0" Packed="False" />
+      <Resource Name="Variants/ThirdUI_base" LoadType="0" Packed="False" />
+      <Resource Name="Variants_base" LoadType="0" Packed="False" />
+    </Resources>
+    <Assets>
+      <Asset Guid="002f66c96e9811a4cae2b9f2ab8f1778" ResourceName="GameResources/54" />
+      <Asset Guid="010720d36801330408f8b532d78796d3" ResourceName="GameResources/36" />
+      <Asset Guid="017d23bab9c90214e8f8b88550891dcb" ResourceName="GameResources/48" />
+      <Asset Guid="0325900f39d840a4f952ec7fa25fc563" ResourceName="GameResources/105" />
+      <Asset Guid="0340bb5c245678d42af09c3cc80252b6" ResourceName="GameResources/81" />
+      <Asset Guid="03576fa05df566141933b8b31f66f2f5" ResourceName="Sound" />
+      <Asset Guid="03d3d8c7630143946b19b12c4c0a571f" ResourceName="Entity/Road" />
+      <Asset Guid="04368b17d70ceef42930bfac0bc25608" ResourceName="GameResources/37" />
+      <Asset Guid="0455a54507b873e49aec55894391973e" ResourceName="GameResources/54" />
+      <Asset Guid="054692ff5e90c3248aad7309e1167df6" ResourceName="GameResources/45" />
+      <Asset Guid="05e70c88e9e013040931e334ded0f08a" ResourceName="GameResources/21" />
+      <Asset Guid="05ed65d23b0cbc342b6e2eabda1fc307" ResourceName="GameResources/13" />
+      <Asset Guid="06246e83a14a7144d93cfe19a3115f19" ResourceName="GameResources/30" />
+      <Asset Guid="0671b83f85f1f2a4886f9cf5a5a53176" ResourceName="GameResources/56" />
+      <Asset Guid="06c925f0690f97b4cbed8bfa0344103d" ResourceName="GameResources/21" />
+      <Asset Guid="07000b7b4ed53eb44bf412dde2323479" ResourceName="GameResources/74" />
+      <Asset Guid="071808ee7d0ebb749ba51bf2ac41a2f6" ResourceName="Setting" />
+      <Asset Guid="07d4bff4e5eb43648a8f9f93160cb934" ResourceName="GameResources/57" />
+      <Asset Guid="07dd28ee92449db4b9145513f27e1d79" ResourceName="Entity/Road" />
+      <Asset Guid="08b18c7217e3bdb40b6992d222ccc841" ResourceName="GameResources/24" />
+      <Asset Guid="08c77176fc3d9b34c9607ad21b8c81bf" ResourceName="GameResources/15" />
+      <Asset Guid="095ca9fb6fe39e049b1bac5153e991f5" ResourceName="Entity/Road" />
+      <Asset Guid="0971fd33b9c60ae439f56e35da60aae9" ResourceName="GameResources/13" />
+      <Asset Guid="09970bf8c3e645f43a411680930a636f" ResourceName="GameResources/12" />
+      <Asset Guid="099aa6306b16bce458b894f28fb6af6c" ResourceName="UI/Sprites/InMatch" />
+      <Asset Guid="09d21091d12aa9f4a8543cff5d1ea9af" ResourceName="GameResources/4" />
+      <Asset Guid="09de152f4bd75cd4d9a004a517509eb2" ResourceName="GameResources/13" />
+      <Asset Guid="09f38484c3e8bd946818957250dd8523" ResourceName="GameResources/13" />
+      <Asset Guid="0a6cbc891dc99664881537352c9a6f50" ResourceName="GameResources/13" />
+      <Asset Guid="0a8e21dfbf17d77408b81bb3b32f1729" ResourceName="Shader" />
+      <Asset Guid="0ab684dd657bf63418d28232a7ad40c4" ResourceName="GameResources/76" />
+      <Asset Guid="0ada5ce01dc3aff4da931911958e3b8a" ResourceName="GameResources/16" />
+      <Asset Guid="0aff45e07686f394782adfab3e8e9e4f" ResourceName="Entity/Motorcycle" />
+      <Asset Guid="0b1f86f9357fc874391c6b031cc155f0" ResourceName="GameResources/56" />
+      <Asset Guid="0ba4cffdbd080864ca422ddc28d4f88c" ResourceName="UI/Form" />
+      <Asset Guid="0c76bcaeb1ac1a546b6d7dd27b4d44ee" ResourceName="GameResources/97" />
+      <Asset Guid="0c819a7f83078544bb214e2aa445a96c" ResourceName="Shader" />
+      <Asset Guid="0cc75e600ed6b734cab7d98be629c12c" ResourceName="Sound" />
+      <Asset Guid="0cdf8721503d96c4c89d6f6119b11161" ResourceName="GameResources/4" />
+      <Asset Guid="0da2e828a360c9340ab77d4185fcb76d" ResourceName="GameResources/56" />
+      <Asset Guid="0dcab55f24605fd4796e7160ee4ce9b7" ResourceName="UI/Sprites/Battel" />
+      <Asset Guid="0dd40fc23edce8343a5a03b7ac7e611b" ResourceName="GameResources/66" />
+      <Asset Guid="0e011f3f4a330ec47811ca02ad78ea5d" ResourceName="GameResources/13" />
+      <Asset Guid="0e3fc760e71f4ee409c33a122cbc6b10" ResourceName="GameResources/46" />
+      <Asset Guid="0e6d9d2f88b36364a83e44ef0e42ca9a" ResourceName="UI/Sprites/Flag" />
+      <Asset Guid="0e76ed4cc885d774ca9d13831839c550" ResourceName="GameResources/130" />
+      <Asset Guid="0e884cba374b11b4ea50c660c1a4bbf5" ResourceName="Entity/Road" />
+      <Asset Guid="0ea426fa983ef5e4cac9da665ab08ed1" ResourceName="UI/Sprites/Common" />
+      <Asset Guid="0ec2eb7b17575c447b2716ec43f3bb7e" ResourceName="GameResources/4" />
+      <Asset Guid="0f419e1dcff44e742ab5545a5c41925e" ResourceName="Entity/Road" />
+      <Asset Guid="0f7bcaa984df522408e104a7106d9f12" ResourceName="UI/Sprites/Race" />
+      <Asset Guid="0facbea34dd61d046863f079d2041541" ResourceName="GameResources/55" />
+      <Asset Guid="0fe4e05a766d75249af8ca6821d07470" ResourceName="GameResources/6" />
+      <Asset Guid="100c84a984b0d804daea8a326822ef0d" ResourceName="GameResources/46" />
+      <Asset Guid="103ef3c0a22de4548a1175cbe4847f14" ResourceName="GameResources/13" />
+      <Asset Guid="104e474ec29dcf84896301f67957f1cb" ResourceName="GameResources/25" />
+      <Asset Guid="1095b3c968a7dd24395f4fec4309f1bc" ResourceName="GameResources/67" />
+      <Asset Guid="10e9e9bf3d5eee048829edf175832662" ResourceName="Entity/Road" />
+      <Asset Guid="10f1bfe2811f35841ad8b8953a4d13ce" ResourceName="GameResources/39" />
+      <Asset Guid="1168438d7b48ce94da7bc12c2ffd2686" ResourceName="GameResources/63" />
+      <Asset Guid="119e02ae611b5514287fc07841fcaeac" ResourceName="GameResources/55" />
+      <Asset Guid="11b7d7de0f33a9c4b8494efa72ed0aee" ResourceName="GameResources/4" />
+      <Asset Guid="11f89c850a8eedf4c82911ccc3cd225a" ResourceName="GameResources/77" />
+      <Asset Guid="12417a945c8f3014399c826ce2d520a0" ResourceName="GameResources/10" />
+      <Asset Guid="12449d1b801b2d0478232ad4f16a7813" ResourceName="Sound" />
+      <Asset Guid="12ec57616e5c6fd4bb761dd9733f5822" ResourceName="GameResources/1" />
+      <Asset Guid="13d41337efb01904981b09e953496726" ResourceName="Sound" />
+      <Asset Guid="1402f7ed337abbe42a37105957676323" ResourceName="GameResources/56" />
+      <Asset Guid="142d2c8dcf8bd834fa763112819697b1" ResourceName="Setting" />
+      <Asset Guid="1473d955093a0054a8548013521b6809" ResourceName="Entity/Road" />
+      <Asset Guid="149108e475ae57141ae2bf120b0ccf47" ResourceName="UI/Form" />
+      <Asset Guid="14f61d58a8dc5f24e8b32122b705c774" ResourceName="Variants/SecondUI/Table" />
+      <Asset Guid="150c134cec61ab741aab7cfc65f56fe6" ResourceName="Sound" />
+      <Asset Guid="15363271577447a4dae04c7f5111f678" ResourceName="GameResources/86" />
+      <Asset Guid="15a68df22581ed74bb76958e48feec6a" ResourceName="GameResources/1" />
+      <Asset Guid="1662528fdfcf61447b996ce1d872a034" ResourceName="GameResources/13" />
+      <Asset Guid="1683040023f0f2145a94d62ca5711bf0" ResourceName="GameResources/16" />
+      <Asset Guid="16fdbb3060799c84a93f542e7f9adbf1" ResourceName="UI/Sprites/Battel" />
+      <Asset Guid="174534039186fb6458d016f81a2b9dc0" ResourceName="Entity/Road" />
+      <Asset Guid="175a50718774da14a9bd01c1c766cd51" ResourceName="GameResources/115" />
+      <Asset Guid="179a8a82299c3354ea952f46ffca7f14" ResourceName="GameResources/46" />
+      <Asset Guid="17e0fa7571a165d47b296f75ecb50f8d" ResourceName="GameResources/63" />
+      <Asset Guid="1852dbde1abc6604992c778eadf81b6b" ResourceName="GameResources/108" />
+      <Asset Guid="188a4f1d9546c4f4188856f667b91d93" ResourceName="GameResources/120" />
+      <Asset Guid="18d0ecde17fc07446b9348b3eb749e30" ResourceName="GameResources/62" />
+      <Asset Guid="190b5801c8d79ff4ea6dcf660a34db33" ResourceName="GameResources/13" />
+      <Asset Guid="193d08fd9c8a3414eadeb71e9e1035cd" ResourceName="GameResources/19" />
+      <Asset Guid="19fe0f2d744b1844388077cd7c7f0e93" ResourceName="Sound" />
+      <Asset Guid="1a1b1e91046152e42971036190e06b65" ResourceName="UI/Sprites/Common" />
+      <Asset Guid="1a602672506a5ce4887f477feb50869e" ResourceName="GameResources/29" />
+      <Asset Guid="1a79744c94af1c64fa7c06a81f291047" ResourceName="UI/Form" />
+      <Asset Guid="1a7af3219a8abbf4a8847f6660e54e84" ResourceName="GameResources/4" />
+      <Asset Guid="1a7d8a80b69c264469a8dccae43a5414" ResourceName="GameResources/87" />
+      <Asset Guid="1b8fe904ff553e244a88d061082c066b" ResourceName="Entity/Motorcycle" />
+      <Asset Guid="1bd20e445e7af7b469c34b7959db5456" ResourceName="GameResources/13" />
+      <Asset Guid="1be38bf8e20d2174eb6603f6c559da15" ResourceName="GameResources/44" />
+      <Asset Guid="1c3cae057cb2f894d94c39808a117d1d" ResourceName="GameResources/13" />
+      <Asset Guid="1c7262062ed46af4fb656e1fcd644154" ResourceName="GameResources/4" />
+      <Asset Guid="1c91e51e6ea54cd46a02c8b494fc4bf1" ResourceName="GameResources/103" />
+      <Asset Guid="1caaa277d9baaef4b9ebb6224bf6d651" ResourceName="GameResources/4" />
+      <Asset Guid="1d3dba79c3af1634e88b27e235a9a58f" ResourceName="UI/Form" />
+      <Asset Guid="1d7c85c4bd2e81c47a848ff28aaf3270" ResourceName="GameResources/42" />
+      <Asset Guid="1dbd414f4020f7847b87ff31bc241f7d" ResourceName="GameResources/56" />
+      <Asset Guid="1dcb4abfa031cea499442f1146e6c0b2" ResourceName="GameResources/82" />
+      <Asset Guid="1dd853788597797469ab27af96607e19" ResourceName="GameResources/1" />
+      <Asset Guid="1e8b1403139d61d42b848816744bf927" ResourceName="GameResources/62" />
+      <Asset Guid="1eb6a4007cbf9734a8c2af13617de8ed" ResourceName="GameResources/56" />
+      <Asset Guid="1ee680ee304f792449dd413d19895dcd" ResourceName="UI/Sprites/Race" />
+      <Asset Guid="1f347dada356da84296431ea420bda42" ResourceName="GameResources/8" />
+      <Asset Guid="1fc4c3ba1acf877418a0bf9f101cb7ce" ResourceName="GameResources/31" />
+      <Asset Guid="1fd59a1653311c2479a3262c4a4fd6d7" ResourceName="GameResources/1" />
+      <Asset Guid="1ff8f1870b5be314dbb1cfdcc5366179" ResourceName="GameResources/92" />
+      <Asset Guid="202b8f0baf2767e49ab9b4fec5cf4670" ResourceName="GameResources/15" />
+      <Asset Guid="20809ab854d9bfb4cbde47dfc4d57c6a" ResourceName="GameResources/4" />
+      <Asset Guid="20f7c6e213582a2498a5ffdac8090bd2" ResourceName="UI/Form" />
+      <Asset Guid="21464d2737316af4881a75ebe22695bf" ResourceName="Entity/Road" />
+      <Asset Guid="21ff62ac06adb2f4b888f0a2af793f76" ResourceName="Entity/Road" />
+      <Asset Guid="22d80e127f681d349a4db527458274fe" ResourceName="GameResources/13" />
+      <Asset Guid="2423a6109c2886e47a55183b9520d289" ResourceName="Scene/MatchScene" />
+      <Asset Guid="24e8e2b91416d4b4e8217fd39d79216b" ResourceName="GameResources/87" />
+      <Asset Guid="2593490b4d3dd44468dea25fde54e3e3" ResourceName="Entity/Road" />
+      <Asset Guid="25e5535f428f85640a5ad93e33f79034" ResourceName="GameResources/119" />
+      <Asset Guid="26ad40e7a8c767642a3e9048120341c2" ResourceName="Entity/Road" />
+      <Asset Guid="26cc2613450197b47964b07ed3cf1708" ResourceName="UI/Form" />
+      <Asset Guid="273bb29eebe03964486bec73267886c3" ResourceName="GameResources/93" />
+      <Asset Guid="27467a62c03fc4741a8c9a902ae4fb4c" ResourceName="GameResources/13" />
+      <Asset Guid="27821d23f6552604ca62ee0469ed0f4b" ResourceName="GameResources/47" />
+      <Asset Guid="27ab736d22ac25a4e94283f65dfa6b66" ResourceName="Entity/Road" />
+      <Asset Guid="27df0e1a4a3286845bd7cda95ad309a7" ResourceName="GameResources/104" />
+      <Asset Guid="28309fcd15bac1e4dacb2c8cfdad6e30" ResourceName="GameResources/26" />
+      <Asset Guid="2856a34e2d1c2be4c9377462138be63b" ResourceName="UI/Font/Materials" />
+      <Asset Guid="28c21c30b9b89684a836e601d578635c" ResourceName="GameResources/59" />
+      <Asset Guid="28c99215a97424f499bd710f3b26db7a" ResourceName="GameResources/13" />
+      <Asset Guid="28eda4d292130dc40955c373f6f7be45" ResourceName="GameResources/95" />
+      <Asset Guid="295d163c30fcdd442bd09ffaa7d91c75" ResourceName="GameResources/13" />
+      <Asset Guid="29f76474cd7f8464abcc829304c5d577" ResourceName="GameResources/117" />
+      <Asset Guid="2a5b50a07b160fc43b9081c25f6ed307" ResourceName="Entity/Road" />
+      <Asset Guid="2a660abfaee8e8c4cbc5fe2f194d33a4" ResourceName="Entity/Road" />
+      <Asset Guid="2adb3a13d7f0a644890b0b6c00d8f587" ResourceName="Entity/Road" />
+      <Asset Guid="2add1363332c310469c3222ffd52d86a" ResourceName="GameResources/59" />
+      <Asset Guid="2b87ee0f14dfecd4d891b9d0c179ceb7" ResourceName="GameResources/54" />
+      <Asset Guid="2c6d6fde1b8ff064488fb0b0e4bc130c" ResourceName="GameResources/62" />
+      <Asset Guid="2d1832c283d55d046968b8eb17cc3895" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="2d19efce7e8b25a4fa870f43c9405f6a" ResourceName="GameResources/83" />
+      <Asset Guid="2d46bc3dff26c6d499707fe70b04b635" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="2d66d4f81b088644da9b7858eeae3958" ResourceName="GameResources/13" />
+      <Asset Guid="2d901ab226cdd284c97fccd6f817b2b5" ResourceName="GameResources/118" />
+      <Asset Guid="2dcd1f3c9c3bbb64d8574406965848dd" ResourceName="UI/Font/Materials" />
+      <Asset Guid="2dfbec649215f6d4686c2f7935faeee7" ResourceName="Entity/Road" />
+      <Asset Guid="2e1ba665364644746bbe4bda38576503" ResourceName="GameResources/0" />
+      <Asset Guid="2e5bd33ada02483449d7acb1efc6447c" ResourceName="Entity/Road" />
+      <Asset Guid="2e8c3d6fb54c94348ab0ecc1941e5568" ResourceName="GameResources/77" />
+      <Asset Guid="2e98ebd8b7c0df54f919ad1d8e1b8a72" ResourceName="GameResources/129" />
+      <Asset Guid="2ed7e4465efbc7945bba993c0775a9ae" ResourceName="Shader" />
+      <Asset Guid="2ee092162c515d841bcae99c8972f14d" ResourceName="GameResources/72" />
+      <Asset Guid="2f0efeaf0c26ade49a9a7a40000bd4ce" ResourceName="Entity/Road" />
+      <Asset Guid="2f27acd7641698e4599d3efd3036bf64" ResourceName="GameResources/13" />
+      <Asset Guid="2f2d27dc7aa14f3488da8acd8a74c84c" ResourceName="GameResources/56" />
+      <Asset Guid="3026c53152af7cc42b1354988accd4bf" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="304f6b69cac58f0439ebe1c87ef15172" ResourceName="GameResources/46" />
+      <Asset Guid="3094a7f1dc0f25d4280b6cea868c84c2" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="312ce23e6377b0d4f829f32c189f4da9" ResourceName="Entity/Road" />
+      <Asset Guid="314a108d04034554c84432fb8e534edd" ResourceName="GameResources/1" />
+      <Asset Guid="319fef60ff2174c46acb37455138ab1c" ResourceName="Shader" />
+      <Asset Guid="337dd0686d00b6d4583829d9fd2644e7" ResourceName="GameResources/13" />
+      <Asset Guid="33ebf7b1cd52bdf498d6d718ba8a12bc" ResourceName="GameResources/1" />
+      <Asset Guid="33ff4b737ff98e14e8f79ec13e081211" ResourceName="Shader" />
+      <Asset Guid="34a8b99f65ef991478ff15bcf1577cf6" ResourceName="GameResources/65" />
+      <Asset Guid="34d96fc37f444784e943df14cc7f5ca4" ResourceName="GameResources/5" />
+      <Asset Guid="352b09dc10b26a746b92c2bf3256f147" ResourceName="Entity/Road" />
+      <Asset Guid="35f8635571cf8b148bd3f4e1ee2fd18c" ResourceName="GameResources/59" />
+      <Asset Guid="362988bcf542a8d458d621bae5ba67aa" ResourceName="GameResources/13" />
+      <Asset Guid="36a5b9e95e8952b478b2de6ea15ebd44" ResourceName="Entity/Road" />
+      <Asset Guid="36a89a66d568539419ec5505fb0a10c9" ResourceName="GameResources/128" />
+      <Asset Guid="373adeb901cb1bf4b95b0e7b42e7f806" ResourceName="GameResources/71" />
+      <Asset Guid="378850cd4efa1a447980d17474b3cf87" ResourceName="GameResources/35" />
+      <Asset Guid="37cbc636440e1c749b09aa50dba97ae7" ResourceName="GameResources/13" />
+      <Asset Guid="37d59e83ccc430b4aa70b99f71983bec" ResourceName="GameResources/1" />
+      <Asset Guid="38a1773dcd48a8e4a980ed1e673149ca" ResourceName="GameResources/57" />
+      <Asset Guid="38a98da942ab3ab43a70bf35ffc6efb5" ResourceName="GameResources/15" />
+      <Asset Guid="3914ec3995247c64980bc9468f737c98" ResourceName="GameResources/62" />
+      <Asset Guid="398da2b6da2ed6e4381989647e44437e" ResourceName="GameResources/27" />
+      <Asset Guid="39a5bc6bf515b1248b9e50a3ae6bfcba" ResourceName="Shader" />
+      <Asset Guid="39e8ed91e21f27448bd5d3ee66623cf4" ResourceName="Entity/Road" />
+      <Asset Guid="39e90a64db7a7b24d8c6a27974b6295c" ResourceName="GameResources/71" />
+      <Asset Guid="3a014c445f53fff4cb44bfe1f23b7e3a" ResourceName="GameResources/94" />
+      <Asset Guid="3a65e9bd709dc994487f22a5b926b0b7" ResourceName="GameResources/4" />
+      <Asset Guid="3a6f91255a5e6774989f413e0242303a" ResourceName="GameResources/104" />
+      <Asset Guid="3a9243ecdb1b0a340b3e6a32ca2be2b8" ResourceName="GameResources/62" />
+      <Asset Guid="3accbccf7fc292e458b27d621c2184c3" ResourceName="GameResources/97" />
+      <Asset Guid="3b31f02f08c93bd4cbca3c9e960b1966" ResourceName="Sound" />
+      <Asset Guid="3b6ee48ac207cc647a8e1cd46dd7beca" ResourceName="GameResources/62" />
+      <Asset Guid="3c34de269c2b3e7499a8b45708f3b408" ResourceName="GameResources/13" />
+      <Asset Guid="3c8bcba725b2b7a4190b7fd1edd583c3" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="3ca598f46b180164a8557567fd6adb13" ResourceName="GameResources/100" />
+      <Asset Guid="3d019804e469faf49b1e80af8fb3f48d" ResourceName="GameResources/4" />
+      <Asset Guid="3d2893e0d0089ca4c951a821ab81fe1c" ResourceName="GameResources/13" />
+      <Asset Guid="3d2b33e4624ed48428fcfa4e475c7503" ResourceName="GameResources/78" />
+      <Asset Guid="3d81b5c48252f2842bdf1aa0ddb3103b" ResourceName="GameResources/4" />
+      <Asset Guid="3d840a6edd7742d4c8a915ba23aa4f7a" ResourceName="GameResources/43" />
+      <Asset Guid="3d97bd848bab0d34c9579d03783922ba" ResourceName="GameResources/112" />
+      <Asset Guid="3d9f5ef8ca6afe04c81efa745931cc18" ResourceName="GameResources/102" />
+      <Asset Guid="3da583e0b62cd0641883f67cc93568f3" ResourceName="GameResources/0" />
+      <Asset Guid="3dff114d86dc73a479bb5c8adf9f0729" ResourceName="GameResources/13" />
+      <Asset Guid="3e29fec7533467f4eb8bfdc161930e4b" ResourceName="Variants/ThirdUI_base" />
+      <Asset Guid="3e880a123ef192a4db8efca727e2d663" ResourceName="GameResources/62" />
+      <Asset Guid="3fc9d2ef2893fe247b87e685b7369d6d" ResourceName="UI/Sprites/Battel" />
+      <Asset Guid="4015666a811cd2d4d9b8d0219075946d" ResourceName="GameResources/75" />
+      <Asset Guid="40e5b1f9cb2304d419aee4579b666153" ResourceName="Entity/Road" />
+      <Asset Guid="4106307d2e34d5d4982dcc2e54a70d08" ResourceName="GameResources/62" />
+      <Asset Guid="41066b868efcd9541886fc4593a3159b" ResourceName="Entity/Road" />
+      <Asset Guid="411a776f994a6f3488fcff4f1def8cf7" ResourceName="GameResources/36" />
+      <Asset Guid="41a1afcee7c76bc4e890316cb607d04f" ResourceName="Entity/Road" />
+      <Asset Guid="41b109b7d63ef11468992a6d09fc91f9" ResourceName="GameResources/13" />
+      <Asset Guid="41fd25a48c742b145a9a37aa94a8105f" ResourceName="GameResources/13" />
+      <Asset Guid="422b3135c1fcc834086f67312b0b6860" ResourceName="GameResources/40" />
+      <Asset Guid="42c4430ac04bdfa438be04fae2399f31" ResourceName="Entity/Road" />
+      <Asset Guid="435da9d1c5ef72148a9ea50cfdf19cd6" ResourceName="GameResources/13" />
+      <Asset Guid="4367b967f252f7c40ba0d1529264415f" ResourceName="Table" />
+      <Asset Guid="438594a2aa05d7d41a483f7984234172" ResourceName="GameResources/85" />
+      <Asset Guid="445fcb4271585bd40a2ff7b692655647" ResourceName="GameResources/121" />
+      <Asset Guid="44a7a35462f275041adfbbfe7bd7695c" ResourceName="GameResources/50" />
+      <Asset Guid="457db6835d93e294d915b7a7b715c89d" ResourceName="GameResources/118" />
+      <Asset Guid="45a03389e61dee54fba228767f9a2415" ResourceName="GameResources/103" />
+      <Asset Guid="4648a23480a5e1c49a067c447632ccd4" ResourceName="GameResources/40" />
+      <Asset Guid="46a8b9dab55929c43a36efd668ea67d6" ResourceName="GameResources/4" />
+      <Asset Guid="46ab29b426dc7e34bb9eff4b8f3d7c2a" ResourceName="GameResources/4" />
+      <Asset Guid="46e5ca58b5bd0794990bbbb41c8f0cd9" ResourceName="GameResources/41" />
+      <Asset Guid="483357cff22c59544b4c0c0bbc34eff8" ResourceName="UI/Sprites/Race" />
+      <Asset Guid="4879742bb5e6b35409e191032ecf9615" ResourceName="Entity/Road" />
+      <Asset Guid="48a771f565cd8964fb0382cb01309519" ResourceName="UI/Sprites/Battel" />
+      <Asset Guid="48d0f6ec12e090d4d9b408eaa292a53c" ResourceName="UI/Form" />
+      <Asset Guid="49ab898397552c2498ee08d2a5b2fc63" ResourceName="UI/Sprites/Control" />
+      <Asset Guid="4aad467acd2a6fb4aba36d8f0a350e96" ResourceName="GameResources/13" />
+      <Asset Guid="4b90488410ed8c140b7af3cf459bf3e5" ResourceName="Shader" />
+      <Asset Guid="4baee8e30d47c244c9014af688b1e659" ResourceName="GameResources/13" />
+      <Asset Guid="4bb2158f52fd9a24693875472afeb231" ResourceName="GameResources/8" />
+      <Asset Guid="4be4ff3abdf8eb445ab4b1db434ea369" ResourceName="GameResources/46" />
+      <Asset Guid="4ccbf57c33e89674da07f4d570367af2" ResourceName="GameResources/90" />
+      <Asset Guid="4cd55cb098c44da4baef761824029f5f" ResourceName="GameResources/90" />
+      <Asset Guid="4ce9884da9f42ed4fa98ded330ccb282" ResourceName="Sound" />
+      <Asset Guid="4d51ea704a2972b409e13c1377585aa2" ResourceName="Entity/Road" />
+      <Asset Guid="4d87284cd6067f541ad957526f79cdcf" ResourceName="GameResources/54" />
+      <Asset Guid="4ddfbef7a4a87a845a77abac44989390" ResourceName="UI/Form" />
+      <Asset Guid="4e1bd79332e1ac746aa56843af385a79" ResourceName="GameResources/6" />
+      <Asset Guid="4e499d1a311ece3499b8b59608687e9f" ResourceName="GameResources/0" />
+      <Asset Guid="4f98d732b0e5fac498475e13ad54b70d" ResourceName="GameResources/73" />
+      <Asset Guid="4fa0dfa21ba3d934784738378361ae17" ResourceName="GameResources/81" />
+      <Asset Guid="4fa5731e31b519a4fa51021652a09e48" ResourceName="GameResources/51" />
+      <Asset Guid="4fadf01e7831c164aa63dda20f5b9c56" ResourceName="Entity/Road" />
+      <Asset Guid="50991828eeec09440a8605dfb20b1d22" ResourceName="GameResources/132" />
+      <Asset Guid="50cfd8c4ec5b5464396be7f1b2d37b04" ResourceName="GameResources/13" />
+      <Asset Guid="50da789375c4ed648a393824e2bfd798" ResourceName="Setting" />
+      <Asset Guid="516ecee2bc207994ba3e06cf0e9b18b1" ResourceName="GameResources/99" />
+      <Asset Guid="51b728ae5ff22024eb32bf20c7dde88d" ResourceName="Sound" />
+      <Asset Guid="51be785c0b6c77c40b4c8292a245ad28" ResourceName="GameResources/13" />
+      <Asset Guid="52bc61d544f832946ad5b82437cbd7e1" ResourceName="Entity/Road" />
+      <Asset Guid="530ea52b557c6234dbd868366ac8bbbf" ResourceName="GameResources/91" />
+      <Asset Guid="531bab8549fcc32468455a561b9221c4" ResourceName="GameResources/17" />
+      <Asset Guid="532b6427cba58494a88c3061a960e79f" ResourceName="Setting" />
+      <Asset Guid="53892238d5cb8ef4ab6c58cf0c4c30ed" ResourceName="GameResources/114" />
+      <Asset Guid="53af9cfc28452f34c8a5eff977daad6c" ResourceName="UI/Sprites/Shop" />
+      <Asset Guid="53bff333cccd10e439dd4359bffac729" ResourceName="Entity/Road" />
+      <Asset Guid="5436ecfabcafcb149b13410d868caec0" ResourceName="GameResources/67" />
+      <Asset Guid="544927d640fc80347aefde5937331aca" ResourceName="GameResources/33" />
+      <Asset Guid="5451d32d059fdf840bb5dc3a3640a67e" ResourceName="Entity/Road" />
+      <Asset Guid="5475aeafa6939a94c8e76c981d014651" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="549ef949623372f4796f7597d40b1a4c" ResourceName="UI/Font_base" />
+      <Asset Guid="54cf55540dfbff343b0bcf0bcbe4f86e" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="55ab1a812db9ef344a6d237ad8feee25" ResourceName="GameResources/13" />
+      <Asset Guid="55ce3c055156f8848a198d8936bc9879" ResourceName="UI/Form" />
+      <Asset Guid="5687c3629fca30e459e56939aa6e0303" ResourceName="Entity/Road" />
+      <Asset Guid="56f69e426f17009458396ee7ae557940" ResourceName="GameResources/13" />
+      <Asset Guid="57188df44b20e1c4ab6ba8928e749951" ResourceName="GameResources/106" />
+      <Asset Guid="574fa79d2f407c346a349c6015461937" ResourceName="GameResources/56" />
+      <Asset Guid="57aed236e74fc5044bfb0322e6383ac5" ResourceName="Table" />
+      <Asset Guid="57f3b12a59951c34e84d3ba128f1d894" ResourceName="GameResources/14" />
+      <Asset Guid="57feecfd9ef338843bf7fdf61e19f625" ResourceName="GameResources/25" />
+      <Asset Guid="58378e559021cb34ba78a62530dcfe60" ResourceName="Entity/Road" />
+      <Asset Guid="585926dcae7c11f44b032aa81d653d5e" ResourceName="Entity/Road" />
+      <Asset Guid="58e28102c5f4fd740834f579d6a02ea4" ResourceName="GameResources/6" />
+      <Asset Guid="59700b6965de46c40ab318e10f0f1073" ResourceName="GameResources/60" />
+      <Asset Guid="59a4d53746ee5e74389c5f4a45091b2b" ResourceName="GameResources/101" />
+      <Asset Guid="59adedea9b31f354aa0183c17c480a1e" ResourceName="GameResources/33" />
+      <Asset Guid="59b405854372f774da926c23a1d15dcf" ResourceName="GameResources/88" />
+      <Asset Guid="59ce81b49c2faef43a3accd4eb9e6319" ResourceName="GameResources/0" />
+      <Asset Guid="5a0880204f87bd847b6de78fc701c52c" ResourceName="UI/Sprites/Race" />
+      <Asset Guid="5a75052abbcecf14599f2620dc4db73d" ResourceName="UI/Sprites/Guide" />
+      <Asset Guid="5b065f86ffe96f346bf72705ece630b3" ResourceName="UI/Sprites/Control" />
+      <Asset Guid="5b29f407562c23e42b8e50c371d7dfad" ResourceName="GameResources/13" />
+      <Asset Guid="5b33496435d9b554fadd866f7c20b3fa" ResourceName="GameResources/57" />
+      <Asset Guid="5b7dc2e5df9bb904eadf30803851225c" ResourceName="Entity/Road" />
+      <Asset Guid="5bdf71f8640643b4fb08ebfb63906c67" ResourceName="GameResources/100" />
+      <Asset Guid="5bf91607668a41447abb4a93bfb5b018" ResourceName="GameResources/46" />
+      <Asset Guid="5cc4fcf1e9f1ece449213e09f0b947c1" ResourceName="GameResources/20" />
+      <Asset Guid="5d261c62e5099364a80c13d4d032817c" ResourceName="Entity/Road" />
+      <Asset Guid="5d3c5ef1331898941aa19bbddb636e61" ResourceName="Setting" />
+      <Asset Guid="5d9e9f0df03017e439a1f6aceacc181b" ResourceName="Variants/SecondUI_base" />
+      <Asset Guid="5db54a26b3d964340bcb343432b48e93" ResourceName="GameResources/4" />
+      <Asset Guid="5e1aad114ac85014d886b26171a12f3a" ResourceName="UI/Font/Materials" />
+      <Asset Guid="5eada71363151bb42a9f10c5c25b6c53" ResourceName="GameResources/21" />
+      <Asset Guid="5ee9580c54fd66548aa743ec2b81dbed" ResourceName="GameResources/23" />
+      <Asset Guid="5ef4b56205cd6014991f42e0f4fecc96" ResourceName="GameResources/1" />
+      <Asset Guid="5f120261652bde941ad72b520551f40f" ResourceName="Scene_base" />
+      <Asset Guid="5f4c034811e994245940c365cdf61ed0" ResourceName="UI/Sprites/Common" />
+      <Asset Guid="5f99de50a795b2a4787a0ceac370b42d" ResourceName="GameResources/73" />
+      <Asset Guid="5fd1d61616ab34c4587521484c15d014" ResourceName="GameResources/4" />
+      <Asset Guid="6005d7263ce7d4f40beffe051a537d0a" ResourceName="GameResources/4" />
+      <Asset Guid="60ae4f6b5fbd9164e833ae6222b46364" ResourceName="GameResources/111" />
+      <Asset Guid="6104b8347e7deb942a188f08c17a6ee0" ResourceName="UI/Form" />
+      <Asset Guid="61d7309186cee7c4fa337b7512479314" ResourceName="UI/Form" />
+      <Asset Guid="61e75254c2d5d444abd89791d67abb61" ResourceName="UI/Sprites/Control" />
+      <Asset Guid="61fa1b4c69e09634091562263cfe5014" ResourceName="GameResources/4" />
+      <Asset Guid="62321295a6cddf949b886ab6e3c1912c" ResourceName="GameResources/95" />
+      <Asset Guid="6232d69b64fbe0646bff6ef94a66a286" ResourceName="Entity/Road" />
+      <Asset Guid="623e51fe7007c7e40aaabc398cea3339" ResourceName="GameResources/56" />
+      <Asset Guid="62a5a0408fee8014e844f8b6578d2661" ResourceName="GameResources/4" />
+      <Asset Guid="630efd925d7c38944b4849adafb43bca" ResourceName="Entity/Road" />
+      <Asset Guid="6326ac487aa7e64408e3d845bc41411c" ResourceName="Entity/Road" />
+      <Asset Guid="63d3b192aadb58245b68606b3aa05a63" ResourceName="GameResources/19" />
+      <Asset Guid="655b66234f8968442a51e35e88b17f85" ResourceName="GameResources/56" />
+      <Asset Guid="6649ffa979ccd214b9b9386d4fe18fce" ResourceName="GameResources/6" />
+      <Asset Guid="668bba7ec873cf44ea44d0e59a1eb788" ResourceName="Entity/Road" />
+      <Asset Guid="67fe10517a7d0d14c9da727665859336" ResourceName="Entity/Road" />
+      <Asset Guid="68bb5a62d0df5ee4d8da3cd7c768b36f" ResourceName="GameResources/13" />
+      <Asset Guid="68c03713b76e04a4abb7a9a782664bfa" ResourceName="Entity/Road" />
+      <Asset Guid="68c9280211382344694086b61c8defcb" ResourceName="GameResources/9" />
+      <Asset Guid="68ca8f6d7df7b524d85c1652e053fb68" ResourceName="GameResources/62" />
+      <Asset Guid="6941f62c8ed5cfb4681675b1eb1e34ce" ResourceName="Entity/Road" />
+      <Asset Guid="694abf17b8ac92540a779d2988f92a1f" ResourceName="GameResources/13" />
+      <Asset Guid="6998eabd509a480438876270557c0e72" ResourceName="Variants/ThirdUI/Table" />
+      <Asset Guid="69c4366485d781b498b5e48bff9370e1" ResourceName="GameResources/110" />
+      <Asset Guid="6a42357297f0229499e9c44eb5280b87" ResourceName="GameResources/128" />
+      <Asset Guid="6a4c32d34de789449931d6892675237f" ResourceName="GameResources/89" />
+      <Asset Guid="6bd12fb06a365fb40b8a21c11be660be" ResourceName="GameResources/6" />
+      <Asset Guid="6c3e9a1bb92a86d428b6c1c99171baeb" ResourceName="GameResources/106" />
+      <Asset Guid="6c859582bdc9f5c4c80af3709e9c11c0" ResourceName="GameResources/6" />
+      <Asset Guid="6cf919618d7e7694cb4cf55a16f95f79" ResourceName="GameResources/34" />
+      <Asset Guid="6d139db9dcbdaca42b9784f5b3d83e8a" ResourceName="Entity/Road" />
+      <Asset Guid="6d73b129d02033645972e47fc673c042" ResourceName="GameResources/56" />
+      <Asset Guid="6d7ea388da8fe684ab9f255610c83ef9" ResourceName="UI/Sprites/Race" />
+      <Asset Guid="6d9df52b7c4258143b9a95af3af6224b" ResourceName="GameResources/132" />
+      <Asset Guid="6dd39cf879953d14a8ea538b97500321" ResourceName="GameResources/113" />
+      <Asset Guid="6de0d72af3f95d84d875a4ba3ab23f5d" ResourceName="Setting" />
+      <Asset Guid="6e25676728370264e894dc1ba703ff6e" ResourceName="GameResources/5" />
+      <Asset Guid="6e498877e48d6bf428f63ca2b190b3f8" ResourceName="UI/Sprites/Common" />
+      <Asset Guid="6e9596cfd6ebbd347a4c49ccc6506878" ResourceName="Shader" />
+      <Asset Guid="6ecffc5822cf8584c8a562ac80f56486" ResourceName="GameResources/117" />
+      <Asset Guid="6f246c356178f8a4b8df68b95f60bbe9" ResourceName="Setting" />
+      <Asset Guid="6f42dc80941999b44a2d4b6374166a84" ResourceName="Entity/Road" />
+      <Asset Guid="6f55cc93a876edf4db29865861f28304" ResourceName="UI/Font/Materials" />
+      <Asset Guid="6fc3f35b46b4d1a4bbc3b50e9a37cf12" ResourceName="Entity/Road" />
+      <Asset Guid="6fc5df78b46438743969670ed910fe76" ResourceName="GameResources/13" />
+      <Asset Guid="6fd06aec376420043b58f2785412f527" ResourceName="GameResources/127" />
+      <Asset Guid="70453c48b7c778f43a270211191171de" ResourceName="UI/Sprites/Popup" />
+      <Asset Guid="7078ebe7bc16e1f45be4419514f0d1fd" ResourceName="Setting" />
+      <Asset Guid="70eafecea318173479017e37ea197ccb" ResourceName="GameResources/27" />
+      <Asset Guid="71820a4c79a398e42b1ea41803ffbe06" ResourceName="GameResources/13" />
+      <Asset Guid="721c2d87c914d9145a6545ce4ec31450" ResourceName="GameResources/2" />
+      <Asset Guid="7249d01902a305f4999a745c00e4496a" ResourceName="GameResources/53" />
+      <Asset Guid="72585c50766a0f94595baf1f05393408" ResourceName="GameResources/116" />
+      <Asset Guid="72aed6c1d6612364a9cfd8c9039e4fd4" ResourceName="GameResources/4" />
+      <Asset Guid="739422826545d43498f00be4d58045a4" ResourceName="GameResources/119" />
+      <Asset Guid="73ac9e5a4ba9ebe4eb90f770b88e3411" ResourceName="GameResources/13" />
+      <Asset Guid="74c68a12fcf868147b9be587f31027ef" ResourceName="UI/Form" />
+      <Asset Guid="75266fa63c98f714ba68d12da3a47262" ResourceName="GameResources/49" />
+      <Asset Guid="75ae79a8d7c45ba4490fb2bd741b1c74" ResourceName="GameResources/46" />
+      <Asset Guid="76552148d9a54c74a947cb948a6c9b87" ResourceName="GameResources/1" />
+      <Asset Guid="7674c3e182fde9d4bab9b6d3771029e9" ResourceName="GameResources/13" />
+      <Asset Guid="772c445ae89bffa40a9c6976244feb64" ResourceName="GameResources/79" />
+      <Asset Guid="77bae2bbb1c76174cace814dc7ab185b" ResourceName="GameResources/6" />
+      <Asset Guid="77fd07c4e9f64c84abe2de31b82686f9" ResourceName="GameResources/6" />
+      <Asset Guid="7803c01ee70038a4ab1bc4378b095717" ResourceName="GameResources/4" />
+      <Asset Guid="7853a4d13c8cd9c4d9461600051357c7" ResourceName="GameResources/5" />
+      <Asset Guid="787f415f5de1d6d4cb309c6be725318c" ResourceName="GameResources/4" />
+      <Asset Guid="79244ef976ce903468d619c7ba249cff" ResourceName="GameResources/21" />
+      <Asset Guid="7933bc7528aafcd49a8a0c9fcea193e2" ResourceName="GameResources/131" />
+      <Asset Guid="79e79835551315c4c921ed04c9927331" ResourceName="Entity/Road" />
+      <Asset Guid="7ae431260cf2b4447a76663bdcba629b" ResourceName="GameResources/5" />
+      <Asset Guid="7af6aecc35660be45801ec7188b6c085" ResourceName="GameResources/68" />
+      <Asset Guid="7af93dcd4baea4c4b9dc21daf9598494" ResourceName="GameResources/6" />
+      <Asset Guid="7b210414386e0614593d36c1ec27c39c" ResourceName="GameResources/66" />
+      <Asset Guid="7b6ac8c9550d70644b490c3ec88fdaf9" ResourceName="GameResources/13" />
+      <Asset Guid="7b876622ab5dcdc4d9b491be1622c0de" ResourceName="GameResources/13" />
+      <Asset Guid="7bcb61d569917594d963375a6ceb06b4" ResourceName="Entity/Road" />
+      <Asset Guid="7c40a16170011c64b8c020a0720625e7" ResourceName="GameResources/50" />
+      <Asset Guid="7c444dbe5a9cb914081351614e0d6543" ResourceName="GameResources/12" />
+      <Asset Guid="7c6eaaa8506f79c428ee7fc8554b4a1f" ResourceName="GameResources/46" />
+      <Asset Guid="7cabf0cb9e3fcf94d914557c96839127" ResourceName="GameResources/16" />
+      <Asset Guid="7cb57d5329c0e2c4c9513163c89daff1" ResourceName="GameResources/4" />
+      <Asset Guid="7d7994d4a4c206141896b07c681e8c82" ResourceName="Entity/Camera" />
+      <Asset Guid="7d7be3a7fe4e1cd4a8d59743cf75beb8" ResourceName="Entity/Road" />
+      <Asset Guid="7e075df52a27a324dbfcc0eadf59a60d" ResourceName="GameResources/43" />
+      <Asset Guid="7e8b53cd25392394287b52873d478d41" ResourceName="Shader" />
+      <Asset Guid="7e9909474bb41f74198e5b9ee328f581" ResourceName="GameResources/4" />
+      <Asset Guid="7edeea532bf8774479502b51f3314980" ResourceName="UI/Sprites/Flag" />
+      <Asset Guid="7ee472e4071779d4c9d6570d4a1811a5" ResourceName="GameResources/16" />
+      <Asset Guid="7f7ea6a7fcde39f49826ab5d0f0bdf9d" ResourceName="GameResources/13" />
+      <Asset Guid="7ff957b1091f1784695980a2af175906" ResourceName="GameResources/55" />
+      <Asset Guid="805de823f9e697945860de04b6ed6be6" ResourceName="Variants/ThirdUI/UI/Form" />
+      <Asset Guid="8120c1714af6ab54db97878dbbc5b73b" ResourceName="GameResources/21" />
+      <Asset Guid="814e725b6eb08c14cb9767bd2f592498" ResourceName="Variants/SecondUI/UI/Form" />
+      <Asset Guid="81940dfb886e19c42865aaeda912bab9" ResourceName="GameResources/4" />
+      <Asset Guid="823c41d029e313844921963215e28050" ResourceName="Entity/Road" />
+      <Asset Guid="826298f13da0f024dad4f61feba897d1" ResourceName="Entity/Road" />
+      <Asset Guid="8294895ee5b18b64ca8b2a0cadbf02ff" ResourceName="GameResources/19" />
+      <Asset Guid="8303db368d0103041ab48533f2eb4209" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="8315e518f82453e46831517e5bdcdf36" ResourceName="GameResources/119" />
+      <Asset Guid="839b90bd0bcaf99408406a6a5618b912" ResourceName="GameResources/4" />
+      <Asset Guid="83c8dd8bce83eb14b94eb2d8cd390d33" ResourceName="GameResources/4" />
+      <Asset Guid="83d987ca20b6c9841bf926533f60400c" ResourceName="Sound" />
+      <Asset Guid="8428bb5bf4efc844ba8936bcbee5fbbf" ResourceName="GameResources/39" />
+      <Asset Guid="847d043b80fb14e4395ae2edc5626cef" ResourceName="GameResources/40" />
+      <Asset Guid="84bad44805e2d6a4e9a5011bcf71a981" ResourceName="GameResources/72" />
+      <Asset Guid="8507c99c4a49ab64f9b71a69c7f822c9" ResourceName="GameResources/12" />
+      <Asset Guid="851854d0e40fe4445ad7be58ae79a4bd" ResourceName="GameResources/46" />
+      <Asset Guid="856ef05536664d44da16aeed9f39990a" ResourceName="GameResources/37" />
+      <Asset Guid="85e2524f26ca07f4d83193eca85b0d06" ResourceName="GameResources/48" />
+      <Asset Guid="88247595b8c7cda40b521c3466670856" ResourceName="GameResources/13" />
+      <Asset Guid="8869e373e3ffef143a1f368f894c00af" ResourceName="UI/Sprites/Battel" />
+      <Asset Guid="88c20418e6e35bd4e8b7019bd3154f50" ResourceName="Sound" />
+      <Asset Guid="88eb5adcbc0feb94d8c3a13f5a3781f0" ResourceName="GameResources/6" />
+      <Asset Guid="891ba770d3cbec14fa84b688bc84e605" ResourceName="GameResources/4" />
+      <Asset Guid="895bc6bf28792054fb32272364fa66e9" ResourceName="Entity/Road" />
+      <Asset Guid="896e7792b5618bd44bde029af90fb309" ResourceName="GameResources/128" />
+      <Asset Guid="8991519d0805c224a8aacc6c351f3320" ResourceName="GameResources/13" />
+      <Asset Guid="8995375957570d547972571b331f42fa" ResourceName="Entity/Road" />
+      <Asset Guid="89aca7a0f899ca24a8910844f9ce3edb" ResourceName="UI/Form" />
+      <Asset Guid="8a1145065737cfe48adf18f24e048893" ResourceName="GameResources/0" />
+      <Asset Guid="8a2dc7a504c30e946805d09371d9e21d" ResourceName="GameResources/17" />
+      <Asset Guid="8a37cc8d1f1373a4d9f7f1c72bcf7ae3" ResourceName="Entity/Road" />
+      <Asset Guid="8a685b70ac04bd849a4bdbf5546b1e3f" ResourceName="GameResources/13" />
+      <Asset Guid="8af894bbf3aefc54eb445f1e68394f71" ResourceName="GameResources/126" />
+      <Asset Guid="8bec956afd3dd314eb220ebfa431cd0c" ResourceName="GameResources/99" />
+      <Asset Guid="8d0c49e75775f3d4e9d9d2e8e97a739b" ResourceName="GameResources/45" />
+      <Asset Guid="8d170cc171fce864d93a18846c8f73f5" ResourceName="GameResources/118" />
+      <Asset Guid="8d193b9ea2e9cb6479b1c20a764b32fd" ResourceName="Entity/Road" />
+      <Asset Guid="8d47a12949b612a45a5d564a893b6691" ResourceName="GameResources/111" />
+      <Asset Guid="8df1c98486bdc744488c84275c1c1dac" ResourceName="Shader" />
+      <Asset Guid="8e1ff97bcbee02c4b970feed190d39bf" ResourceName="Entity/Road" />
+      <Asset Guid="8f076dd9a5a401c43a5c4b5318a12cd0" ResourceName="GameResources/13" />
+      <Asset Guid="8f2028fc9e516934a8fff4cb042130c4" ResourceName="GameResources/59" />
+      <Asset Guid="8f47c3554b9fcb94d8f28b3176c6a681" ResourceName="Entity/Road" />
+      <Asset Guid="8fe22a3a15407e84b9eb1b6473d5c51b" ResourceName="Entity/Motorcycle" />
+      <Asset Guid="90348dad74ded264ebe640525e41b607" ResourceName="Entity/Road" />
+      <Asset Guid="90446abb6ac91fd44ae83885ed06aab0" ResourceName="GameResources/4" />
+      <Asset Guid="9048442d20b32334bac917e1342ec1a6" ResourceName="GameResources/13" />
+      <Asset Guid="906b31d3777c7a142bc339973254f55a" ResourceName="Setting" />
+      <Asset Guid="90acf66dc28b85e49bb3211563ee9745" ResourceName="UI/Sprites/Battel" />
+      <Asset Guid="9110030876a68e9449dd1e86dcd24225" ResourceName="GameResources/18" />
+      <Asset Guid="913cc6ffab5045d43a14b0941050cdc4" ResourceName="GameResources/28" />
+      <Asset Guid="91d7d54bfdb63b04f875bb83e97ccc2a" ResourceName="GameResources/13" />
+      <Asset Guid="9219c12bccfdaea4fa1d98f2a64a7084" ResourceName="GameResources/5" />
+      <Asset Guid="92b6519c46f6df84abfacff2f6687240" ResourceName="UI/Sprites/Popup" />
+      <Asset Guid="92c01b723a8c4e7448718e8c69cc05b6" ResourceName="Entity/Character" />
+      <Asset Guid="92d7f9ac6506c4844ad4ce275781d431" ResourceName="Entity/Motorcycle" />
+      <Asset Guid="9349fbe77e72fd247b8447be82bc7501" ResourceName="UI/Sprites/Common" />
+      <Asset Guid="942d3d38f767f8249beccacb9e6e9cf0" ResourceName="UI/Form" />
+      <Asset Guid="9433c9d08e8644b4ab0b254a94f4e23b" ResourceName="GameResources/54" />
+      <Asset Guid="949711a7636683945b49aa7a2efbb8ec" ResourceName="Entity/Road" />
+      <Asset Guid="94b8adaa8439b9540963816d6abfae8e" ResourceName="GameResources/125" />
+      <Asset Guid="94bc6884a3e8869428cd1327022631cf" ResourceName="GameResources/13" />
+      <Asset Guid="95406c70910057c4da9d4dd54625946a" ResourceName="GameResources/13" />
+      <Asset Guid="95538194e3f6cf540b7d7e55a84d8077" ResourceName="Shader" />
+      <Asset Guid="95db038f9bd1c5a44813feadc98e474d" ResourceName="Entity/Road" />
+      <Asset Guid="962458044a40e0345998e5f745ff50d6" ResourceName="Variants_base" />
+      <Asset Guid="96d079bb6cf49174390a710fc9d2e8d8" ResourceName="GameResources/13" />
+      <Asset Guid="9704ff4597c5e45469bfb51b3c25f695" ResourceName="Entity/Road" />
+      <Asset Guid="972cb9064720606498befa11032f4024" ResourceName="GameResources/86" />
+      <Asset Guid="97f74ecc216ac974d89b8962a606104e" ResourceName="GameResources/7" />
+      <Asset Guid="9801f5cdb9e82224081149a0953d2ae4" ResourceName="GameResources/4" />
+      <Asset Guid="983be104af9405846bdfad8c7ad55ded" ResourceName="GameResources/23" />
+      <Asset Guid="9847fe92448791f429f0bdb684a53778" ResourceName="Entity/Road" />
+      <Asset Guid="9918e2c790c5694449e5b4b055553153" ResourceName="GameResources/22" />
+      <Asset Guid="991ff7926e5b5ee48a146f024d162335" ResourceName="GameResources/41" />
+      <Asset Guid="994fca61f114c0f4caf803acfa3a49fd" ResourceName="GameResources/52" />
+      <Asset Guid="99c552bde9d1cf74c8f5308c93f890ae" ResourceName="GameResources/35" />
+      <Asset Guid="9a2f773f3eabe574e9514a1f6956ed36" ResourceName="GameResources/70" />
+      <Asset Guid="9a5fe65368c9d154d9bb2d6e817c5ab4" ResourceName="Shader" />
+      <Asset Guid="9a91c93ecdfc57a45b99c5a115b176a1" ResourceName="GameResources/13" />
+      <Asset Guid="9c03ac59db31b604d912e87b5c9ac185" ResourceName="GameResources/68" />
+      <Asset Guid="9c087e7e091450646bb0b50878ddef75" ResourceName="GameResources/61" />
+      <Asset Guid="9c111d342edbc6a488c2978acbcec784" ResourceName="GameResources/78" />
+      <Asset Guid="9c490aa07c7b6e845a660d20f6101a51" ResourceName="GameResources/118" />
+      <Asset Guid="9caf9113db9c2b14abdba006fe285b42" ResourceName="GameResources/13" />
+      <Asset Guid="9d17c77f823ae8146b74f002eb7162da" ResourceName="GameResources/115" />
+      <Asset Guid="9d1dd336bf05b0c4890955f2c6498dd5" ResourceName="Entity/Road" />
+      <Asset Guid="9ded4fd3ed71eac459c7743e2fa38bb7" ResourceName="GameResources/3" />
+      <Asset Guid="9e4435bc061b9834b9e0e289ab2ed581" ResourceName="Entity/Road" />
+      <Asset Guid="9e5d926cf541a6f449ec42ac8e1b035b" ResourceName="GameResources/4" />
+      <Asset Guid="9ec8611d68f65f14b8a0168da90b48ee" ResourceName="Entity/Road" />
+      <Asset Guid="9fc8d27e2ea8b874bb28bd6ee7c732ad" ResourceName="Setting" />
+      <Asset Guid="a02148108d506a3488ed27861f9cbc26" ResourceName="UI/Sprites/Popup" />
+      <Asset Guid="a0ea8dba72cf63149ace6942651f639d" ResourceName="GameResources/1" />
+      <Asset Guid="a1237e14851d9d241b83f295dec7bdb5" ResourceName="Entity/Road" />
+      <Asset Guid="a1e971e4031e1884ba4d8e165aa0f27a" ResourceName="GameResources/7" />
+      <Asset Guid="a2b2e281c7a858549ac55f034ed07091" ResourceName="GameResources/62" />
+      <Asset Guid="a2cb46f484609354992367963babed84" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="a3015585f857a5f4090fe774d339436e" ResourceName="GameResources/4" />
+      <Asset Guid="a3176aed3ec6c664d930837613993af2" ResourceName="GameResources/83" />
+      <Asset Guid="a320886daa23636409704d30e8399a7c" ResourceName="GameResources/109" />
+      <Asset Guid="a39cd567828d6784286db2fcfccf477c" ResourceName="GameResources/3" />
+      <Asset Guid="a4a9fa228d2293f48a63e60fda6450e5" ResourceName="GameResources/13" />
+      <Asset Guid="a4e2eaa6a1ea60646abd441022527166" ResourceName="GameResources/14" />
+      <Asset Guid="a52abbc0e94965d499d41f9e77ae87af" ResourceName="Setting" />
+      <Asset Guid="a6fee23670bb5874f9df449740b2da2c" ResourceName="GameResources/13" />
+      <Asset Guid="a75505f7d5bbaa84088b6291efaf918c" ResourceName="Shader" />
+      <Asset Guid="a7735006017a2c3499d77229ea310f43" ResourceName="GameResources/21" />
+      <Asset Guid="a7a65f2d1ea5b3843b1d039d8b2bf984" ResourceName="GameResources/5" />
+      <Asset Guid="a7c2418f91ce2e8429c12b392ac53c16" ResourceName="Entity_base" />
+      <Asset Guid="a7c53d2eca9db43499198d9aef455043" ResourceName="GameResources/75" />
+      <Asset Guid="a7c8ac5ebd168984e9965c28db1f19dd" ResourceName="Entity/Road" />
+      <Asset Guid="a7cdac5d33f920b4ab230f8e9a38bb4f" ResourceName="GameResources/5" />
+      <Asset Guid="a7d2cd95aba3a8249ab80ddefd2307e2" ResourceName="GameResources/76" />
+      <Asset Guid="a82f1399449575f459942786c4196fde" ResourceName="GameResources/82" />
+      <Asset Guid="a84cc266c3432924ca1f153d11f9ccfc" ResourceName="Sound" />
+      <Asset Guid="a858c319b781b9b4dba06b1219857d49" ResourceName="UI/Sprites/Common" />
+      <Asset Guid="a8a5c33141797374cba9c10d75628d6e" ResourceName="Table" />
+      <Asset Guid="a8b2ef35002d5fb4db4ecac77527062a" ResourceName="GameResources/1" />
+      <Asset Guid="a8cfbdc7da1fc5246aa3b6ba971a5847" ResourceName="Entity/Road" />
+      <Asset Guid="a8f9a2bd8bac5684bb384cde551de02e" ResourceName="GameResources/4" />
+      <Asset Guid="a95dbfb6db72389439a729302f4504ce" ResourceName="Entity/Road" />
+      <Asset Guid="aa20f428b60cf124a9fd0dd0c0931851" ResourceName="GameResources/32" />
+      <Asset Guid="aaa89188a1773994aa56994ee4640c4b" ResourceName="Entity/Road" />
+      <Asset Guid="aab6ad521a48ed346a787a07903fa52a" ResourceName="GameResources/5" />
+      <Asset Guid="ab1a999e1dfd099429a88bcf15abaaa1" ResourceName="GameResources/5" />
+      <Asset Guid="ab2330089c448ac45b3f14a523a72fd5" ResourceName="Entity/Road" />
+      <Asset Guid="ac11ccd0e13a4b048bbc7aaae2a15841" ResourceName="GameResources/109" />
+      <Asset Guid="ac2eb94925f82be40ba8ad6af1dc7ef5" ResourceName="GameResources/13" />
+      <Asset Guid="acac49f2c96573b42a46564fb3a4bc8f" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="acbb10a05ce8d3b499e69c1a885fa488" ResourceName="GameResources/25" />
+      <Asset Guid="ad03ed092a6b9e9479e234bc4f5d3c98" ResourceName="GameResources/58" />
+      <Asset Guid="ad3d2638e628cf04c93ca58bb362f49d" ResourceName="GameResources/94" />
+      <Asset Guid="ad71f67812552af4ca57d6c2f8bb615d" ResourceName="GameResources/49" />
+      <Asset Guid="aeacdc42c64af394c89b32e4a9ab09a4" ResourceName="Shader" />
+      <Asset Guid="aec6f87861dba9b4fbc0791f12c78510" ResourceName="GameResources/17" />
+      <Asset Guid="af217e92290d01241a69a9323bfcf541" ResourceName="GameResources/31" />
+      <Asset Guid="afd6548bcfffd2149bde00bc0401a9e0" ResourceName="GameResources/105" />
+      <Asset Guid="afe9b6eac1b54724eb207e58613e6a16" ResourceName="GameResources/107" />
+      <Asset Guid="b0993437a6b876a4f8376b0193e925c1" ResourceName="GameResources/128" />
+      <Asset Guid="b0bd4d114e8353145a8854bd1e4980d9" ResourceName="GameResources/56" />
+      <Asset Guid="b1510cb843b05894fa64e7296201a21b" ResourceName="GameResources/13" />
+      <Asset Guid="b1510cf210e5ba9438656a83bffa35a2" ResourceName="Entity/Road" />
+      <Asset Guid="b1d747ca900bced448d6ba97b193e664" ResourceName="UI/Sprites/Common" />
+      <Asset Guid="b1dba945eae72da4f99a237aae36b080" ResourceName="GameResources/12" />
+      <Asset Guid="b200743a872b08f45a49a5a4f1c76eb2" ResourceName="GameResources/13" />
+      <Asset Guid="b2164620ad44d96439d3892764e45bb1" ResourceName="GameResources/1" />
+      <Asset Guid="b236257f6c05dc14293de8c4d08bcb0a" ResourceName="GameResources/114" />
+      <Asset Guid="b314b05cf979866438d78ed3e675150d" ResourceName="GameResources/0" />
+      <Asset Guid="b4b78034333f1aa489572ceb4fe4d4cb" ResourceName="Shader" />
+      <Asset Guid="b51999752899e73468c9a5a7ae1210ea" ResourceName="GameResources/62" />
+      <Asset Guid="b5319dbeef40007419a8e43360295763" ResourceName="UI/Form" />
+      <Asset Guid="b54052bb28066f448ad1e9f6585f58aa" ResourceName="GameResources/18" />
+      <Asset Guid="b624ff5e152606a488a57b6aa248c350" ResourceName="Variants/SecondUI/Entity/Motorcycle" />
+      <Asset Guid="b6c887de90435e544a0d9c5df498109c" ResourceName="GameResources/92" />
+      <Asset Guid="b711d11c70a823e4cbc727babbf4c68c" ResourceName="GameResources/13" />
+      <Asset Guid="b7cddc0018aff3e4287710dadd99ff37" ResourceName="GameResources/13" />
+      <Asset Guid="b7ce8829de40cd245a228e5e837f3ac2" ResourceName="GameResources/65" />
+      <Asset Guid="b7e1c77792702e348b1179e9f3b06cda" ResourceName="GameResources/62" />
+      <Asset Guid="b8c44f2ba29c44547a5157162f7fc3ce" ResourceName="GameResources/13" />
+      <Asset Guid="b8d306f487d3e5348a25ba861425a967" ResourceName="GameResources/80" />
+      <Asset Guid="b8f409f374d892e4f97c772254925873" ResourceName="GameResources/80" />
+      <Asset Guid="b93101fca296ec24e98cc91cd3571705" ResourceName="Entity/Road" />
+      <Asset Guid="b9385b8784588b3488aa679152b0e1b7" ResourceName="GameResources/9" />
+      <Asset Guid="b95516cdd074d184eaf3179768bc91e1" ResourceName="Scene/FixRoadTest" />
+      <Asset Guid="b984f2448ba88b64baab91880b52984e" ResourceName="Scene/ConfigurableTest" />
+      <Asset Guid="b99fa39914769a64583edbcffc16679a" ResourceName="Entity/Road" />
+      <Asset Guid="ba5388b05e2f08f42b007de8cec36f0d" ResourceName="GameResources/10" />
+      <Asset Guid="ba94d3d0f4ecb8d42ae2d8a617949b94" ResourceName="GameResources/13" />
+      <Asset Guid="bae71b3b4ca2e714896be01b2acc1217" ResourceName="GameResources/38" />
+      <Asset Guid="bb127ef0e3aa54142bf4b69bafa2bc2e" ResourceName="UI/Sprites/Guide" />
+      <Asset Guid="bbefefdbcf36c8b41961354dfb36dba4" ResourceName="Entity/Road" />
+      <Asset Guid="bc57f30ba9889874881c7f02006c38af" ResourceName="GameResources/4" />
+      <Asset Guid="bd06df8b304816d429adaaad2f9a6d30" ResourceName="GameResources/3" />
+      <Asset Guid="bd515241b55a91e4d97a39845dd74cf3" ResourceName="GameResources/1" />
+      <Asset Guid="be43af047396abc4082286e986a9493f" ResourceName="GameResources/96" />
+      <Asset Guid="be57336785d6493429ee2452dcc03cc2" ResourceName="GameResources/46" />
+      <Asset Guid="be75dcacd03054749b02372c7c4dd92e" ResourceName="GameResources/13" />
+      <Asset Guid="beab00eed5b81cd43aa0a74f29a7d2c1" ResourceName="UI/Sprites/Battel" />
+      <Asset Guid="bf4ca8e4f5b1aa84f812a1e334b170a4" ResourceName="GameResources/98" />
+      <Asset Guid="bf5be6048d6106947b8a95ad57c6bbfc" ResourceName="GameResources/69" />
+      <Asset Guid="bf6358b38f98e5c4b89008d8d58ad38e" ResourceName="Entity/Road" />
+      <Asset Guid="bfdd0c2f544228a4a926ecbd75cf6a2d" ResourceName="GameResources/85" />
+      <Asset Guid="c028a6e6c02d7fa4cb742ab6e2518349" ResourceName="GameResources/27" />
+      <Asset Guid="c07899ae40c0f5545945d4823e986a4d" ResourceName="Entity/Road" />
+      <Asset Guid="c0a732d5995fdfb45acff278878a17d1" ResourceName="GameResources/62" />
+      <Asset Guid="c146135dcaf87d94f857642c565d9be6" ResourceName="GameResources/56" />
+      <Asset Guid="c15023623f7549e4cada61e970391efb" ResourceName="GameResources/88" />
+      <Asset Guid="c196f41eab9e64c4192e094152a79b2c" ResourceName="GameResources/62" />
+      <Asset Guid="c1e901c8683c1e64eabd02f8ae964485" ResourceName="GameResources/25" />
+      <Asset Guid="c26ae112bae4df64da9798603058e31b" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="c37b09af3a608c0429167e92dcde8c85" ResourceName="GameResources/13" />
+      <Asset Guid="c385b6cb465157b4d820c640b1e15165" ResourceName="GameResources/13" />
+      <Asset Guid="c4603bfc675c82c4c90b23935e6d2ade" ResourceName="GameResources/28" />
+      <Asset Guid="c4ae1af9e323b7d47b0b5d81d6c87528" ResourceName="Entity/Road" />
+      <Asset Guid="c522fbc8d809dd74b97e90164eb1ddba" ResourceName="GameResources/55" />
+      <Asset Guid="c5914d9b64d037d46be59d22350cf59a" ResourceName="GameResources/4" />
+      <Asset Guid="c592719d94f7fa747abb2e40568cef80" ResourceName="GameResources/5" />
+      <Asset Guid="c5ad41c72cf422543882960bcd623c42" ResourceName="GameResources/4" />
+      <Asset Guid="c62877170fd79004a8acd14744ef3b90" ResourceName="UI/Font/Materials" />
+      <Asset Guid="c6eb8bd6fb3fd2b4db6079ae74f613e9" ResourceName="GameResources/4" />
+      <Asset Guid="c74eed691d38277419c39db3c21f5fca" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="c778e8476c9b4e14a916190e372d38bf" ResourceName="GameResources/3" />
+      <Asset Guid="c81668d25ff00aa46b0e18427df60c0a" ResourceName="GameResources/15" />
+      <Asset Guid="c8176a16905124547911b0c8d80bd462" ResourceName="GameResources/13" />
+      <Asset Guid="c840287baf2e3884399e7cdda316f93c" ResourceName="GameResources/13" />
+      <Asset Guid="c870c7f5a07b88c4ea120bb93175a29b" ResourceName="GameResources/56" />
+      <Asset Guid="c924d4cf6c60a8c4b8bcda9389e8c140" ResourceName="Entity/Road" />
+      <Asset Guid="ca2c5459da6f97c4ca5e2a806ee6ae55" ResourceName="GameResources/84" />
+      <Asset Guid="ca3142eee8ad079499a58661ed6eee4e" ResourceName="GameResources/116" />
+      <Asset Guid="ca3ba396557dc0a41aa5460a51973119" ResourceName="Entity/Road" />
+      <Asset Guid="ca937958085a7d84eadfe441f47ec8c6" ResourceName="Entity/Road" />
+      <Asset Guid="cab15ce55bcfb8d4fa3b07ed58ea322a" ResourceName="Sound" />
+      <Asset Guid="cab82d36c8e5679438c7183f4b98824e" ResourceName="GameResources/11" />
+      <Asset Guid="cbbc9ba5e8dc9a044a2461d8cc9b9b88" ResourceName="GameResources/1" />
+      <Asset Guid="cccb24efdb508e549ab6c78537fa4fc2" ResourceName="Entity/Road" />
+      <Asset Guid="cd71682f250c18b41ab868a92c2b86a6" ResourceName="GameResources/98" />
+      <Asset Guid="cd94c6c14b73b904c92d2daaf84a913b" ResourceName="GameResources/57" />
+      <Asset Guid="cdcfc73e8f3dd3240b545ad668f3e7c8" ResourceName="GameResources/20" />
+      <Asset Guid="cde65208a87e86c47a5ef9c5e12e05b1" ResourceName="GameResources/34" />
+      <Asset Guid="cde724026d0e7e94bade0a75ab118651" ResourceName="GameResources/79" />
+      <Asset Guid="cdede921b1033dc47abb69160b0e9d6b" ResourceName="GameResources/52" />
+      <Asset Guid="ce4950464b5531d4aaf2365d37fe4f22" ResourceName="GameResources/13" />
+      <Asset Guid="cec86983a6fbd5c4baf5aa71d3486200" ResourceName="GameResources/62" />
+      <Asset Guid="cf01564e6de9c01479e76deb62fcef72" ResourceName="UI/Form" />
+      <Asset Guid="cf096730b7a23c44e845b387d0c82c48" ResourceName="GameResources/29" />
+      <Asset Guid="cf5492b89d2601b4a949a4637a463b8a" ResourceName="GameResources/13" />
+      <Asset Guid="d0d1c4d1d99637d48bcdbceb9d835e32" ResourceName="GameResources/55" />
+      <Asset Guid="d113c9ef3caf704448152af7ace6f3a4" ResourceName="GameResources/62" />
+      <Asset Guid="d168aee063e32a44c910e1a46cfc8e81" ResourceName="GameResources/13" />
+      <Asset Guid="d1cc9ee69c0a60a4bbefd980df01ecbe" ResourceName="UI/Sprites/Common" />
+      <Asset Guid="d20f8423b3ffd9a4c982287737474df3" ResourceName="GameResources/32" />
+      <Asset Guid="d248a3f4ffdc7d44e95f7345a942cfc5" ResourceName="GameResources/13" />
+      <Asset Guid="d34517aa28ce340409405bd6ade04cc0" ResourceName="UI/Form" />
+      <Asset Guid="d3bdc496014cc0241b5ba3e3a2858502" ResourceName="GameResources/19" />
+      <Asset Guid="d3ef967d504e17c47a53e7363336c4a7" ResourceName="GameResources/108" />
+      <Asset Guid="d45ed7d6a5bf95d468aa904470978807" ResourceName="GameResources/102" />
+      <Asset Guid="d50fe53b64a7ce74bbb39e4397587927" ResourceName="GameResources/16" />
+      <Asset Guid="d53502086f84b2b49a33f48c741aff90" ResourceName="Entity/Road" />
+      <Asset Guid="d5467f71f67887645b3a3a4a6e7fa73e" ResourceName="Entity/Road" />
+      <Asset Guid="d5afa0a7fa5a3d34c93e97fb74a96f9a" ResourceName="UI/Sprites/InMatch" />
+      <Asset Guid="d5df86271a36f3942acd97a0fc276697" ResourceName="GameResources/6" />
+      <Asset Guid="d7e7bee2c44a2bf429cdb75e3e27a96e" ResourceName="Entity/Road" />
+      <Asset Guid="d81a72dc39f95af40adea4078e463942" ResourceName="UI/Sprites/Battel" />
+      <Asset Guid="d83dcabe8c9bb114d9583f773dc91b0c" ResourceName="GameResources/13" />
+      <Asset Guid="d86e6f23939a5454d9efb8488a956a39" ResourceName="GameResources/13" />
+      <Asset Guid="d90c5965a08d0b941b8f602ee5274108" ResourceName="Shader" />
+      <Asset Guid="d9496d3dd13cf9649adbbbfe6312f388" ResourceName="GameResources/69" />
+      <Asset Guid="d94f40ee068f0334faf2d1aef070810b" ResourceName="GameResources/13" />
+      <Asset Guid="d9624ac92e5b65a4f8c35fe5b6834800" ResourceName="GameResources/15" />
+      <Asset Guid="d9ac7e60d8e9e634a833d4169a1cecb6" ResourceName="Entity/Road" />
+      <Asset Guid="da20717903e716c4cac44fe144ccb93f" ResourceName="GameResources/4" />
+      <Asset Guid="dafbf0190c865eb40bd74725c256b1c4" ResourceName="GameResources/5" />
+      <Asset Guid="db03e2dbe85f93b40a7252032f0a148a" ResourceName="GameResources/49" />
+      <Asset Guid="db125f50f24787e44aed84043658d4b4" ResourceName="GameResources/13" />
+      <Asset Guid="db42529263bd1a94b97bdb88803dc8ee" ResourceName="GameResources/27" />
+      <Asset Guid="db85b5c0668866148bff4c602a309874" ResourceName="GameResources/112" />
+      <Asset Guid="dbebd19f4ec728c48a8defc0d302a811" ResourceName="GameResources/13" />
+      <Asset Guid="dc2d0f2c02b7a0f4c9851603d3a3965b" ResourceName="Sound" />
+      <Asset Guid="dd81aecffcd86dd42ada241f4d0e20eb" ResourceName="Entity/Road" />
+      <Asset Guid="dda76695107f6cb40a885cb8fd7680fa" ResourceName="GameResources/91" />
+      <Asset Guid="de80d43dfccf4d1498b1fa1d66eebab2" ResourceName="Entity/Road" />
+      <Asset Guid="df7e9a4e7a7a71c4599c1d0bf35e449c" ResourceName="GameResources/13" />
+      <Asset Guid="dfb8cdc8e3886ac4aa87772cc58b2f60" ResourceName="GameResources/13" />
+      <Asset Guid="dfedb7a424cdee049910aeced42e0ce1" ResourceName="GameResources/46" />
+      <Asset Guid="e0bbe069e760fe542a5e22cd982df101" ResourceName="GameResources/4" />
+      <Asset Guid="e0dbc5900e15d874e9d106c0eba9a1f4" ResourceName="Sound" />
+      <Asset Guid="e0f857223debf46419e6957a6667977f" ResourceName="GameResources/51" />
+      <Asset Guid="e165adbc7e11f814187eaaa7aa91b7ae" ResourceName="GameResources/56" />
+      <Asset Guid="e16683beff8c056488af48318fa1c544" ResourceName="GameResources/44" />
+      <Asset Guid="e176a336005919745baed58177654799" ResourceName="Entity/Road" />
+      <Asset Guid="e1a1b1500188b064ca60c9c1f998e2dc" ResourceName="Sound" />
+      <Asset Guid="e1a5803370bb7ff40a433d64d988f2b5" ResourceName="GameResources/13" />
+      <Asset Guid="e251d313b7d68334788ad455a8be12c2" ResourceName="GameResources/42" />
+      <Asset Guid="e3c9f400899801241897f03aca805369" ResourceName="UI/Sprites/InMatch" />
+      <Asset Guid="e3eff336c3d23e14f8b3da2fa77c72b2" ResourceName="GameResources/131" />
+      <Asset Guid="e44fd157476793640ba620b346e6396a" ResourceName="GameResources/1" />
+      <Asset Guid="e49b44007ecc2694fa5b5cec52a49d6d" ResourceName="GameResources/46" />
+      <Asset Guid="e4cab051af7c8a5408f3f8c64ccfc3e5" ResourceName="GameResources/26" />
+      <Asset Guid="e5597bd22265e034c99967a309233a6c" ResourceName="GameResources/93" />
+      <Asset Guid="e57345b651e154143b8c2a30ff494c35" ResourceName="GameResources/64" />
+      <Asset Guid="e596262ce15159546bee887b77b37840" ResourceName="GameResources/13" />
+      <Asset Guid="e5e6d851a8f8bc047ba989c5b50a7b07" ResourceName="Entity/Road" />
+      <Asset Guid="e64337239e7a5164da5db6e01b167089" ResourceName="GameResources/16" />
+      <Asset Guid="e6de2629913edd24ab7a0f9609366b6b" ResourceName="GameResources/5" />
+      <Asset Guid="e77c2ee88ab14384bb46d6ecc88b6ce1" ResourceName="GameResources/12" />
+      <Asset Guid="e7a3121f186322641b473a76886741b9" ResourceName="GameResources/128" />
+      <Asset Guid="e834c64255fd15c40b554a13caf2d463" ResourceName="Entity/Road" />
+      <Asset Guid="e86b0817176425644802776ff7282b11" ResourceName="GameResources/13" />
+      <Asset Guid="e92c494aa125a9d4ca3ba30be5100e53" ResourceName="GameResources/22" />
+      <Asset Guid="e9a372a31b7d0d44f84ad0ac2e7f6e89" ResourceName="UI/Sprites/Shop" />
+      <Asset Guid="e9eba8538423a3e4b99189838ac4e2fa" ResourceName="GameResources/51" />
+      <Asset Guid="e9f3599e397ab9b43aab4e1f11e6e265" ResourceName="UI/Sprites/Guide" />
+      <Asset Guid="ea5a90e5a3cd87d40b9d258b6591f122" ResourceName="GameResources/46" />
+      <Asset Guid="ea6663fa5c9c95f4faabf93c0abc02f5" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="ea7efc69f671b924aba763fdbb0c0332" ResourceName="GameResources/124" />
+      <Asset Guid="eab27821433b2b44faf2c1356e7eca04" ResourceName="GameResources/110" />
+      <Asset Guid="eaed8b3abab44274397d031b507be9d7" ResourceName="UI/Form" />
+      <Asset Guid="eb426fb2454314742bdf0037afd2deba" ResourceName="GameResources/122" />
+      <Asset Guid="ebb8a54c979404442a73cb71ddac39f5" ResourceName="GameResources/13" />
+      <Asset Guid="ec21dadeaacf9c546871e8b9986c177a" ResourceName="Entity/Road" />
+      <Asset Guid="ec8c185b5cec2ff4daddfab3d718eaec" ResourceName="GameResources/19" />
+      <Asset Guid="ecfd11b020b46e84188d17d450ebfd40" ResourceName="GameResources/4" />
+      <Asset Guid="ed1ec86656ca0964c9db26d4b4dc364a" ResourceName="GameResources/57" />
+      <Asset Guid="ed4380e170e452a47a52b4b59c903a22" ResourceName="UI/Sprites/Race" />
+      <Asset Guid="ed49cc4955c039c45be50b1c31001796" ResourceName="Entity/Road" />
+      <Asset Guid="ed8cd4deb3addd84797330eff1512a2a" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="ede52daf0b32fe940978a2848da075be" ResourceName="GameResources/13" />
+      <Asset Guid="ee36e64691fa1e74280612a61b390957" ResourceName="GameResources/13" />
+      <Asset Guid="eeb5ff3ff868b1941905360ba6c5db96" ResourceName="GameResources/70" />
+      <Asset Guid="eeffd0cf0daf4784081f6afa803c51ab" ResourceName="GameResources/84" />
+      <Asset Guid="ef01a550f958c944caf664ac17117313" ResourceName="GameResources/107" />
+      <Asset Guid="ef78e8b475a018c418c65e77ca1bba43" ResourceName="GameResources/62" />
+      <Asset Guid="eff73808662241a47b29970efc3eb970" ResourceName="GameResources/17" />
+      <Asset Guid="f0bb8c6974292cd4c85432e232d87d64" ResourceName="GameResources/13" />
+      <Asset Guid="f0d7857ff83d43041bd64454497e46c0" ResourceName="Entity/Road" />
+      <Asset Guid="f0fb53bd38cb25942b7024056a17bfce" ResourceName="GameResources/89" />
+      <Asset Guid="f10ce2d053fed534690a7d3200cd457b" ResourceName="UI/Form" />
+      <Asset Guid="f1603f911e331094581f22f964a81c5c" ResourceName="Entity/Road" />
+      <Asset Guid="f1731baf8b343dc4b9061713a079385a" ResourceName="GameResources/47" />
+      <Asset Guid="f1934bf7b21d0024f8c1c99e9a0a3510" ResourceName="Entity/Road" />
+      <Asset Guid="f1993d6d5e6c89a4b84050ca8c270119" ResourceName="GameResources/4" />
+      <Asset Guid="f245504f03527df4ca32fdb6313d4370" ResourceName="GameResources/113" />
+      <Asset Guid="f2f20a2337fb21247ae212066c86a67e" ResourceName="Entity/Road" />
+      <Asset Guid="f35dd61373b58684499aea920b7ed3e6" ResourceName="Entity/Road" />
+      <Asset Guid="f381928101d40c147b62c15d7f31b9f6" ResourceName="Entity/Road" />
+      <Asset Guid="f3cc737c9677ed44a9b95ee481894e6b" ResourceName="GameResources/61" />
+      <Asset Guid="f4157102db727144bb7caca10763fcf7" ResourceName="GameResources/46" />
+      <Asset Guid="f449131aa12bbfc4c8178226401ff4f7" ResourceName="GameResources/101" />
+      <Asset Guid="f51933eb494484f4d8063306f8e74fde" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="f59e42ed28c06fd428f82ef9f64bcc65" ResourceName="GameResources/0" />
+      <Asset Guid="f5ba23bb4f50a9d4c950dab627fde178" ResourceName="Entity/Road" />
+      <Asset Guid="f5cc672422615264b89a336601aabcb5" ResourceName="GameResources/13" />
+      <Asset Guid="f5d53e89742eb0042ae84aae82d733e0" ResourceName="GameResources/13" />
+      <Asset Guid="f60d40a700974a747ad2c4bebae8201d" ResourceName="GameResources/123" />
+      <Asset Guid="f7860ada85269dd49a64790093da1ff2" ResourceName="GameResources/64" />
+      <Asset Guid="f7ca07878771c4f4182406e07864a4be" ResourceName="GameResources/49" />
+      <Asset Guid="f7cb6301b0633a44a95cfc219acec0cd" ResourceName="UI/Sprites/Shop" />
+      <Asset Guid="f80913423349e0c4ea8331820fd3825e" ResourceName="GameResources/52" />
+      <Asset Guid="f81670e48495fdc44b8465c9dff93766" ResourceName="UI/Sprites/Home" />
+      <Asset Guid="f89958b782afa114e956917476ff0ed9" ResourceName="GameResources/6" />
+      <Asset Guid="f8d24eae9705f1e45bdc5f6cfd033514" ResourceName="GameResources/46" />
+      <Asset Guid="f8e07ce26d853984f899c3c8a11319fb" ResourceName="GameResources/4" />
+      <Asset Guid="f8eac0d9fba12b7418e7c4f9f5bcb7bc" ResourceName="UI/Sprites/InMatch" />
+      <Asset Guid="f946439bff1779e45a107d041ee3d551" ResourceName="UI/Form" />
+      <Asset Guid="f990459f3c7bbff4d901605d969d9be9" ResourceName="GameResources/30" />
+      <Asset Guid="fab7c64b0ce9d694ab72ec25bc2e91bf" ResourceName="GameResources/13" />
+      <Asset Guid="fb3b6ff219ad8424794d364e4cc906a3" ResourceName="Entity/Road" />
+      <Asset Guid="fb7a68a1c98df074ca27ef417e164a64" ResourceName="GameResources/13" />
+      <Asset Guid="fb86f022b05024c489004a12585701a9" ResourceName="GameResources/96" />
+      <Asset Guid="fbc5e1e67af80f64d8a148b2383cff7d" ResourceName="GameResources/13" />
+      <Asset Guid="fc721d3dbfc6eb54b9266a66f81689c2" ResourceName="GameResources/13" />
+      <Asset Guid="fcd2f55364931d04b8fffbd7d4876f1b" ResourceName="GameResources/40" />
+      <Asset Guid="fcf02b107b6d2e24db54657da443324c" ResourceName="GameResources/74" />
+      <Asset Guid="fcf89d60ee1fa1e45ba83f5591fcf39a" ResourceName="UI/Sprites/Shop" />
+      <Asset Guid="fd744326112b83b4db709b99994c4a46" ResourceName="Entity/Road" />
+      <Asset Guid="fe78db9b0f067b24d87c429750bb8d8e" ResourceName="GameResources/12" />
+      <Asset Guid="fea72fedaecc9964c815b99a488ec98a" ResourceName="GameResources/38" />
+      <Asset Guid="fea9e07637fdab54cbaa0a07f9cad6ca" ResourceName="GameResources/24" />
+      <Asset Guid="ff4e9967da26d084eb14285e7cf150f1" ResourceName="GameResources/56" />
+      <Asset Guid="ffa2b3420705c99439602fac426f6598" ResourceName="UI/Form" />
+    </Assets>
+  </ResourceCollection>
+</UnityGameFramework>

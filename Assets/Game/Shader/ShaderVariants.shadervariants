@@ -1,0 +1,397 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShaderVariants
+  m_Shaders:
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: LIGHTPROBE_SH _DEPTH_NO_MSAA
+        passType: 0
+  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: UNITY_HDR_ON
+        passType: 0
+      - keywords: _SUNDISK_SIMPLE
+        passType: 0
+      - keywords: _DEPTH_NO_MSAA _SUNDISK_SIMPLE
+        passType: 0
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _SUNDISK_SIMPLE
+        passType: 0
+      - keywords: _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT _SUNDISK_SIMPLE
+        passType: 0
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT _SUNDISK_SIMPLE
+        passType: 0
+      - keywords: _ADDITIONAL_LIGHTS _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+          _SUNDISK_SIMPLE
+        passType: 0
+  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9101, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _DEPTH_NO_MSAA
+        passType: 0
+  - first: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA
+        passType: 0
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 0
+  - first: {fileID: 4800000, guid: 65df88701913c224d95fc554db28381a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: UNITY_HDR_ON
+        passType: 0
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA
+        passType: 0
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 0
+  - first: {fileID: 4800000, guid: e7857e9d0c934dc4f83f270f8447b006, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: UNITY_HDR_ON
+        passType: 0
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA
+        passType: 0
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 0
+  - first: {fileID: 4800000, guid: b4b78034333f1aa489572ceb4fe4d4cb, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: _METALLICSPECGLOSSMAP
+        passType: 8
+      - keywords: 
+        passType: 13
+      - keywords: _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: LIGHTPROBE_SH _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS
+        passType: 13
+      - keywords: UNITY_HDR_ON _ADDITIONAL_LIGHTS _DEPTH_NO_MSAA
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: _NORMALMAP
+        passType: 13
+      - keywords: _MAIN_LIGHT_SHADOWS _NORMALMAP
+        passType: 13
+      - keywords: _MAIN_LIGHT_SHADOWS _NORMALMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _NORMALMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _NORMALMAP
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS _NORMALMAP
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS _NORMALMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _NORMALMAP
+          _SHADOWS_SOFT
+        passType: 13
+      - keywords: _MAIN_LIGHT_SHADOWS _METALLICSPECGLOSSMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _METALLICSPECGLOSSMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: LIGHTPROBE_SH _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _METALLICSPECGLOSSMAP
+          _SHADOWS_SOFT
+        passType: 13
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _METALLICSPECGLOSSMAP
+          _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _METALLICSPECGLOSSMAP
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS _METALLICSPECGLOSSMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _METALLICSPECGLOSSMAP
+          _SHADOWS_SOFT
+        passType: 13
+  - first: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 8516d7a69675844a7a0b7095af7c46af, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 2ed7e4465efbc7945bba993c0775a9ae, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: aeacdc42c64af394c89b32e4a9ab09a4, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: _NORMALMAP
+        passType: 8
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _NORMALMAP
+        passType: 8
+      - keywords: 
+        passType: 13
+      - keywords: _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS
+        passType: 13
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _NORMALMAP _SHADOWS_SOFT
+        passType: 13
+  - first: {fileID: -6465566751694194690, guid: 8df1c98486bdc744488c84275c1c1dac, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 8
+  - first: {fileID: -6465566751694194690, guid: 0c819a7f83078544bb214e2aa445a96c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: _NORMALMAP
+        passType: 8
+      - keywords: _DEPTH_NO_MSAA _NORMALMAP
+        passType: 8
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _NORMALMAP
+        passType: 8
+      - keywords: 
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS_VERTEX
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS_VERTEX _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT
+        passType: 13
+      - keywords: _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _NORMALMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: LIGHTPROBE_SH _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _NORMALMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: UNITY_HDR_ON _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS _NORMALMAP _SHADOWS_SOFT
+        passType: 13
+      - keywords: LIGHTPROBE_SH _ADDITIONAL_LIGHTS _DEPTH_NO_MSAA _MAIN_LIGHT_SHADOWS
+          _NORMALMAP _SHADOWS_SOFT
+        passType: 13
+  - first: {fileID: 4800000, guid: a75505f7d5bbaa84088b6291efaf918c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 39a5bc6bf515b1248b9e50a3ae6bfcba, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d90c5965a08d0b941b8f602ee5274108, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 6e9596cfd6ebbd347a4c49ccc6506878, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
