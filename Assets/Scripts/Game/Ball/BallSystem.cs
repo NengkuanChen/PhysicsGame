@@ -44,5 +44,10 @@ namespace Game.Ball
             currentBall.transform.rotation = Quaternion.identity;
             currentBall.AddComponent(new BallFixComponent());
         }
+
+        public void OnGameStart()
+        {
+            currentBall.RemoveComponent(BallFixComponent.UniqueId);
+        }
     }
 }

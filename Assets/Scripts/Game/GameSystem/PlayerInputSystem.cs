@@ -20,9 +20,13 @@ namespace Game.GameSystem
         {
             base.OnEnable();
             playerInput = new PlayerInputAction();
-            playerInput.Enable();
-            playerInput.Player.Fire.performed += OnPlayerFire;
-            playerInput.Player1.BallMove.performed += OnDeviceRotate;
+#if UNITY_EDITOR
+            playerInput.Editor.Enable();
+            playerInput.Editor.Fire.performed += OnPlayerFire;
+            playerInput.Editor.BallMove.performed += OnPlayerMoveBall;
+#endif
+            
+            playerInput.Player.BallMove.performed += OnDeviceRotate;
         }
 
         private void OnPlayerFire(InputAction.CallbackContext context)
@@ -33,14 +37,20 @@ namespace Game.GameSystem
             }
         }
 
+        private void OnPlayerMoveBall(InputAction.CallbackContext context)
+        {
+            Log.Info($"{context.ReadValue<float>()}");
+        }
+
         private void OnDeviceRotate(InputAction.CallbackContext context)
         {
-            Debug.Log(context.valueType);
+            Log.Info(context.valueType);
         }
-        
+
         internal override void OnUpdate(float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(elapseSeconds, realElapseSeconds);
+            var deviceRot = playerInput.Player.BallMove.ReadValue<Quaternion>();
             
         }
     }

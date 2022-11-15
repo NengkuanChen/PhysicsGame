@@ -144,4 +144,24 @@ namespace Game.GameEvent
             return ReferencePool.Acquire<OnPlayerAttemptingFireCannonEventArgs>();
         }
     }
+
+    public class OnPlayerMoveBallEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public float Axis;
+
+        public static OnPlayerMoveBallEventArgs Create(float axis)
+        {
+            var arg = ReferencePool.Acquire<OnPlayerMoveBallEventArgs>();
+            arg.Axis = axis;
+            return arg;
+        }
+    }
 }

@@ -2,7 +2,7 @@
     "name": "PlayerInputAction",
     "maps": [
         {
-            "name": "Player",
+            "name": "Editor",
             "id": "21cc4b47-40de-4d6f-9121-578a1c6b5756",
             "actions": [
                 {
@@ -27,7 +27,7 @@
                     "name": "BallMove",
                     "type": "Value",
                     "id": "5c72d31c-5cda-4b0a-a284-27e09e7c1bae",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -92,7 +92,7 @@
             ]
         },
         {
-            "name": "Player1",
+            "name": "Player",
             "id": "62e71c4f-2e59-4c4d-be28-1eab748eeca6",
             "actions": [
                 {
