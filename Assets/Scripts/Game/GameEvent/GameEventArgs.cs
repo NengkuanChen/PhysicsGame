@@ -128,4 +128,20 @@ namespace Game.GameEvent
             return ReferencePool.Acquire<OnGameStartEventArgs>();
         }
     }
+
+    public class OnPlayerAttemptingFireCannonEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public static OnPlayerAttemptingFireCannonEventArgs Create()
+        {
+            return ReferencePool.Acquire<OnPlayerAttemptingFireCannonEventArgs>();
+        }
+    }
 }

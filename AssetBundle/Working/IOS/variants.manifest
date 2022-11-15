@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2157969797
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 15ddeceeb59531d74b1d2dc1749b8747
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0b5f42c69264dc7eff9c8b46e4a9e033
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: ecd53dce0c0a470e920c2ed23ec8a3e8, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/Variants/GameVariantSetting.asset
+Dependencies: []

@@ -22,13 +22,13 @@ namespace VisualProcedure.Runtime
                 {
                     return portId switch
                     {
-                        0 => new Game.VisualProcedure.MainMenuNode(){ ID = 2 },
+                        0 => new Game.VisualProcedure.PrototypeNode(){ ID = 3 },
                         _ => null
                     };
                 }
             },
             {
-                (typeof(Game.VisualProcedure.MainMenuNode), 2), portId =>
+                (typeof(Game.VisualProcedure.PrototypeNode), 3), portId =>
                 {
                     return portId switch
                     {

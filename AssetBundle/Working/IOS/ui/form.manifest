@@ -1,0 +1,54 @@
+ManifestFileVersion: 0
+CRC: 3096598356
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 09a3bf2c7674a63ec4336b0ccd0b114f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8c6944bb1b106365d336fc2f74ef274c
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2897c0bb2cff4739af33490fd5dfcae8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5fe694a716044e5ba7dcb369502030f8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 35253f7e587d43028faa2567c97d608e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eeb93cbad05a49a2b3eed99ffd5388d9, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.VertexGradient
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Assets/Game/UI/Form/BlackForm.prefab
+- Assets/Game/UI/Form/LoadingForm.prefab
+- Assets/Game/UI/Form/ControlForm.prefab
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/IOS/ui/font_base

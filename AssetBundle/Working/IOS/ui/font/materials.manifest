@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 3272202759
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ec9213e9ac7f808dee79c9268c070213
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 82515b3694a1e5beae009c48c1198c34
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/UI/Font/Materials/impact SDF_shadow_00000080.mat
+- Assets/Game/UI/Font/Materials/impact SDF_shadow_brown.mat
+- Assets/Game/UI/Font/Materials/impact SDF_shadow_stroke.mat
+- Assets/Game/UI/Font/Materials/impact SDF_shadow_00000050.mat
+- Assets/Game/UI/Font/Materials/impact SDF_shadow_0000005A.mat
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/IOS/shader
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/IOS/ui/font_base

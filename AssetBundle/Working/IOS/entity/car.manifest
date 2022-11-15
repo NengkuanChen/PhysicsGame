@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 342124048
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9799d1c432122e290d62f563c7710980
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4d5f17cf7ae80be3d236860ffa059187
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 778a3b355ba74aea85bdf68e969c2f6f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/Entity/Car/Car01.prefab
+Dependencies: []

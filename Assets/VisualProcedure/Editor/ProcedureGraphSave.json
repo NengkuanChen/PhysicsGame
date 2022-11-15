@@ -28,7 +28,7 @@
                 {
                     "flowOutPortId": 0,
                     "targetNodeList": [
-                        2
+                        3
                     ]
                 }
             ]
@@ -40,6 +40,20 @@
                 "y": -19.47826385498047
             },
             "nodeClassTypeName": "Game.VisualProcedure.MainMenuNode",
+            "flowOutPortInfoList": [
+                {
+                    "flowOutPortId": 0,
+                    "targetNodeList": []
+                }
+            ]
+        },
+        {
+            "nodeId": 3,
+            "positionInGraph": {
+                "x": 300.0005187988281,
+                "y": 125.7143783569336
+            },
+            "nodeClassTypeName": "Game.VisualProcedure.PrototypeNode",
             "flowOutPortInfoList": [
                 {
                     "flowOutPortId": 0,

@@ -1,0 +1,47 @@
+ManifestFileVersion: 0
+CRC: 4001559153
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c6ad9507ba975ce637322463f6c737b0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 77ae1e857ed9523d820ac6e5007f9290
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 1a122d0414dc4c24bbb3d2f47bc30092, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8e2c60a6a8a54982b54e6b5cc66bce85, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e8f501605093457ba3f3b04614b37c69, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eacb54db5b074b5fb498d791adf0a8f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4cc1210badc041be938ff31ecc90af9e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5dbb49debacb40e9aeefe446ed770c93, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: Game.Setting.QualitySetting/QualityConfig
+- AssemblyName: Unity.InputSystem
+  ClassName: UnityEngine.InputSystem.InputAction
+- AssemblyName: Unity.InputSystem
+  ClassName: UnityEngine.InputSystem.InputActionMap
+- AssemblyName: Unity.InputSystem
+  ClassName: UnityEngine.InputSystem.InputBinding
+Assets:
+- Assets/Game/Setting/GameSetting.asset
+- Assets/Game/Setting/QualitySetting.asset
+- Assets/Game/Setting/ReportSetting.asset
+- Assets/Game/Setting/PlayerInputAction.inputactions
+- Assets/Game/Setting/CannonSetting.asset
+- Assets/Game/Setting/AdvertisementSetting.asset
+- Assets/Game/Setting/PlatformSetting.asset
+Dependencies: []

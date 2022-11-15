@@ -33,7 +33,7 @@ namespace Game
             cameraData = camera.GetUniversalAdditionalCameraData();
 
             //宽屏两边加黑边
-            // CommonUtility.CameraRectAdapte(camera);
+            CommonUtility.CameraRectAdapte(camera);
         }
 
         private void OnDisable()

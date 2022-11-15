@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using FlatNode.Runtime;
+using Game.Ball;
 using Game.Car;
 using Game.Entity;
 using Game.GameCamera;
@@ -31,10 +32,15 @@ namespace Game.VisualProcedure
         {
             LoadingForm loadingForm = await UIUtility.OpenFormAsync<LoadingForm>(LoadingForm.UniqueId);
             //载入场景
-            await SceneUtility.LoadSceneAsync("MainMenuScene");
-            
+            await SceneUtility.LoadSceneAsync("Prototype");
+            var cameraSystem = new GameCameraSystem();
+            // var cannonSystem = new CannonSystem();
+            await cameraSystem.LoadCameraAsync();
+            // await cannonSystem.LoadCannonAsync();
+            new PlayerInputSystem();
+            var ballSystem = new BallSystem();
+            await ballSystem.LoadBallEntityAsync();
             UIUtility.CloseForm(LoadingForm.UniqueId);
-            var camera = await EntityUtility.ShowEntityAsync<CameraEntity>("Camera/GameCamera", EntityGroupName.Camera);
             ExitProcedure(FlowOutPort.LoadComplete);
             
             

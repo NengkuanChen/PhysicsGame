@@ -56,11 +56,11 @@ namespace Game.Utility
             }
 
             //宽屏两边加黑边
-            // if (IsWidthScreen)
-            // {
-            //     var width = Screen.height * (1080f / 1920f) / Screen.width;
-            //     c.rect = new Rect((1f - width) * .5f, 0f, width, 1f);
-            // }
+            if (IsWidthScreen)
+            {
+                var width = Screen.height * (1080f / 1920f) / Screen.width;
+                c.rect = new Rect((1f - width) * .5f, 0f, width, 1f);
+            }
         }
 
         public static void RestoreCameraRect(Camera c)

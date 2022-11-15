@@ -22,7 +22,7 @@ namespace Game.UI.Form
         protected override void OnOpen(object userData)
         {
             base.OnOpen(userData);
-            startButton.onClick.AddListener(()=> Framework.EventComponent.Fire(this,OnGameStartEventArgs.Create()));
+            // startButton.onClick.AddListener(()=> Framework.EventComponent.Fire(this,OnGameStartEventArgs.Create()));
         }
     }
 }

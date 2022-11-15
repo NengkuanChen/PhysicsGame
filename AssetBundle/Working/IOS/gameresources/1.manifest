@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3644281419
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f7e306511dba48c814aa9e861e38ca57
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9373241baafe7684daf662ef4780ff70
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/GameResources/Materials/Blue.mat
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/IOS/shader

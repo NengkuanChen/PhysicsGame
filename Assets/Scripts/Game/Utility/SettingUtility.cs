@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Game.Advertisement;
+using Game.PlatForm;
 using Game.Report;
 using Game.Setting;
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace Game.Utility
         public static QualitySetting QualitySetting { get; private set; }
         public static ReportSetting ReportSetting { get; private set; }
         public static AdvertisementSetting AdvertisementSetting { get; private set; }
+        
+        public static PlatformSetting PlatformSetting { get; private set; }
 
         public static async UniTask LoadSettingsAsync()
         {
@@ -22,6 +25,7 @@ namespace Game.Utility
                 ResourceUtility.LoadAssetAsync<ScriptableObject>("Setting/QualitySetting.asset"),
                 ResourceUtility.LoadAssetAsync<ScriptableObject>("Setting/ReportSetting.asset"),
                 ResourceUtility.LoadAssetAsync<ScriptableObject>("Setting/AdvertisementSetting.asset"),
+                ResourceUtility.LoadAssetAsync<ScriptableObject>("Setting/PlatformSetting.asset"),
             };
 
             var results = await UniTask.WhenAll(loadTasks);
@@ -31,6 +35,7 @@ namespace Game.Utility
             QualitySetting = results[index++] as QualitySetting;
             ReportSetting = results[index++] as ReportSetting;
             AdvertisementSetting = results[index++] as AdvertisementSetting;
+            PlatformSetting = results[index++] as PlatformSetting;
         }
     }
 }

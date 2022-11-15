@@ -2,8 +2,8 @@
 <UnityGameFramework>
   <ResourceBuilder>
     <Settings>
-      <InternalResourceVersion>81</InternalResourceVersion>
-      <Platforms>32</Platforms>
+      <InternalResourceVersion>82</InternalResourceVersion>
+      <Platforms>16</Platforms>
       <ZipSelected>True</ZipSelected>
       <UncompressedAssetBundleSelected>False</UncompressedAssetBundleSelected>
       <DisableWriteTypeTreeSelected>False</DisableWriteTypeTreeSelected>
@@ -16,7 +16,7 @@
       <OutputFullSelected>False</OutputFullSelected>
       <OutputPackedSelected>False</OutputPackedSelected>
       <BuildEventHandlerTypeName>None</BuildEventHandlerTypeName>
-      <OutputDirectory>D:/UnityProjects/SuperCrossRace_git/AssetBundle</OutputDirectory>
+      <OutputDirectory>C:/Users/cnk99/PhysicsGame/AssetBundle</OutputDirectory>
     </Settings>
   </ResourceBuilder>
 </UnityGameFramework>

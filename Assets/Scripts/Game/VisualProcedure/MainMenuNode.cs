@@ -18,7 +18,7 @@ namespace Game.VisualProcedure
         public override void OnEnter(NodeTransitionParameter parameter)
         {
             base.OnEnter(parameter);
-            Framework.EventComponent.Subscribe(OnGameStartEventArgs.UniqueId, OnGameStartButtonClicked);
+            // Framework.EventComponent.Subscribe(OnGameStartEventArgs.UniqueId, OnGameStartButtonClicked);
         }
 
 
@@ -30,7 +30,7 @@ namespace Game.VisualProcedure
         public override void OnExit()
         {
             base.OnExit();
-            Framework.EventComponent.Unsubscribe(OnGameStartEventArgs.UniqueId, OnGameStartButtonClicked);
+            // Framework.EventComponent.Unsubscribe(OnGameStartEventArgs.UniqueId, OnGameStartButtonClicked);
         }
     }
 }

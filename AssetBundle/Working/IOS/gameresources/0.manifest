@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3821979090
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a3fa6ff6ee38a5bda64545faa45be9a0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9373241baafe7684daf662ef4780ff70
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/GameResources/Materials/Ball.mat
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/IOS/shader

@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 1389166358
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dfe958f2bfdb016bb4afbda8539e6049
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ad29ace5dd2beb3b4352bdf164fbb2d4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/Entity/Ball/BallEntity.prefab
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/IOS/gameresources/0

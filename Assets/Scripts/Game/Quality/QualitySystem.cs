@@ -194,10 +194,10 @@ namespace Game.Quality
             Log.Info($"screen width:{Screen.width}, screen height: {Screen.height}");
             var screenWidth = Screen.width;
             //需要考虑到相机渲染范围会变化（宽屏两边会加黑边）
-            // if (CommonUtility.IsWidthScreen)
-            // {
-            //     screenWidth = Mathf.RoundToInt(screenWidth * CommonUtility.WidthScreenWidthScale);
-            // }
+            if (CommonUtility.IsWidthScreen)
+            {
+                screenWidth = Mathf.RoundToInt(screenWidth * CommonUtility.WidthScreenWidthScale);
+            }
 
             var uiRenderOutputSize = new Vector2(screenWidth, Screen.height);
             uiRenderOutputSize *= urpAsset.renderScale;

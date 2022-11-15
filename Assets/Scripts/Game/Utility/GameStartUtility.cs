@@ -79,6 +79,9 @@ namespace Game.Utility
             {
                 Framework.EntityComponent.AddEntityGroup(EntityGroupName.Car, 10f, 5, 60, 0);
                 Framework.EntityComponent.AddEntityGroup(EntityGroupName.Camera, 10f, 1, 60, 0);
+                Framework.EntityComponent.AddEntityGroup(EntityGroupName.Cannon, 10f, 2, 60, 0);
+                Framework.EntityComponent.AddEntityGroup(EntityGroupName.Ball, 10f, 2, 60, 0);
+                Framework.EntityComponent.AddEntityGroup(EntityGroupName.Platform, 10f, 4, 60, 0);
             }
 
             if (Framework.UiComponent != null)
