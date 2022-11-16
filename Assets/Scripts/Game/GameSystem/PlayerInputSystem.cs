@@ -50,8 +50,8 @@ namespace Game.GameSystem
         internal override void OnUpdate(float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(elapseSeconds, realElapseSeconds);
-            var deviceRot = playerInput.Player.BallMove.ReadValue<Quaternion>();
-            
+            var deviceRot = playerInput.Player.BallMove.ReadValue<Vector3>();
+            Debug.Log(deviceRot);
         }
     }
 }
