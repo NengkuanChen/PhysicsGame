@@ -1,0 +1,73 @@
+ManifestFileVersion: 0
+CRC: 69007179
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: entity/ball
+      Dependencies:
+        Dependency_0: gameresources/0
+        Dependency_1: gameresources/2
+        Dependency_2: gameresources/4
+        Dependency_3: setting
+    Info_1:
+      Name: entity/camera
+      Dependencies: {}
+    Info_2:
+      Name: entity/cannon
+      Dependencies:
+        Dependency_0: gameresources/1
+        Dependency_1: setting
+    Info_3:
+      Name: entity/car
+      Dependencies: {}
+    Info_4:
+      Name: entity/platform
+      Dependencies:
+        Dependency_0: gameresources/1
+        Dependency_1: gameresources/3
+    Info_5:
+      Name: gameresources/0
+      Dependencies:
+        Dependency_0: shader
+    Info_6:
+      Name: gameresources/1
+      Dependencies:
+        Dependency_0: shader
+    Info_7:
+      Name: gameresources/2
+      Dependencies:
+        Dependency_0: shader
+    Info_8:
+      Name: gameresources/3
+      Dependencies:
+        Dependency_0: shader
+    Info_9:
+      Name: gameresources/4
+      Dependencies:
+        Dependency_0: shader
+    Info_10:
+      Name: scene
+      Dependencies:
+        Dependency_0: gameresources/1
+    Info_11:
+      Name: setting
+      Dependencies: {}
+    Info_12:
+      Name: shader
+      Dependencies: {}
+    Info_13:
+      Name: ui/font/materials
+      Dependencies:
+        Dependency_0: shader
+        Dependency_1: ui/font_base
+    Info_14:
+      Name: ui/font_base
+      Dependencies:
+        Dependency_0: shader
+    Info_15:
+      Name: ui/form
+      Dependencies:
+        Dependency_0: ui/font_base
+    Info_16:
+      Name: variants
+      Dependencies: {}

@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3416014703
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e805366cdf6474cd955c2e861d683100
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9373241baafe7684daf662ef4780ff70
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/GameResources/Materials/Blue.mat
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/shader

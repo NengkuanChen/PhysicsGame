@@ -1,0 +1,49 @@
+ManifestFileVersion: 0
+CRC: 3785183591
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3349a1ebfe3790ae84503bea19096ec3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8bf740f2b788a5322d459fe3ebe80f03
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 95608f0ed4314caf8191cdad999bd854, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d8acfceb36cf43f282a0e861c4263898, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 74d7a170ae6a47a7a4c267f920958e80, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0839ba99086b4149a013688a497035c5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 134
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/Entity/Ball/IronBall.prefab
+- Assets/Game/Entity/Ball/WoodBall.prefab
+- Assets/Game/Entity/Ball/PlasticBall.prefab
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/gameresources/0
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/gameresources/2
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/gameresources/4
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/setting

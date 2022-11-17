@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 330957885
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bab63d257cd7f33e6935d135ad753f98
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 457c28fc8edceddcd7378a32e643a2e9
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ab0271b0b3374e6cb85647f7a700f39e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 876f5f787e20cf64da75f05347adf706, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/Entity/Camera/GameCamera.prefab
+Dependencies: []

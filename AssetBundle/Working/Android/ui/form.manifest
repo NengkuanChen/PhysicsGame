@@ -1,0 +1,85 @@
+ManifestFileVersion: 0
+CRC: 468418975
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3966db6d255ad848ce05cad71868779c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d5e88257194ebf5e4ad687f8d92c4f92
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2897c0bb2cff4739af33490fd5dfcae8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5fe694a716044e5ba7dcb369502030f8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 35253f7e587d43028faa2567c97d608e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eeb93cbad05a49a2b3eed99ffd5388d9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1e08d752393249fabb8a62b92b0555f5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e0adecd8af9a47628a182133ed4e66b3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b9f4f43f1747462ea91e2a850dad89f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 80845caf824a4a5db9d36ffafffd52b9, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.VertexGradient
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.AnimationTriggers
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Button/ButtonClickedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.ColorBlock
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Navigation
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Slider/SliderEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.SpriteState
+Assets:
+- Assets/Game/UI/Form/EditorTestingControlForm.prefab
+- Assets/Game/UI/Form/RotateTestForm.prefab
+- Assets/Game/UI/Form/BlackForm.prefab
+- Assets/Game/UI/Form/LoadingForm.prefab
+- Assets/Game/UI/Form/ControlForm.prefab
+- Assets/Game/UI/Form/WaitingStartForm.prefab
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/ui/font_base

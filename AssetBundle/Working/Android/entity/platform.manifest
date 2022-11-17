@@ -1,0 +1,44 @@
+ManifestFileVersion: 0
+CRC: 1494440948
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a8926df6e37661d7b62f2bbc48eabb81
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 216cc74f40d2b18f00dade6947a6e975
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 59
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 778e50227d7440b0994054ba75745516, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 282ce3874bb740ddb639dfb455a41767, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/Entity/Platform/FixedPlatform.prefab
+- Assets/Game/Entity/Platform/SeeSawPlatform.prefab
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/gameresources/1
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/gameresources/3

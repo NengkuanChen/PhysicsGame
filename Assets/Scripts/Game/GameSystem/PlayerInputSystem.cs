@@ -30,11 +30,7 @@ namespace Game.GameSystem
             playerInputSetting = SettingUtility.PlayerInputSetting;
             playerInput = new PlayerInputAction();
 #if UNITY_EDITOR
-            // playerInput.Editor.Enable();
-            // playerInput.Editor.Fire.performed += OnPlayerTap;
-            // playerInput.Editor.BallMove.performed += OnPlayerMoveBallEditor;
             Framework.EventComponent.Subscribe(OnEditorPlayerMoveBallEventArgs.UniqueId, OnPlayerMoveBallEditor);
-
 #else
             playerInput.Player.Enable();
             InputSystem.EnableDevice(Gyroscope.current);
@@ -59,6 +55,7 @@ namespace Game.GameSystem
             deviceRotate = deviceRotate > 180 ? deviceRotate - 360 : deviceRotate;
             deviceRotate = Mathf.Clamp(deviceRotate, -playerInputSetting.MaxDeviceInputAngle,
                 playerInputSetting.MaxDeviceInputAngle);
+            // Log.Info(deviceRotate);
         }
 
         private void OnPlayerMoveBallEditor(object sender, GameEventArgs e)
@@ -70,16 +67,13 @@ namespace Game.GameSystem
         private void OnDeviceRotate(InputAction.CallbackContext context)
         {
             // Log.Info(context.ReadValue<Quaternion>().eulerAngles);
+            
         }
-
-
+        
         internal override void OnDisable()
         {
             base.OnDisable();
 #if UNITY_EDITOR
-            // playerInput.Editor.Disable();
-            // playerInput.Editor.Fire.performed -= OnPlayerTap;
-            // playerInput.Editor.BallMove.performed -= OnPlayerMoveBallEditor;
             Framework.EventComponent.Unsubscribe(OnEditorPlayerMoveBallEventArgs.UniqueId, OnPlayerMoveBallEditor);
 #endif
         }

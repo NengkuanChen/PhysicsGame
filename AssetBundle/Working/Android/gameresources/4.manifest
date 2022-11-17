@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1561630260
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c27f4964f3e1351674650292e37e244e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f6fa77478f436e06ce601a3db2e4b767
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 134
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/GameResources/PhysicsMaterial/WoodBall.physicMaterial
+- Assets/Game/GameResources/Materials/Wood.mat
+Dependencies:
+- C:/Users/cnk99/PhysicsGame/AssetBundle/Working/Android/shader

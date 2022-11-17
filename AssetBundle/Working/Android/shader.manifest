@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 3262503866
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bf8e6ff7aeb3d62163196ab4adb2883d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7a5c676dbdd801c041f5d3c2995e9aec
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 200
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Game/Shader/Particle/Mobile-Particle-Alpha.shader
+- Assets/Game/Shader/Particle/Mobile-Particle-Multiply.shader
+- Assets/Game/Shader/SpriteUnlit.shader
+- Assets/Game/Shader/Lit.shader
+- Assets/Game/Shader/GrayUI.shader
+- Assets/Game/Shader/Particle/Mobile-Particle-Add.shader
+- Assets/Game/Shader/Unlit.shader
+- Assets/Game/Shader/SimpleLit.shader
+- Assets/Game/Shader/UIGray.mat
+- Assets/Game/Shader/ShaderVariants.shadervariants
+- Assets/Game/Shader/Font/TMP_SDF-Mobile SSD.shader
+- Assets/Game/Shader/Font/TMP_SDF-Mobile.shader
+- Assets/Game/Shader/Font/TMP_SDF-Mobile Masking.shader
+- Assets/Game/Shader/Font/TMP_SDF-Mobile Overlay.shader
+Dependencies: []

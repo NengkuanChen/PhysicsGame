@@ -1,0 +1,55 @@
+ManifestFileVersion: 0
+CRC: 1433942997
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d53fe21ad67ae60a7f6c62d001af52c4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 96ee6cf86c5ad730769d64f946b6551a
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 1a122d0414dc4c24bbb3d2f47bc30092, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8e2c60a6a8a54982b54e6b5cc66bce85, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e8f501605093457ba3f3b04614b37c69, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eacb54db5b074b5fb498d791adf0a8f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4cc1210badc041be938ff31ecc90af9e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 95608f0ed4314caf8191cdad999bd854, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5dbb49debacb40e9aeefe446ed770c93, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f36f4687bef8400e834b5c0693ac30f7, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: Game.Setting.QualitySetting/QualityConfig
+- AssemblyName: Unity.InputSystem
+  ClassName: UnityEngine.InputSystem.InputAction
+- AssemblyName: Unity.InputSystem
+  ClassName: UnityEngine.InputSystem.InputActionMap
+- AssemblyName: Unity.InputSystem
+  ClassName: UnityEngine.InputSystem.InputBinding
+Assets:
+- Assets/Game/Setting/PlayerInputSetting.asset
+- Assets/Game/Setting/GameSetting.asset
+- Assets/Game/Setting/WoodBallSetting.asset
+- Assets/Game/Setting/QualitySetting.asset
+- Assets/Game/Setting/IronBallSetting.asset
+- Assets/Game/Setting/ReportSetting.asset
+- Assets/Game/Setting/PlayerInputAction.inputactions
+- Assets/Game/Setting/CannonSetting.asset
+- Assets/Game/Setting/AdvertisementSetting.asset
+- Assets/Game/Setting/PlasticBallSetting.asset
+- Assets/Game/Setting/PlatformSetting.asset
+Dependencies: []

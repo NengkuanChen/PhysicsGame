@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameFramework>
+  <BuildReport>
+    <Summary>
+      <ProductName>Prototype</ProductName>
+      <CompanyName>TrippleBStudio</CompanyName>
+      <GameIdentifier>com.TrippleBStudio.Prototype</GameIdentifier>
+      <GameFrameworkVersion>2020.12.31</GameFrameworkVersion>
+      <UnityVersion>2021.3.6f1</UnityVersion>
+      <ApplicableGameVersion>0.0.1</ApplicableGameVersion>
+      <InternalResourceVersion>97</InternalResourceVersion>
+      <Platforms>Android</Platforms>
+      <ZipSelected>True</ZipSelected>
+      <BuildAssetBundleOptions>272</BuildAssetBundleOptions>
+    </Summary>
+    <Resources Count="15">
+      <Resource Name="Entity/Ball" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="e483e9895a10b06469f1758cf802878a" Name="Assets/Game/Entity/Ball/BallEntity.prefab" Length="3811" HashCode="-265969257">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/Game/GameResources/Materials/Ball.mat" />
+              <DependencyAsset Name="Assets/Game/Setting/BallSetting.asset" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="4055" HashCode="-520638172" ZipLength="4055" ZipHashCode="-520638172" />
+        </Codes>
+      </Resource>
+      <Resource Name="Entity/Camera" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="b56b31fa7e5562b4d9e4846f990c2a6f" Name="Assets/Game/Entity/Camera/GameCamera.prefab" Length="4672" HashCode="-1595081423" />
+        </Assets>
+        <Codes>
+          <Android Length="4069" HashCode="913051142" ZipLength="4069" ZipHashCode="913051142" />
+        </Codes>
+      </Resource>
+      <Resource Name="Entity/Cannon" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="f2bb3e366b522504b84bab90a103d51b" Name="Assets/Game/Entity/Cannon/Cannon.prefab" Length="11926" HashCode="120275136">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/Game/GameResources/Materials/Blue.mat" />
+              <DependencyAsset Name="Assets/Game/Setting/CannonSetting.asset" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="37566" HashCode="-1825250792" ZipLength="37566" ZipHashCode="-1825250792" />
+        </Codes>
+      </Resource>
+      <Resource Name="Entity/Car" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="aae84bdfbfa12ea4aa8315024f52364e" Name="Assets/Game/Entity/Car/Car01.prefab" Length="2822" HashCode="331985252" />
+        </Assets>
+        <Codes>
+          <Android Length="66328" HashCode="-1217229473" ZipLength="66328" ZipHashCode="-1217229473" />
+        </Codes>
+      </Resource>
+      <Resource Name="Entity/Platform" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="2">
+          <Asset Guid="05bb29ea9478ed740ac8b4de2f7eb4aa" Name="Assets/Game/Entity/Platform/SeeSawPlatform.prefab" Length="7461" HashCode="424917863">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/GameResources/Materials/Red.mat" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="628d2adf3d29ca445b2abc72043129ce" Name="Assets/Game/Entity/Platform/FixedPlatform.prefab" Length="3751" HashCode="-971296950">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/GameResources/Materials/Blue.mat" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="68366" HashCode="2027293328" ZipLength="68366" ZipHashCode="2027293328" />
+        </Codes>
+      </Resource>
+      <Resource Name="GameResources/0" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="d224a92008926a94fa83c8ebc1535a10" Name="Assets/Game/GameResources/Materials/Ball.mat" Length="3424" HashCode="1942575183">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/Shader/Lit.shader" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="2850" HashCode="1173140863" ZipLength="2850" ZipHashCode="1173140863" />
+        </Codes>
+      </Resource>
+      <Resource Name="GameResources/1" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="07cba2e50cb2209449d8d9dd7a5581a0" Name="Assets/Game/GameResources/Materials/Blue.mat" Length="3426" HashCode="2096893919">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/Shader/Lit.shader" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="2822" HashCode="1525149322" ZipLength="2822" ZipHashCode="1525149322" />
+        </Codes>
+      </Resource>
+      <Resource Name="GameResources/2" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="325317f1c5160f348b45a8b9b9a398e0" Name="Assets/Game/GameResources/Materials/Red.mat" Length="3425" HashCode="1392651671">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/Shader/Lit.shader" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="2849" HashCode="-1135407156" ZipLength="2849" ZipHashCode="-1135407156" />
+        </Codes>
+      </Resource>
+      <Resource Name="Scene" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="3">
+          <Asset Guid="35f44114bfc3b9c418089f37ca492420" Name="Assets/Game/Scene/Prototype.unity" Length="18900" HashCode="1058616156">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/GameResources/Materials/Blue.mat" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="37ecff71e21b62d4d930a7059bfed425" Name="Assets/Game/Scene/MainMenuScene.unity" Length="9414" HashCode="1044882325" />
+          <Asset Guid="d5fbb8e0930873e4da54748fc070b75c" Name="Assets/Game/Scene/Game.unity" Length="9079" HashCode="-140445374" />
+        </Assets>
+        <Codes>
+          <Android Length="203089" HashCode="784747318" ZipLength="203089" ZipHashCode="784747318" />
+        </Codes>
+      </Resource>
+      <Resource Name="Setting" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="8">
+          <Asset Guid="071808ee7d0ebb749ba51bf2ac41a2f6" Name="Assets/Game/Setting/GameSetting.asset" Length="400" HashCode="-41842821" />
+          <Asset Guid="16b283fd703a61640854c5208e8733ba" Name="Assets/Game/Setting/PlatformSetting.asset" Length="421" HashCode="-1531409463" />
+          <Asset Guid="269ac9e0bfc88464d8e3abcd189d4405" Name="Assets/Game/Setting/CannonSetting.asset" Length="438" HashCode="1965392603" />
+          <Asset Guid="5e2afd3eb5a4f7b42aabaa9aa16c05c6" Name="Assets/Game/Setting/BallSetting.asset" Length="415" HashCode="339333132" />
+          <Asset Guid="5fd535272d2bdbb459fb8d6be1ae8203" Name="Assets/Game/Setting/ReportSetting.asset" Length="496" HashCode="456008290" />
+          <Asset Guid="9072fc05d84b4ff4da0c2a919463d089" Name="Assets/Game/Setting/PlayerInputAction.inputactions" Length="6764" HashCode="-2020199441" />
+          <Asset Guid="ebac9cca85aec5d4ca421372a454e7d2" Name="Assets/Game/Setting/QualitySetting.asset" Length="837" HashCode="1012981582" />
+          <Asset Guid="f9c2744c4487cdb469cd4b29cccaaaaf" Name="Assets/Game/Setting/AdvertisementSetting.asset" Length="662" HashCode="-1855898935" />
+        </Assets>
+        <Codes>
+          <Android Length="5876" HashCode="-1469587008" ZipLength="5876" ZipHashCode="-1469587008" />
+        </Codes>
+      </Resource>
+      <Resource Name="Shader" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="14">
+          <Asset Guid="06a48619949e84d45bc396ab18463577" Name="Assets/Game/Shader/UIGray.mat" Length="1033" HashCode="1328481005">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/Shader/GrayUI.shader" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="319fef60ff2174c46acb37455138ab1c" Name="Assets/Game/Shader/SpriteUnlit.shader" Length="2133" HashCode="635360697" />
+          <Asset Guid="39a5bc6bf515b1248b9e50a3ae6bfcba" Name="Assets/Game/Shader/Font/TMP_SDF-Mobile SSD.shader" Length="3071" HashCode="-1995836967" />
+          <Asset Guid="4b90488410ed8c140b7af3cf459bf3e5" Name="Assets/Game/Shader/Unlit.shader" Length="9595" HashCode="-742889759" />
+          <Asset Guid="65b0c6eb7795ef745900fded25f3d02a" Name="Assets/Game/Shader/GrayUI.shader" Length="5263" HashCode="890380817" />
+          <Asset Guid="6a92be642386ab7428c120e90183100b" Name="Assets/Game/Shader/Particle/Mobile-Particle-Alpha.shader" Length="2483" HashCode="-1614776794" />
+          <Asset Guid="6e9596cfd6ebbd347a4c49ccc6506878" Name="Assets/Game/Shader/Font/TMP_SDF-Mobile Overlay.shader" Length="7643" HashCode="1081359542" />
+          <Asset Guid="7e8b53cd25392394287b52873d478d41" Name="Assets/Game/Shader/ShaderVariants.shadervariants" Length="11510" HashCode="-612088245">
+            <DependencyAssets Count="6">
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile Masking.shader" />
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile Overlay.shader" />
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile SSD.shader" />
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile.shader" />
+              <DependencyAsset Name="Assets/Game/Shader/Lit.shader" />
+              <DependencyAsset Name="Assets/Game/Shader/SimpleLit.shader" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="878bb6fc52cf4004fad06c0c7ec7cd64" Name="Assets/Game/Shader/Particle/Mobile-Particle-Multiply.shader" Length="2441" HashCode="1519369342" />
+          <Asset Guid="98b089e3c83007f40808733b09f50ca0" Name="Assets/Game/Shader/Particle/Mobile-Particle-Add.shader" Length="3229" HashCode="1807895249" />
+          <Asset Guid="a75505f7d5bbaa84088b6291efaf918c" Name="Assets/Game/Shader/Font/TMP_SDF-Mobile Masking.shader" Length="7822" HashCode="-1974890133" />
+          <Asset Guid="aeacdc42c64af394c89b32e4a9ab09a4" Name="Assets/Game/Shader/SimpleLit.shader" Length="18808" HashCode="-473809545" />
+          <Asset Guid="b4b78034333f1aa489572ceb4fe4d4cb" Name="Assets/Game/Shader/Lit.shader" Length="23301" HashCode="-1024238868" />
+          <Asset Guid="d90c5965a08d0b941b8f602ee5274108" Name="Assets/Game/Shader/Font/TMP_SDF-Mobile.shader" Length="7674" HashCode="473699191" />
+        </Assets>
+        <Codes>
+          <Android Length="1623225" HashCode="2011185109" ZipLength="1623225" ZipHashCode="2011185109" />
+        </Codes>
+      </Resource>
+      <Resource Name="UI/Font/Materials" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="5">
+          <Asset Guid="2856a34e2d1c2be4c9377462138be63b" Name="Assets/Game/UI/Font/Materials/impact SDF_shadow_brown.mat" Length="3241" HashCode="-461596980">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile.shader" />
+              <DependencyAsset Name="Assets/Game/UI/Font/impact SDF.asset" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="2dcd1f3c9c3bbb64d8574406965848dd" Name="Assets/Game/UI/Font/Materials/impact SDF_shadow_stroke.mat" Length="3189" HashCode="463342312">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile.shader" />
+              <DependencyAsset Name="Assets/Game/UI/Font/impact SDF.asset" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="5e1aad114ac85014d886b26171a12f3a" Name="Assets/Game/UI/Font/Materials/impact SDF_shadow_00000050.mat" Length="3169" HashCode="38327071">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile.shader" />
+              <DependencyAsset Name="Assets/Game/UI/Font/impact SDF.asset" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="6f55cc93a876edf4db29865861f28304" Name="Assets/Game/UI/Font/Materials/impact SDF_shadow_0000005A.mat" Length="3169" HashCode="2034517746">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile.shader" />
+              <DependencyAsset Name="Assets/Game/UI/Font/impact SDF.asset" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="c62877170fd79004a8acd14744ef3b90" Name="Assets/Game/UI/Font/Materials/impact SDF_shadow_00000080.mat" Length="3170" HashCode="-177927476">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile.shader" />
+              <DependencyAsset Name="Assets/Game/UI/Font/impact SDF.asset" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="3567" HashCode="-1483871172" ZipLength="3567" ZipHashCode="-1483871172" />
+        </Codes>
+      </Resource>
+      <Resource Name="UI/Font_base" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="549ef949623372f4796f7597d40b1a4c" Name="Assets/Game/UI/Font/impact SDF.asset" Length="576749" HashCode="-379759827">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/Shader/Font/TMP_SDF-Mobile.shader" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="117529" HashCode="-2045899450" ZipLength="117529" ZipHashCode="-2045899450" />
+        </Codes>
+      </Resource>
+      <Resource Name="UI/Form" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="4">
+          <Asset Guid="1a79744c94af1c64fa7c06a81f291047" Name="Assets/Game/UI/Form/ControlForm.prefab" Length="5350" HashCode="-769589794" />
+          <Asset Guid="c2fbd1ebdba46b347a3e5db8d978ba01" Name="Assets/Game/UI/Form/RotateTestForm.prefab" Length="5570" HashCode="-842285117" />
+          <Asset Guid="f10ce2d053fed534690a7d3200cd457b" Name="Assets/Game/UI/Form/BlackForm.prefab" Length="7485" HashCode="-982799861" />
+          <Asset Guid="f2b9a250f4c36c3408965222f5369f20" Name="Assets/Game/UI/Form/LoadingForm.prefab" Length="15488" HashCode="1694885392">
+            <DependencyAssets Count="1">
+              <DependencyAsset Name="Assets/Game/UI/Font/impact SDF.asset" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Android Length="8751" HashCode="-228051557" ZipLength="8751" ZipHashCode="-228051557" />
+        </Codes>
+      </Resource>
+      <Resource Name="Variants" Extension="dat" LoadType="0" Packed="False">
+        <Assets Count="1">
+          <Asset Guid="962458044a40e0345998e5f745ff50d6" Name="Assets/Game/Variants/GameVariantSetting.asset" Length="524" HashCode="-63822919" />
+        </Assets>
+        <Codes>
+          <Android Length="1950" HashCode="1624728176" ZipLength="1950" ZipHashCode="1624728176" />
+        </Codes>
+      </Resource>
+    </Resources>
+  </BuildReport>
+</UnityGameFramework>
