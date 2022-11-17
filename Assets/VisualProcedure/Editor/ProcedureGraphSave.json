@@ -36,8 +36,8 @@
         {
             "nodeId": 2,
             "positionInGraph": {
-                "x": 337.41241455078127,
-                "y": -19.47826385498047
+                "x": 464.3349304199219,
+                "y": -92.55522918701172
             },
             "nodeClassTypeName": "Game.VisualProcedure.MainMenuNode",
             "flowOutPortInfoList": [
@@ -50,10 +50,26 @@
         {
             "nodeId": 3,
             "positionInGraph": {
-                "x": 300.0005187988281,
-                "y": 125.7143783569336
+                "x": 394.23101806640627,
+                "y": 47.1153678894043
             },
-            "nodeClassTypeName": "Game.VisualProcedure.PrototypeNode",
+            "nodeClassTypeName": "Game.VisualProcedure.WaitingStartNode",
+            "flowOutPortInfoList": [
+                {
+                    "flowOutPortId": 0,
+                    "targetNodeList": [
+                        4
+                    ]
+                }
+            ]
+        },
+        {
+            "nodeId": 4,
+            "positionInGraph": {
+                "x": 771.1539306640625,
+                "y": 74.03846740722656
+            },
+            "nodeClassTypeName": "Game.VisualProcedure.MainGameNode",
             "flowOutPortInfoList": [
                 {
                     "flowOutPortId": 0,

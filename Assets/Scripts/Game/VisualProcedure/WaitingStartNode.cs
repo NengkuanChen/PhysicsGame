@@ -1,21 +1,24 @@
 ﻿using FlatNode.Runtime;
 using Game.Ball;
+using Game.GameEvent;
 using Game.GameSystem;
 using Game.Scene;
+using GameFramework.Event;
 using UnityEngine;
 using VisualProcedure.Runtime;
 using VisualProcedure.Runtime.ProcedureNode;
 
 namespace Game.VisualProcedure
 {
-    [ProcedureGraphNode("PrototypeNode", "PrototypeNode")]
-    [NodeFlowOutPort(FlowOutPort.Finish, "Finish")]
-    public class PrototypeNode: ProcedureNodeBase
+    [ProcedureGraphNode("WaitingStartNode", "WaitingStartNode")]
+    [NodeFlowOutPort(FlowOutPort.GameStart, "GameStart")]
+    public class WaitingStartNode: ProcedureNodeBase
     {
         public static class FlowOutPort
         {
-            public const int Finish = 0;
+            public const int GameStart = 0;
         }
+        
 
         public override void OnEnter(NodeTransitionParameter parameter)
         {
@@ -28,7 +31,18 @@ namespace Game.VisualProcedure
             // cannonTransform.rotation = CannonSpawningPoint.Current.transform.rotation;
             // var ballEntity = BallSystem.Get().playerCurrentBall;
             BallSystem.Get().OnWaitingGameStart();
-            
+            Framework.EventComponent.Subscribe(OnGameStartEventArgs.UniqueId, OnGameStart);
+        }
+
+        public void OnGameStart(object o, GameEventArgs e)
+        {
+            ExitProcedure(FlowOutPort.GameStart);
+        }
+
+        public override void OnExit()
+        {
+            base.OnExit();
+            Framework.EventComponent.Unsubscribe(OnGameStartEventArgs.UniqueId, OnGameStart);
         }
     }
 }

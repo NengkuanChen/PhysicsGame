@@ -164,4 +164,20 @@ namespace Game.GameEvent
             return arg;
         }
     }
+    
+    public class OnControlFormHitEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public static OnControlFormHitEventArgs Create()
+        {
+            return ReferencePool.Acquire<OnControlFormHitEventArgs>();
+        }
+    }
 }

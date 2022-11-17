@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Game;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasRenderer))]

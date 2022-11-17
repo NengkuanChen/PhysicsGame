@@ -9,18 +9,10 @@ namespace Game.UI.Form.Control
         public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
         public override int FormType => UniqueId;
 
-        [SerializeField, LabelText("Control Area")] 
-        private Image controlArea;
-
         static ControlForm()
         {
             UIConfig.RegisterForm(UniqueId, nameof(ControlForm), UiDepth.Control);
         }
-
-        protected override void OnInit(object userData)
-        {
-            base.OnInit(userData);
-            
-        }
+        
     }
 }
