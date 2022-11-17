@@ -129,7 +129,7 @@ namespace Game.GameEvent
         }
     }
 
-    public class OnPlayerAttemptingFireCannonEventArgs : GameEventArgs
+    public class OnPlayerTapScreen : GameEventArgs
     {
         public override void Clear()
         {
@@ -139,9 +139,9 @@ namespace Game.GameEvent
         public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
         public override int Id => UniqueId;
 
-        public static OnPlayerAttemptingFireCannonEventArgs Create()
+        public static OnPlayerTapScreen Create()
         {
-            return ReferencePool.Acquire<OnPlayerAttemptingFireCannonEventArgs>();
+            return ReferencePool.Acquire<OnPlayerTapScreen>();
         }
     }
 

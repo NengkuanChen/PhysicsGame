@@ -81,7 +81,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""1D Axis"",
                     ""id"": ""902a4a9b-5d4b-4b7c-accc-a247e10df952"",
-                    ""path"": ""1DAxis"",
+                    ""path"": ""1DAxis(minValue=-45,maxValue=45)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -118,22 +118,13 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
             ""id"": ""62e71c4f-2e59-4c4d-be28-1eab748eeca6"",
             ""actions"": [
                 {
-                    ""name"": ""Fire"",
+                    ""name"": ""Tap"",
                     ""type"": ""Button"",
                     ""id"": ""be62278a-709d-491c-b64a-6c9b5658a82c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Aim"",
-                    ""type"": ""Value"",
-                    ""id"": ""f6a81ef8-7882-4187-bf67-6be12575ee14"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""BallMove"",
@@ -149,22 +140,11 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""29fd3789-de10-4ffe-9cef-7a872673c03b"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6b1c0b11-6084-40f2-8cec-52e27c17e087"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Aim"",
+                    ""action"": ""Tap"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -191,8 +171,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         m_Editor_BallMove = m_Editor.FindAction("BallMove", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
-        m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
+        m_Player_Tap = m_Player.FindAction("Tap", throwIfNotFound: true);
         m_Player_BallMove = m_Player.FindAction("BallMove", throwIfNotFound: true);
     }
 
@@ -302,15 +281,13 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_Fire;
-    private readonly InputAction m_Player_Aim;
+    private readonly InputAction m_Player_Tap;
     private readonly InputAction m_Player_BallMove;
     public struct PlayerActions
     {
         private @PlayerInputAction m_Wrapper;
         public PlayerActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Fire => m_Wrapper.m_Player_Fire;
-        public InputAction @Aim => m_Wrapper.m_Player_Aim;
+        public InputAction @Tap => m_Wrapper.m_Player_Tap;
         public InputAction @BallMove => m_Wrapper.m_Player_BallMove;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -321,12 +298,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @Aim.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
-                @Aim.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
-                @Aim.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                @Tap.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTap;
+                @Tap.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTap;
+                @Tap.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTap;
                 @BallMove.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBallMove;
                 @BallMove.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBallMove;
                 @BallMove.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBallMove;
@@ -334,12 +308,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Fire.started += instance.OnFire;
-                @Fire.performed += instance.OnFire;
-                @Fire.canceled += instance.OnFire;
-                @Aim.started += instance.OnAim;
-                @Aim.performed += instance.OnAim;
-                @Aim.canceled += instance.OnAim;
+                @Tap.started += instance.OnTap;
+                @Tap.performed += instance.OnTap;
+                @Tap.canceled += instance.OnTap;
                 @BallMove.started += instance.OnBallMove;
                 @BallMove.performed += instance.OnBallMove;
                 @BallMove.canceled += instance.OnBallMove;
@@ -355,8 +326,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     }
     public interface IPlayerActions
     {
-        void OnFire(InputAction.CallbackContext context);
-        void OnAim(InputAction.CallbackContext context);
+        void OnTap(InputAction.CallbackContext context);
         void OnBallMove(InputAction.CallbackContext context);
     }
 }

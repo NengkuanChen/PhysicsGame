@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Ball
 {
-    public class BallEntity: GameEntityLogic
+    public abstract class BallEntity: GameEntityLogic
     {
         [SerializeField, Required] 
         private Rigidbody ballRigidBody;

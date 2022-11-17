@@ -26,7 +26,7 @@ namespace Game.VisualProcedure
             // var cannonTransform = CannonSystem.Get().CurrentCannon.transform;
             // cannonTransform.position = CannonSpawningPoint.Current.transform.position;
             // cannonTransform.rotation = CannonSpawningPoint.Current.transform.rotation;
-            var ballEntity = BallSystem.Get().CurrentBall;
+            // var ballEntity = BallSystem.Get().playerCurrentBall;
             BallSystem.Get().OnWaitingGameStart();
             
         }

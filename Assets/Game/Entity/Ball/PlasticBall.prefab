@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7827420719457466179}
   - component: {fileID: 5359443915457815772}
   m_Layer: 0
-  m_Name: BallEntity
+  m_Name: PlasticBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d224a92008926a94fa83c8ebc1535a10, type: 2}
+  - {fileID: 2100000, guid: 4f83a751db847564e89a263dc9411188, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,7 +93,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3108116384372143455}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 06dfd38aeb6b1af45bcbf389058c8f06, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3108116384372143455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cf825f2a5b41b8acf5bf5a87616604, type: 3}
+  m_Script: {fileID: 11500000, guid: 74d7a170ae6a47a7a4c267f920958e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ballRigidBody: {fileID: 7827420719457466179}

@@ -40,6 +40,7 @@ namespace Game.VisualProcedure
             new PlayerInputSystem();
             var ballSystem = new BallSystem();
             await ballSystem.LoadBallEntityAsync();
+            await UIUtility.OpenFormAsync<WaitingStartForm>(WaitingStartForm.UniqueId);
             UIUtility.CloseForm(LoadingForm.UniqueId);
             ExitProcedure(FlowOutPort.LoadComplete);
             

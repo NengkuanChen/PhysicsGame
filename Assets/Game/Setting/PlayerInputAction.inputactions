@@ -59,7 +59,7 @@
                 {
                     "name": "1D Axis",
                     "id": "902a4a9b-5d4b-4b7c-accc-a247e10df952",
-                    "path": "1DAxis",
+                    "path": "1DAxis(minValue=-45,maxValue=45)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -96,22 +96,13 @@
             "id": "62e71c4f-2e59-4c4d-be28-1eab748eeca6",
             "actions": [
                 {
-                    "name": "Fire",
+                    "name": "Tap",
                     "type": "Button",
                     "id": "be62278a-709d-491c-b64a-6c9b5658a82c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Aim",
-                    "type": "Value",
-                    "id": "f6a81ef8-7882-4187-bf67-6be12575ee14",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 },
                 {
                     "name": "BallMove",
@@ -127,22 +118,11 @@
                 {
                     "name": "",
                     "id": "29fd3789-de10-4ffe-9cef-7a872673c03b",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6b1c0b11-6084-40f2-8cec-52e27c17e087",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Aim",
+                    "action": "Tap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
