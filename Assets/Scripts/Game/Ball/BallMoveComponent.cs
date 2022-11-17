@@ -33,8 +33,9 @@ namespace Game.Ball
             var inputValue = inputSystem.DeviceRotate;
             var pushForce = setting.InputForceCurve.Evaluate(Mathf.Abs(inputValue / inputSetting.MaxDeviceInputAngle)) *
                             setting.PushForce;
-            OwnerEntityType.BallRigidBody.AddForce(OwnerTransform.right * pushForce * ((inputValue > 0) ? 1 : -1),
+            OwnerEntityType.BallRigidBody.AddForce(Vector3.right * pushForce * ((inputValue > 0) ? 1 : -1),
                 ForceMode.Force);
+            // Log.Info(OwnerTransform.right * pushForce * ((inputValue > 0) ? 1 : -1));
         }
     }
 }

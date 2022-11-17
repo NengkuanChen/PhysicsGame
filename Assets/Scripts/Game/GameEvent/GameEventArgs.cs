@@ -180,4 +180,20 @@ namespace Game.GameEvent
             return ReferencePool.Acquire<OnControlFormHitEventArgs>();
         }
     }
+    
+    public class OnBallSwitchEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public static OnBallSwitchEventArgs Create()
+        {
+            return ReferencePool.Acquire<OnBallSwitchEventArgs>();
+        }
+    }
 }

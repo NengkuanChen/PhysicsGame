@@ -37,7 +37,7 @@ namespace Game.GameSystem
             playerInput.Player.Enable();
             InputSystem.EnableDevice(Gyroscope.current);
             InputSystem.EnableDevice(AttitudeSensor.current);
-            playerInput.Player.BallMove.performed += OnDeviceRotate;
+            playerInput.Player.BallMove.performed += OnPlayerMoveBall;
             playerInput.Player.Tap.performed += OnPlayerTap;
 #endif
         }
@@ -53,7 +53,7 @@ namespace Game.GameSystem
         private void OnPlayerMoveBall(InputAction.CallbackContext context)
         {
             var rot = context.ReadValue<Quaternion>();
-            deviceRotate = rot.eulerAngles.y;
+            deviceRotate = rot.eulerAngles.x;
             deviceRotate = deviceRotate > 180 ? deviceRotate - 360 : deviceRotate;
             deviceRotate = Mathf.Clamp(deviceRotate, -playerInputSetting.MaxDeviceInputAngle,
                 playerInputSetting.MaxDeviceInputAngle);
@@ -67,7 +67,7 @@ namespace Game.GameSystem
 
         private void OnDeviceRotate(InputAction.CallbackContext context)
         {
-            Log.Info(context.ReadValue<Quaternion>().eulerAngles);
+            // Log.Info(context.ReadValue<Quaternion>().eulerAngles);
         }
         
     }

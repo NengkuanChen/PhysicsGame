@@ -10,23 +10,30 @@ namespace Game.Ball
 
         public override bool NeedFixedUpdate => true;
 
-        private Vector3 initialPosition;
-        private Quaternion initialRotation;
+        // private Vector3 initialPosition;
+        // private Quaternion initialRotation;
 
         public override void OnComponentAttach()
         {
             base.OnComponentAttach();
-            initialPosition = OwnerTransform.position;
-            initialRotation = OwnerTransform.rotation;
+            // initialPosition = OwnerTransform.position;
+            // initialRotation = OwnerTransform.rotation;
+            OwnerEntityType.BallRigidBody.isKinematic = true;
         }
-
-
-        public override void OnEntityFixedUpdate(float elapseSeconds, float realElapseSeconds)
+        
+        public override void OnComponentDetach()
         {
-            base.OnEntityFixedUpdate(elapseSeconds, realElapseSeconds);
-            OwnerEntityType.BallRigidBody.position = initialPosition;
-            OwnerEntityType.BallRigidBody.velocity = Vector3.zero;
-            OwnerTransform.rotation = initialRotation;
+            base.OnComponentDetach();
+            OwnerEntityType.BallRigidBody.isKinematic = false;
         }
+
+
+        // public override void OnEntityFixedUpdate(float elapseSeconds, float realElapseSeconds)
+        // {
+        //     base.OnEntityFixedUpdate(elapseSeconds, realElapseSeconds);
+        //     OwnerEntityType.BallRigidBody.position = initialPosition;
+        //     OwnerEntityType.BallRigidBody.velocity = Vector3.zero;
+        //     OwnerTransform.rotation = initialRotation;
+        // }
     }
 }

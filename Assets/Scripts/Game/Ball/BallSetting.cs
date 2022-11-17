@@ -22,5 +22,9 @@ namespace Game.Ball
         [SerializeField, LabelText("Input - Force Curve")]
         private AnimationCurve inputForceCurve = AnimationCurve.Linear(0, 0, 1, 1);
         public AnimationCurve InputForceCurve => inputForceCurve;
+        
+        [SerializeField, LabelText("Next Ball")]
+        private BallType nextBall;
+        public BallType NextBall => nextBall;
     }
 }

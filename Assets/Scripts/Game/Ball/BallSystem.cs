@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Game.Entity;
 using Game.GameEvent;
@@ -26,6 +27,9 @@ namespace Game.Ball
 
         public BallEntity playerCurrentBall;
         public BallEntity PlayerCurrentBall => playerCurrentBall;
+        
+        private List<BallEntity> allBalls = new List<BallEntity>();
+        public List<BallEntity> AllBalls => allBalls;
 
         public static BallSystem Get()
         {
@@ -36,31 +40,50 @@ namespace Game.Ball
         {
             base.OnEnable();
             Framework.EventComponent.Subscribe(OnGameStartEventArgs.UniqueId, OnGameStart);
+            Framework.EventComponent.Subscribe(OnBallSwitchEventArgs.UniqueId, OnBallSwitch);
+        }
+
+        private void OnBallSwitch(object sender, GameEventArgs e)
+        {
+            Log.Info("BallSwitch");
+            foreach (var ball in allBalls)
+            {
+                if (ball.Setting.NextBall == playerCurrentBall.BallType)
+                {
+                    // ball.transform.position
+                    ball.ActiveBall(playerCurrentBall.BallRigidBody.velocity, playerCurrentBall.transform.position);
+                    playerCurrentBall.DeActiveBall();
+                    playerCurrentBall = ball;
+                    break;
+                }
+            }
         }
 
         public async UniTask<BallEntity> LoadBallEntityAsync()
         {
-            if (currentIronBall != null)
+            foreach (var ball in allBalls)
             {
-                currentIronBall.Hide();
+                ball.Hide();
             }
 
-            if (currentWoodBall)
+            var loadTasks = new List<UniTask<BallEntity>>
             {
-                currentWoodBall.Hide();
-            }
-            
-            if (currentPlasticBall)
+                EntityUtility.ShowEntityAsync<BallEntity>("Ball/IronBall", EntityGroupName.Ball),
+                EntityUtility.ShowEntityAsync<BallEntity>("Ball/WoodBall", EntityGroupName.Ball),
+                EntityUtility.ShowEntityAsync<BallEntity>("Ball/PlasticBall", EntityGroupName.Ball),
+                
+            };
+            var results = await UniTask.WhenAll(loadTasks);
+            foreach (var ball in results)
             {
-                currentPlasticBall.Hide();
+                ball.DeActiveBall();
+                allBalls.Add(ball);
             }
-
-            currentIronBall = await EntityUtility.ShowEntityAsync<IronBall>("Ball/IronBall", EntityGroupName.Ball);
-            // currentWoodBall = await EntityUtility.ShowEntityAsync<WoodBall>("Ball/WoodBall", EntityGroupName.Ball);
-            // currentPlasticBall = await EntityUtility.ShowEntityAsync<PlasticBall>("Ball/PlasticBall", EntityGroupName.Ball);
+            currentIronBall = allBalls[0] as IronBall;
             playerCurrentBall = currentIronBall;
             return playerCurrentBall;
         }
+        
 
         public void OnWaitingGameStart()
         {
@@ -71,19 +94,20 @@ namespace Game.Ball
             currentIronBall.transform.parent = ScrollRoot.Current.transform;
             currentIronBall.transform.localPosition = Vector3.zero;
             currentIronBall.transform.rotation = Quaternion.identity;
-            currentIronBall.AddComponent(new BallFixComponent());
         }
 
         public void OnGameStart(object o, GameEventArgs args)
         {
-            playerCurrentBall.RemoveComponent(BallFixComponent.UniqueId);
-            playerCurrentBall.AddComponent(new BallMoveComponent());
+            playerCurrentBall.ActiveBall(Vector3.zero, playerCurrentBall.transform.position);
         }
+
+        
         
         internal override void OnDisable()
         {
             base.OnDisable();
             Framework.EventComponent.Unsubscribe(OnGameStartEventArgs.UniqueId, OnGameStart);
+            Framework.EventComponent.Unsubscribe(OnBallSwitchEventArgs.UniqueId, OnBallSwitch);
         }
     }
 }

@@ -129,3 +129,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballRigidBody: {fileID: 7827420719457466179}
   setting: {fileID: 11400000, guid: 5e2afd3eb5a4f7b42aabaa9aa16c05c6, type: 2}
+  ballType: 1
