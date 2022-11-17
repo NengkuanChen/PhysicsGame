@@ -1,5 +1,6 @@
 ﻿using Game.GameEvent;
 using Game.Utility;
+using GameFramework.Event;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Gyroscope = UnityEngine.InputSystem.Gyroscope;
@@ -28,11 +29,12 @@ namespace Game.GameSystem
             base.OnEnable();
             playerInputSetting = SettingUtility.PlayerInputSetting;
             playerInput = new PlayerInputAction();
-            
 #if UNITY_EDITOR
-            playerInput.Editor.Enable();
-            playerInput.Editor.Fire.performed += OnPlayerTap;
-            playerInput.Editor.BallMove.performed += OnPlayerMoveBallEditor;
+            // playerInput.Editor.Enable();
+            // playerInput.Editor.Fire.performed += OnPlayerTap;
+            // playerInput.Editor.BallMove.performed += OnPlayerMoveBallEditor;
+            Framework.EventComponent.Subscribe(OnEditorPlayerMoveBallEventArgs.UniqueId, OnPlayerMoveBallEditor);
+
 #else
             playerInput.Player.Enable();
             InputSystem.EnableDevice(Gyroscope.current);
@@ -59,16 +61,27 @@ namespace Game.GameSystem
                 playerInputSetting.MaxDeviceInputAngle);
         }
 
-        private void OnPlayerMoveBallEditor(InputAction.CallbackContext context)
+        private void OnPlayerMoveBallEditor(object sender, GameEventArgs e)
         {
-            deviceRotate = context.ReadValue<float>();
-            Log.Info(deviceRotate);
+            var arg = e as OnEditorPlayerMoveBallEventArgs;
+            deviceRotate = arg.Axis;
         }
 
         private void OnDeviceRotate(InputAction.CallbackContext context)
         {
             // Log.Info(context.ReadValue<Quaternion>().eulerAngles);
         }
-        
+
+
+        internal override void OnDisable()
+        {
+            base.OnDisable();
+#if UNITY_EDITOR
+            // playerInput.Editor.Disable();
+            // playerInput.Editor.Fire.performed -= OnPlayerTap;
+            // playerInput.Editor.BallMove.performed -= OnPlayerMoveBallEditor;
+            Framework.EventComponent.Unsubscribe(OnEditorPlayerMoveBallEventArgs.UniqueId, OnPlayerMoveBallEditor);
+#endif
+        }
     }
 }

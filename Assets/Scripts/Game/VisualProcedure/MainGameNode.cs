@@ -18,7 +18,11 @@ namespace Game.VisualProcedure
         public override void OnEnter(NodeTransitionParameter parameter)
         {
             base.OnEnter(parameter);
+#if UNITY_EDITOR
+            UIUtility.OpenForm(EditorTestingControlForm.UniqueId);
+#else
             UIUtility.OpenForm(ControlForm.UniqueId);
+#endif
         }
     }
 }
