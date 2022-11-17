@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e475718aca154e15973482884c481a2d, type: 3}
   m_Name: PackageInfoConfiguration(Android)
   m_EditorClassIdentifier: 
-  appName: Dirt Motocross
-  companyName: dirt
-  icon: {fileID: 2800000, guid: 32217ffef64054d44a8e195b78ef9dac, type: 3}
-  packageName: com.dirt.dirtmotocross
-  version: 1.0.0
-  bundleVersionCode: 32328
+  appName: Prototype
+  companyName: TrippleBStudio
+  icon: {fileID: 2800000, guid: 05cfe010378336646ad6c721f66543d1, type: 3}
+  packageName: com.TrippleBStudio.Prototype
+  version: 0.0.1
+  bundleVersionCode: 986335
   facebookId: 166910275218162
   appsflyerDevKey: 9RhFC2ViAszw7TQpRLMSZf
+  maxKey: 
   interstitialAdKey: 
   rewardAdKey: 
   bannerAdKey: 

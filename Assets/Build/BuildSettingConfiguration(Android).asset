@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e8de521dec4e6d923a0e863c81e5de, type: 3}
   m_Name: BuildSettingConfiguration(Android)
   m_EditorClassIdentifier: 
-  buildAssetBundle: 0
+  buildAssetBundle: 1
   enableLog: 1
   enableLunarConsole: 1
-  enableDevelopmentMode: 0
+  enableDevelopmentMode: 1
   enableDingTalkInform: 0
-  reportAndAdPluginsEnable: 1
   exportAAB: 0
+  buildAsAndroidProject: 0

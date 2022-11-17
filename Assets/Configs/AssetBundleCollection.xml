@@ -36,6 +36,7 @@
       <Asset Guid="4b90488410ed8c140b7af3cf459bf3e5" ResourceName="Shader" />
       <Asset Guid="549ef949623372f4796f7597d40b1a4c" ResourceName="UI/Font_base" />
       <Asset Guid="5e1aad114ac85014d886b26171a12f3a" ResourceName="UI/Font/Materials" />
+      <Asset Guid="5e2afd3eb5a4f7b42aabaa9aa16c05c6" ResourceName="Setting" />
       <Asset Guid="5fd535272d2bdbb459fb8d6be1ae8203" ResourceName="Setting" />
       <Asset Guid="628d2adf3d29ca445b2abc72043129ce" ResourceName="Entity/Platform" />
       <Asset Guid="65b0c6eb7795ef745900fded25f3d02a" ResourceName="Shader" />
@@ -52,6 +53,7 @@
       <Asset Guid="aeacdc42c64af394c89b32e4a9ab09a4" ResourceName="Shader" />
       <Asset Guid="b4b78034333f1aa489572ceb4fe4d4cb" ResourceName="Shader" />
       <Asset Guid="b56b31fa7e5562b4d9e4846f990c2a6f" ResourceName="Entity/Camera" />
+      <Asset Guid="c2fbd1ebdba46b347a3e5db8d978ba01" ResourceName="UI/Form" />
       <Asset Guid="c62877170fd79004a8acd14744ef3b90" ResourceName="UI/Font/Materials" />
       <Asset Guid="d224a92008926a94fa83c8ebc1535a10" ResourceName="GameResources/0" />
       <Asset Guid="d5fbb8e0930873e4da54748fc070b75c" ResourceName="Scene" />

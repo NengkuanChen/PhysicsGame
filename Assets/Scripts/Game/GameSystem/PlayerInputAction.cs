@@ -171,7 +171,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a1512197-a379-4913-afe1-79d4f72ea2d5"",
-                    ""path"": ""<Gyroscope>/angularVelocity"",
+                    ""path"": ""<AttitudeSensor>/attitude"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

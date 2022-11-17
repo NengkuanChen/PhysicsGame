@@ -18,10 +18,10 @@ using Game.UI;
 using Game.UI.Form;
 using Table;
 using UnityEngine;
-using UnityEngine.iOS;
 
 #if UNITY_IOS
 using Unity.Advertisement.IosSupport;
+using UnityEngine.iOS;
 #endif
 
 namespace Game.Utility

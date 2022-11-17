@@ -8,12 +8,20 @@ namespace Game.Ball
 
         public override int ID => UniqueId;
 
+        public override bool NeedFixedUpdate => true;
+
         private BallSetting setting;
 
         public override void OnComponentAttach()
         {
             base.OnComponentAttach();
             setting = OwnerEntityType.Setting;
+        }
+
+        public override void OnEntityFixedUpdate(float elapseSeconds, float realElapseSeconds)
+        {
+            base.OnEntityFixedUpdate(elapseSeconds, realElapseSeconds);
+            OwnerEntityType.BallRigidBody.AddForce();
         }
     }
 }
