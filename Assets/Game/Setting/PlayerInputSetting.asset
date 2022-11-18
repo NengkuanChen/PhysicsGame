@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36f4687bef8400e834b5c0693ac30f7, type: 3}
   m_Name: PlayerInputSetting
   m_EditorClassIdentifier: 
-  maxDeviceInputAngle: 45
+  maxDeviceInputAngle: 30

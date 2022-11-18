@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlatformSetting
   m_EditorClassIdentifier: 
   scrollSpeed: 1
+  scrollAcceleration: 0.5

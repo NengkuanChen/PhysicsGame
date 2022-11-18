@@ -5,6 +5,7 @@ using Game.Car;
 using Game.Entity;
 using Game.GameCamera;
 using Game.GameSystem;
+using Game.PlatForm;
 using Game.UI.Form;
 using Game.Utility;
 using VisualProcedure.Runtime;
@@ -40,6 +41,7 @@ namespace Game.VisualProcedure
             new PlayerInputSystem();
             var ballSystem = new BallSystem();
             await ballSystem.LoadBallEntityAsync();
+            new ProceduralPlatformGenerateSystem();
             await UIUtility.OpenFormAsync<WaitingStartForm>(WaitingStartForm.UniqueId);
             UIUtility.CloseForm(LoadingForm.UniqueId);
             ExitProcedure(FlowOutPort.LoadComplete);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.PlatForm
 {
-    public abstract class PlatformEntity: GameEntityLogic
+    public abstract class PlatformEntity: MonoBehaviour
     {
 
         [SerializeField] 
@@ -12,25 +12,27 @@ namespace Game.PlatForm
 
         public Rigidbody PlatformRigidbody => platformRigidbody;
         
-        public virtual void OnPlatformLoad()
+        public virtual void OnPlatformShow()
+        {
+            
+        }
+        
+        public virtual void OnPlatformHide()
         {
             
         }
 
-        public virtual void OnPlatformShoot()
+        public virtual void OnPlayerHitPlatform()
         {
             
         }
-
-        public virtual void OnPlatformHit()
+        
+        public virtual void OnPlayerExitPlatform()
         {
             
         }
-
-        public virtual void OnPlatformPlaced()
-        {
-            
-        }
+        
+        
         
     }
 }

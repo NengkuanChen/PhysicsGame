@@ -35,9 +35,11 @@ namespace Game.GameSystem
             playerInput.Player.Enable();
             InputSystem.EnableDevice(Gyroscope.current);
             InputSystem.EnableDevice(AttitudeSensor.current);
+            Log.Info(InputSystem.GetDevice<AttitudeSensor>().name);
             playerInput.Player.BallMove.performed += OnPlayerMoveBall;
             playerInput.Player.Tap.performed += OnPlayerTap;
 #endif
+            
         }
 
         private void OnPlayerTap(InputAction.CallbackContext context)
@@ -55,7 +57,7 @@ namespace Game.GameSystem
             deviceRotate = deviceRotate > 180 ? deviceRotate - 360 : deviceRotate;
             deviceRotate = Mathf.Clamp(deviceRotate, -playerInputSetting.MaxDeviceInputAngle,
                 playerInputSetting.MaxDeviceInputAngle);
-            // Log.Info(deviceRotate);
+            Log.Info(deviceRotate);
         }
 
         private void OnPlayerMoveBallEditor(object sender, GameEventArgs e)
@@ -70,6 +72,7 @@ namespace Game.GameSystem
             
         }
         
+
         internal override void OnDisable()
         {
             base.OnDisable();

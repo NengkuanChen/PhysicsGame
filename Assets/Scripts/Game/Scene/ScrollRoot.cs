@@ -33,6 +33,7 @@ namespace Game.Scene
             {
                 currentSpeed = Mathf.MoveTowards(currentSpeed, setting.ScrollSpeed,
                     setting.ScrollAcceleration * elapseSeconds);
+                transform.position += Vector3.up * currentSpeed * elapseSeconds;
             }
         }
 
