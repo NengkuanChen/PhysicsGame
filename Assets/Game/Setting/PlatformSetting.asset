@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: 1
   scrollAcceleration: 0.5
+  platformFront: 5
+  platformBehind: 3
