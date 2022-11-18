@@ -1,4 +1,6 @@
-﻿using Game.Setting;
+﻿using Game.Ball;
+using Game.PlatForm;
+using Game.Setting;
 using Game.UI;
 using GameFramework;
 using GameFramework.Event;
@@ -188,12 +190,16 @@ namespace Game.GameEvent
             
         }
 
+        public BallType BallType;
+
         public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
         public override int Id => UniqueId;
 
-        public static OnBallSwitchEventArgs Create()
+        public static OnBallSwitchEventArgs Create(BallType ballType)
         {
-            return ReferencePool.Acquire<OnBallSwitchEventArgs>();
+            var arg = ReferencePool.Acquire<OnBallSwitchEventArgs>();
+            arg.BallType = ballType;
+            return arg;
         }
     }
     
@@ -213,6 +219,25 @@ namespace Game.GameEvent
         {
             var arg = ReferencePool.Acquire<OnEditorPlayerMoveBallEventArgs>();
             arg.Axis = axis;
+            return arg;
+        }
+    }
+    
+    public class OnPlayerEnterPlatformGroupEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            PlatformGroup = null;
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public PlatformGroupEntity PlatformGroup;
+        public static OnPlayerEnterPlatformGroupEventArgs Create(PlatformGroupEntity platformGroup)
+        {
+            var arg = ReferencePool.Acquire<OnPlayerEnterPlatformGroupEventArgs>();
+            arg.PlatformGroup = platformGroup;
             return arg;
         }
     }

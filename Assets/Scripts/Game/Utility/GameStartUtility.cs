@@ -151,6 +151,7 @@ namespace Game.Utility
             var tableLoadDictionary = new Dictionary<string, Action<byte[]>>
             {
                 // {"BoostUpgrade", BoostUpgradeTable.Parse},
+                {"PlatformGeneration", PlatformGenerationTable.Parse},
             };
 
             foreach (var kv in tableLoadDictionary)

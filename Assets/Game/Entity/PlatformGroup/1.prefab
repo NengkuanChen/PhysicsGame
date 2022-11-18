@@ -1,5 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1452986520825344006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6717621188436549652}
+  - component: {fileID: 7266498393013152981}
+  - component: {fileID: 7463393100408907229}
+  m_Layer: 0
+  m_Name: EnterTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6717621188436549652
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452986520825344006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3895171749208599082}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7266498393013152981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452986520825344006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 1, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7463393100408907229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452986520825344006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddd46e1025d40c280cdaac56f6db3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OwnerPlatformGroup: {fileID: 6784344150368485641}
 --- !u!1 &1602678684994463681
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformRigidbody: {fileID: 1212097045337632109}
+  isRandomX: 1
+  randomXRange: {x: -4, y: 4}
 --- !u!54 &1212097045337632109
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -186,7 +247,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6717621188436549652}
   m_Father: {fileID: 7428347802153369014}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -243,9 +305,9 @@ MonoBehaviour:
   - {fileID: 3720731340486545782}
   - {fileID: 8793658715091444676}
   - {fileID: 1370269822052747411}
-  AllPlatformEntities: []
   enterPoistion: {fileID: 3895171749208599082}
   exitPoistion: {fileID: 654401505348643777}
+  enterTrigger: {fileID: 7463393100408907229}
 --- !u!1 &4562275113265963249
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformRigidbody: {fileID: 1721856396576131537}
+  isRandomX: 1
+  randomXRange: {x: -4, y: 4}
 --- !u!54 &1721856396576131537
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -486,6 +550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformRigidbody: {fileID: 23397777466253020}
+  isRandomX: 1
+  randomXRange: {x: -4, y: 4}
 --- !u!54 &23397777466253020
 Rigidbody:
   m_ObjectHideFlags: 0

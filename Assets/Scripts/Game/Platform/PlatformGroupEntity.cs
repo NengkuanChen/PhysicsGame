@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Game.Entity;
+using Game.GameEvent;
 using Game.Utility;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace Game.PlatForm
         private List<PlatformEntity> allPlatformEntities;
 
         [SerializeField, LabelText("All Platforms Entities")]
-        private List<PlatformEntity> AllPlatformEntities;
+        private List<PlatformEntity> AllPlatformEntities => allPlatformEntities;
 
         [SerializeField, LabelText("Enter Line")]
         private Transform enterPoistion;
@@ -21,6 +22,9 @@ namespace Game.PlatForm
         [SerializeField, LabelText("Exit Line")]
         private Transform exitPoistion;
         public Transform ExitPoistion => exitPoistion;
+
+        [SerializeField, LabelText("Enter Detector Trigger")]
+        private PlatformEnterTrigger enterTrigger;
 
         protected override void OnShow(object userData)
         {
@@ -39,6 +43,12 @@ namespace Game.PlatForm
                 platform.OnPlatformHide();
             }
         }
+
+        public void OnPlayerEnter()
+        {
+            Framework.EventComponent.Fire(this, OnPlayerEnterPlatformGroupEventArgs.Create(this));
+        }
+        
 #if UNITY_EDITOR
         [Button(ButtonSizes.Large, Name = "Quick Setup")]
         private void QuickSetup()
@@ -56,6 +66,17 @@ namespace Game.PlatForm
                 exitPoistion = new GameObject("ExitPosition").transform;
                 exitPoistion.SetParent(transform);
                 exitPoistion.localPosition = Vector3.zero;
+            }
+
+            if (enterTrigger == null)
+            {
+                var enterTriggerCollider = new GameObject("EnterTrigger").AddComponent<BoxCollider>();
+                enterTriggerCollider.isTrigger = true;
+                enterTriggerCollider.transform.SetParent(enterPoistion);
+                enterTriggerCollider.transform.localPosition = Vector3.zero;
+                enterTriggerCollider.size = new Vector3(20, 1, 5);
+                enterTrigger = enterTriggerCollider.gameObject.AddComponent<PlatformEnterTrigger>();
+                enterTrigger.OwnerPlatformGroup = this;
             }
         }
 

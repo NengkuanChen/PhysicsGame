@@ -46,9 +46,14 @@ namespace Game.Ball
         private void OnBallSwitch(object sender, GameEventArgs e)
         {
             Log.Info("BallSwitch");
+            var arg = e as OnBallSwitchEventArgs;
+            if (arg.BallType == playerCurrentBall.BallType)
+            {
+                return;
+            }
             foreach (var ball in allBalls)
             {
-                if (ball.Setting.NextBall == playerCurrentBall.BallType)
+                if (ball.BallType == arg.BallType)
                 {
                     // ball.transform.position
                     ball.ActiveBall(playerCurrentBall.BallRigidBody.velocity, playerCurrentBall.transform.position);
