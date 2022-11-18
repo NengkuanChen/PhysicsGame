@@ -7,6 +7,7 @@
       <Resource Name="Entity/Cannon" LoadType="0" Packed="False" />
       <Resource Name="Entity/Car" LoadType="0" Packed="False" />
       <Resource Name="Entity/Platform" LoadType="0" Packed="False" />
+      <Resource Name="Entity/PlatformGroup" LoadType="0" Packed="False" />
       <Resource Name="GameResources/0" LoadType="0" Packed="False" />
       <Resource Name="GameResources/1" LoadType="0" Packed="False" />
       <Resource Name="GameResources/2" LoadType="0" Packed="False" />
@@ -15,6 +16,7 @@
       <Resource Name="Scene" LoadType="0" Packed="False" />
       <Resource Name="Setting" LoadType="0" Packed="False" />
       <Resource Name="Shader" LoadType="0" Packed="False" />
+      <Resource Name="Table" LoadType="0" Packed="False" />
       <Resource Name="UI/Font/Materials" LoadType="0" Packed="False" />
       <Resource Name="UI/Font_base" LoadType="0" Packed="False" />
       <Resource Name="UI/Form" LoadType="0" Packed="False" />
@@ -36,6 +38,7 @@
       <Asset Guid="2dcd1f3c9c3bbb64d8574406965848dd" ResourceName="UI/Font/Materials" />
       <Asset Guid="319fef60ff2174c46acb37455138ab1c" ResourceName="Shader" />
       <Asset Guid="325317f1c5160f348b45a8b9b9a398e0" ResourceName="GameResources/3" />
+      <Asset Guid="3530254ccd72ab942bda5b6562978ab2" ResourceName="Table" />
       <Asset Guid="35f44114bfc3b9c418089f37ca492420" ResourceName="Scene" />
       <Asset Guid="37ecff71e21b62d4d930a7059bfed425" ResourceName="Scene" />
       <Asset Guid="39a5bc6bf515b1248b9e50a3ae6bfcba" ResourceName="Shader" />
@@ -51,6 +54,7 @@
       <Asset Guid="6a92be642386ab7428c120e90183100b" ResourceName="Shader" />
       <Asset Guid="6e9596cfd6ebbd347a4c49ccc6506878" ResourceName="Shader" />
       <Asset Guid="6f55cc93a876edf4db29865861f28304" ResourceName="UI/Font/Materials" />
+      <Asset Guid="7ac8b1eeaee3f4c4aa89aed58419c3fa" ResourceName="Entity/PlatformGroup" />
       <Asset Guid="7e8b53cd25392394287b52873d478d41" ResourceName="Shader" />
       <Asset Guid="85674fe8018822347906dad02c081340" ResourceName="Entity/Ball" />
       <Asset Guid="878bb6fc52cf4004fad06c0c7ec7cd64" ResourceName="Shader" />
@@ -72,12 +76,14 @@
       <Asset Guid="d224a92008926a94fa83c8ebc1535a10" ResourceName="GameResources/0" />
       <Asset Guid="d5fbb8e0930873e4da54748fc070b75c" ResourceName="Scene" />
       <Asset Guid="d90c5965a08d0b941b8f602ee5274108" ResourceName="Shader" />
+      <Asset Guid="dc2df4ba8330d7047b29ff57a173b613" ResourceName="Entity/PlatformGroup" />
       <Asset Guid="e483e9895a10b06469f1758cf802878a" ResourceName="Entity/Ball" />
       <Asset Guid="ebac9cca85aec5d4ca421372a454e7d2" ResourceName="Setting" />
       <Asset Guid="f10ce2d053fed534690a7d3200cd457b" ResourceName="UI/Form" />
       <Asset Guid="f2b9a250f4c36c3408965222f5369f20" ResourceName="UI/Form" />
       <Asset Guid="f2bb3e366b522504b84bab90a103d51b" ResourceName="Entity/Cannon" />
       <Asset Guid="f9c2744c4487cdb469cd4b29cccaaaaf" ResourceName="Setting" />
+      <Asset Guid="fbb89966f74f86946bfd81edad785998" ResourceName="Table" />
     </Assets>
   </ResourceCollection>
 </UnityGameFramework>

@@ -27,7 +27,7 @@ namespace Game.PlatForm
             if (IsRandomX)
             {
                 var randomX = Random.Range(randomXRange.x, randomXRange.y);
-                transform.localPosition = new Vector3(randomX, transform.position.y, transform.position.z);
+                transform.position = new Vector3(randomX, transform.position.y, transform.position.z);
             }
         }
         

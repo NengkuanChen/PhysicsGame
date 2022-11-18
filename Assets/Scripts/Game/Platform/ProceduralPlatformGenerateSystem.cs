@@ -75,6 +75,7 @@ namespace Game.PlatForm
             var newPlatform =
                 await EntityUtility.ShowEntityAsync<PlatformGroupEntity>($"PlatformGroup/{platformID}", EntityGroupName.Platform);
             newPlatform.transform.parent = ScrollRoot.Current.transform;
+            
             if (platformGroupEntities.Count > 0)
             {
                 newPlatform.transform.position += (platformGroupEntities[^1].ExitPoistion.position -
@@ -82,8 +83,8 @@ namespace Game.PlatForm
             }
             else
             {
-                newPlatform.transform.position += (ScrollRoot.Current.transform.position -
-                                                   newPlatform.EnterPoistion.position + Vector3.down * 5);
+                newPlatform.transform.position += (PlatformInitialPosition.Current.transform.position -
+                                                   newPlatform.EnterPoistion.position);
             }
             platformGroupEntities.Add(newPlatform);
             return newPlatform;
