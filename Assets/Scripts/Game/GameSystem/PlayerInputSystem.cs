@@ -53,7 +53,7 @@ namespace Game.GameSystem
         private void OnPlayerMoveBall(InputAction.CallbackContext context)
         {
             var rot = context.ReadValue<Quaternion>();
-            deviceRotate = rot.eulerAngles.x;
+            deviceRotate = rot.eulerAngles.y % 360;
             deviceRotate = deviceRotate > 180 ? deviceRotate - 360 : deviceRotate;
             deviceRotate = Mathf.Clamp(deviceRotate, -playerInputSetting.MaxDeviceInputAngle,
                 playerInputSetting.MaxDeviceInputAngle);

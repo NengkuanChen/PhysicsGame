@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BuildSettingConfiguration(IOS)
   m_EditorClassIdentifier: 
   buildAssetBundle: 1
-  enableLog: 0
-  enableLunarConsole: 0
+  enableLog: 1
+  enableLunarConsole: 1
   enableDevelopmentMode: 0
-  enableDingTalkInform: 1
-  replaceBuild: 0
+  enableDingTalkInform: 0
+  replaceBuild: 1

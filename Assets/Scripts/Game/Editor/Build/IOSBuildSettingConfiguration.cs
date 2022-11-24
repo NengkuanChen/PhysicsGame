@@ -35,6 +35,7 @@ namespace Game.Editor.Build
                 UnityEditor.EditorUtility.SetDirty(reportSetting);
             }
 
+            /*
             if (advertisementSettings != null && advertisementSettings.Length > 0)
             {
                 foreach (var advertisementSetting in advertisementSettings)
@@ -45,7 +46,7 @@ namespace Game.Editor.Build
                     advertisementSetting.IOSRewardKey = IOSPackageInfoConfiguration.RewardAdKey;
                     UnityEditor.EditorUtility.SetDirty(advertisementSetting);
                 }
-            }
+            }*/
 
         #if OCF_ADVERTISEMENT_ENABLE
             var appLovinSettings = AppLovinSettings.Instance;

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a122d0414dc4c24bbb3d2f47bc30092, type: 3}
   m_Name: ReportSetting
   m_EditorClassIdentifier: 
-  appsFlyerDevKeyIOS: 
+  appsFlyerDevKeyIOS: 1
   appsFlyerDevKeyAndroid: 9RhFC2ViAszw7TQpRLMSZf
-  appsFlyerIosAppId: 
+  appsFlyerIosAppId: 1

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f501605093457ba3f3b04614b37c69, type: 3}
   m_Name: AdvertisementSetting
   m_EditorClassIdentifier: 
-  key: 
-  androidInterstitialKey: 
-  androidRewardKey: 
-  androidBannerKey: 
-  iosInterstitialKey: 
-  iosRewardKey: 
-  iosBannerKey: 
+  key: 1
+  androidInterstitialKey: 1
+  androidRewardKey: 1
+  androidBannerKey: 1
+  iosInterstitialKey: 1
+  iosRewardKey: 1
+  iosBannerKey: 1
   interstitialAdCanPlayMinLevel: 3
   interstitialAdCoolDownSeconds: 60
   successRewardAdResetInterstitialAdCoolDown: 1

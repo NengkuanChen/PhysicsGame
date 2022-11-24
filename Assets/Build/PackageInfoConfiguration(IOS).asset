@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2f390131f5438ebdc3d7a382c278b0, type: 3}
   m_Name: PackageInfoConfiguration(IOS)
   m_EditorClassIdentifier: 
-  appName: Dirt Motocross
-  companyName: dirt
-  icon: {fileID: 2800000, guid: 32217ffef64054d44a8e195b78ef9dac, type: 3}
-  packageName: com.dirt.dirtmotocross
-  version: 1.0.0
+  appName: Prototype
+  companyName: TrippleBStudio
+  icon: {fileID: 2800000, guid: abe07bc040eff524eb2e03d5fbbbd902, type: 3}
+  packageName: com.TrippleBStudio.Prototype
+  version: 0.0.1
   bundleVersionCode: 31374
-  facebookId: 166910275218162
-  appsflyerDevKey: 9RhFC2ViAszw7TQpRLMSZf
-  interstitialAdKey: 
-  rewardAdKey: 
-  bannerAdKey: 
-  admobAppId: 
-  iosAppId: 1562066840
+  facebookId: 1
+  appsflyerDevKey: 1
+  maxKey: 1
+  interstitialAdKey: 1
+  rewardAdKey: 1
+  bannerAdKey: 1
+  admobAppId: 1
+  iosAppId: 1
