@@ -12,7 +12,7 @@ namespace Game.PlatForm
         public float MaxForce => maxForce;
         
         [SerializeField, LabelText("Distance - Force Curve")]
-        private AnimationCurve forceCurve = AnimationCurve.Linear(0, 0, 1, 1);
+        private AnimationCurve forceCurve = AnimationCurve.Linear(0, 1, 1, 0);
 
         public AnimationCurve ForceCurve => forceCurve;
         

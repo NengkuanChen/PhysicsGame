@@ -241,4 +241,26 @@ namespace Game.GameEvent
             return arg;
         }
     }
+    
+    public class OnBallEnterMagneticFieldEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            MagneticPlatform = null;
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public MagneticPlatform MagneticPlatform;
+        public bool IsEnter;
+        
+        public static OnBallEnterMagneticFieldEventArgs Create(MagneticPlatform magneticPlatform, bool isEnter)
+        {
+            var arg = ReferencePool.Acquire<OnBallEnterMagneticFieldEventArgs>();
+            arg.MagneticPlatform = magneticPlatform;
+            arg.IsEnter = isEnter;
+            return arg;
+        }
+    }
 }
