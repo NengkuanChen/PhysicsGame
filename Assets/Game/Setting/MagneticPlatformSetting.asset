@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52a8fc748654c7ca255f0f9e1476c64, type: 3}
   m_Name: MagneticPlatformSetting
   m_EditorClassIdentifier: 
-  maxForce: 10
+  maxForce: 5
   forceCurve:
     serializedVersion: 2
     m_Curve:

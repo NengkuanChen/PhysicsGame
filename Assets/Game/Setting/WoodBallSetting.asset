@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95608f0ed4314caf8191cdad999bd854, type: 3}
   m_Name: WoodBallSetting
   m_EditorClassIdentifier: 
-  pushForce: 40
+  pushForce: 1
   maxHorizontalSpeed: 5
   maxVerticalSpeed: 10
   inputForceCurve:

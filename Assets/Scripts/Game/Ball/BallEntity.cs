@@ -1,4 +1,6 @@
 ﻿using Game.Entity;
+using Game.GameEvent;
+using GameFramework.Event;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -22,6 +24,48 @@ namespace Game.Ball
         
         private bool isBallActive;
         public bool IsBallActive => isBallActive;
+
+        protected override void OnShow(object userData)
+        {
+            base.OnShow(userData);
+            Framework.EventComponent.Subscribe(OnBallEnterWindZoneEventArgs.UniqueId, OnBallEnterWindZone);
+        }
+
+        public virtual void OnBallEnterWindZone(object sender, GameEventArgs e)
+        {
+            var arg = e as OnBallEnterWindZoneEventArgs;
+            if (arg == null)
+            {
+                return;
+            }
+
+            if (arg.BallName != name)
+            {
+                return;
+            }
+
+            if (arg.IsEnter)
+            {
+                foreach (var windForce in arg.WindZone.Setting.WindForces)
+                {
+                    if (windForce.BallType == ballType)
+                    {
+                        AddComponent(new BallWindZoneComponent(windForce.WindForce * arg.WindZone.WindDirection.up));
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                RemoveComponent(BallWindZoneComponent.UniqueId);
+            }
+        }
+
+        protected override void OnHide(bool isShutdown, object userData)
+        {
+            base.OnHide(isShutdown, userData);
+            Framework.EventComponent.Unsubscribe(OnBallEnterWindZoneEventArgs.UniqueId, OnBallEnterWindZone);
+        }
 
         public virtual void ActiveBall(Vector3 rigidBodyVelocity, Vector3 position)
         {

@@ -36,6 +36,7 @@
       <Asset Guid="2856a34e2d1c2be4c9377462138be63b" ResourceName="UI/Font/Materials" />
       <Asset Guid="2dc996edfdfc3f34b9befeb7fd232bce" ResourceName="Entity/Ball" />
       <Asset Guid="2dcd1f3c9c3bbb64d8574406965848dd" ResourceName="UI/Font/Materials" />
+      <Asset Guid="31134029353ab4b0f9981ec37a1ed6e9" ResourceName="Setting" />
       <Asset Guid="319fef60ff2174c46acb37455138ab1c" ResourceName="Shader" />
       <Asset Guid="325317f1c5160f348b45a8b9b9a398e0" ResourceName="GameResources/3" />
       <Asset Guid="3530254ccd72ab942bda5b6562978ab2" ResourceName="Table" />
@@ -56,6 +57,7 @@
       <Asset Guid="6f55cc93a876edf4db29865861f28304" ResourceName="UI/Font/Materials" />
       <Asset Guid="7ac8b1eeaee3f4c4aa89aed58419c3fa" ResourceName="Entity/PlatformGroup" />
       <Asset Guid="7e8b53cd25392394287b52873d478d41" ResourceName="Shader" />
+      <Asset Guid="7f8cbf13e525141728a83b7253c04c67" ResourceName="Setting" />
       <Asset Guid="85674fe8018822347906dad02c081340" ResourceName="Entity/Ball" />
       <Asset Guid="878bb6fc52cf4004fad06c0c7ec7cd64" ResourceName="Shader" />
       <Asset Guid="8ff29d80fad9a8d4f8da2dc830aa0016" ResourceName="UI/Form" />

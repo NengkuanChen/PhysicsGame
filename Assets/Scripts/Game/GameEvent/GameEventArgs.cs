@@ -4,6 +4,8 @@ using Game.Setting;
 using Game.UI;
 using GameFramework;
 using GameFramework.Event;
+using UnityEngine;
+using WindZone = Game.PlatForm.WindZone;
 
 namespace Game.GameEvent
 {
@@ -260,6 +262,30 @@ namespace Game.GameEvent
             var arg = ReferencePool.Acquire<OnBallEnterMagneticFieldEventArgs>();
             arg.MagneticPlatform = magneticPlatform;
             arg.IsEnter = isEnter;
+            return arg;
+        }
+    }
+
+    public class OnBallEnterWindZoneEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            WindZone = null;
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public WindZone WindZone;
+        public bool IsEnter;
+        public string BallName;
+        
+        public static OnBallEnterWindZoneEventArgs Create(WindZone windZone, bool isEnter, string ballName)
+        {
+            var arg = ReferencePool.Acquire<OnBallEnterWindZoneEventArgs>();
+            arg.WindZone = windZone;
+            arg.IsEnter = isEnter;
+            arg.BallName = ballName;
             return arg;
         }
     }
