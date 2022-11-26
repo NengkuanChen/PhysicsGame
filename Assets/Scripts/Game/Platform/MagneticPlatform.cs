@@ -33,7 +33,7 @@ namespace Game.PlatForm
         {
             if (other.CompareTag("Player"))
             {
-                if (BallSystem.Get().playerCurrentBall is IronBall)
+                if (BallSystem.Get().PlayerCurrentBall is IronBall)
                 {
                     Framework.EventComponent.Fire(this, OnBallEnterMagneticFieldEventArgs.Create(this, true));
                 }
@@ -44,7 +44,7 @@ namespace Game.PlatForm
         {
             if (other.CompareTag("Player"))
             {
-                if (BallSystem.Get().playerCurrentBall is IronBall)
+                if (BallSystem.Get().PlayerCurrentBall is IronBall)
                 {
                     Framework.EventComponent.Fire(this, OnBallEnterMagneticFieldEventArgs.Create(this, false));
                 }

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windForces:
   - ballType: 0
-    windForce: 0.2
+    windForce: 0
   - ballType: 2
-    windForce: 1
+    windForce: 0.2
   - ballType: 1
-    windForce: 2
+    windForce: 0.4

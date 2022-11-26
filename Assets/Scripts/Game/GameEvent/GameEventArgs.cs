@@ -306,4 +306,24 @@ namespace Game.GameEvent
             return arg;
         }
     }
+    
+    public class OnGlobalWindZoneEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            WindZone = null;    
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+        
+        public GlobalWindZone WindZone;
+        
+        public static OnGlobalWindZoneEventArgs Create(GlobalWindZone windZone)
+        {
+            var arg = ReferencePool.Acquire<OnGlobalWindZoneEventArgs>();
+            arg.WindZone = windZone;
+            return arg;
+        }
+    }
 }

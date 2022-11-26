@@ -25,7 +25,7 @@ namespace Game.Ball
         private PlasticBall currentPlasticBall;
         public PlasticBall CurrentPlasticBall => currentPlasticBall;
 
-        public BallEntity playerCurrentBall;
+        private BallEntity playerCurrentBall;
         public BallEntity PlayerCurrentBall => playerCurrentBall;
         
         private List<BallEntity> allBalls = new List<BallEntity>();
