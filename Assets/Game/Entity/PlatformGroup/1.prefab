@@ -46,9 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044e5dc0c4a24f928dd0ff6cdfb52745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformRigidbody: {fileID: 0}
+  isRandomX: 0
+  randomXRange: {x: -4, y: 4}
   windDirection: {fileID: 187001290231035661}
   windZoneTrigger: {fileID: 2674924069251469191}
   setting: {fileID: 11400000, guid: 31134029353ab4b0f9981ec37a1ed6e9, type: 2}
+  isRandomDirection: 1
+  isRandom4Way: 1
 --- !u!65 &2674924069251469191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -366,6 +371,7 @@ MonoBehaviour:
   allPlatformEntities:
   - {fileID: 3720731340486545782}
   - {fileID: 1370269822052747411}
+  - {fileID: 6831427750584205657}
   enterPoistion: {fileID: 3895171749208599082}
   exitPoistion: {fileID: 654401505348643777}
   enterTrigger: {fileID: 7463393100408907229}

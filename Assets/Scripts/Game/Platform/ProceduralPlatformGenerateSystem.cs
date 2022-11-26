@@ -98,6 +98,20 @@ namespace Game.PlatForm
             return await GeneratePlatformGroup(platformId);
         }
 
+        public async UniTask ResetScene()
+        {
+            foreach (var entity in platformGroupEntities)
+            {
+                entity.Hide();
+            }
+            platformGroupEntities.Clear();
+            playerPassedEntities.Clear();
+            for (int i = 0; i < setting.PlatformFront; i++)
+            {
+                await RandomGeneratePlatformGroup();
+            }
+        }
+        
         internal override void OnDisable()
         {
             base.OnDisable();

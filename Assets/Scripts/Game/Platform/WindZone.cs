@@ -3,10 +3,11 @@ using Game.GameEvent;
 using Game.Utility;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Game.PlatForm
 {
-    public class WindZone: MonoBehaviour
+    public class WindZone: PlatformEntity
     {
         [SerializeField, LabelText("Wind Direction"), Required]
         private Transform windDirection;
@@ -19,6 +20,26 @@ namespace Game.PlatForm
         [SerializeField, LabelText("Wind Zone Setting"), Required]
         private WindZoneSetting setting;
         public WindZoneSetting Setting => setting;
+        
+        [SerializeField, LabelText("Is Random Direction"), Required]
+        private bool isRandomDirection;
+        
+        [SerializeField, LabelText("Is Random 4-way"), Required]
+        private bool isRandom4Way;
+
+        public override void OnPlatformShow()
+        {
+            base.OnPlatformShow();
+            if (isRandomDirection)
+            {
+                windDirection.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
+            }
+
+            if (isRandom4Way)
+            {
+                windDirection.rotation = Quaternion.Euler(0, 0, Random.Range(0, 4) * 90);
+            }
+        }
 
 
         private void OnTriggerEnter(Collider other)

@@ -289,4 +289,21 @@ namespace Game.GameEvent
             return arg;
         }
     }
+    
+    public class OnBallDeadEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+        
+        public static OnBallDeadEventArgs Create()
+        {
+            var arg = ReferencePool.Acquire<OnBallDeadEventArgs>();
+            return arg;
+        }
+    }
 }

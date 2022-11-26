@@ -38,10 +38,31 @@ namespace VisualProcedure.Runtime
                 }
             },
             {
+                (typeof(Game.VisualProcedure.EvaluationNode), 5), portId =>
+                {
+                    return portId switch
+                    {
+                        0 => new Game.VisualProcedure.ResetSceneNode(){ ID = 6 },
+                        _ => null
+                    };
+                }
+            },
+            {
                 (typeof(Game.VisualProcedure.MainGameNode), 4), portId =>
                 {
                     return portId switch
                     {
+                        0 => new Game.VisualProcedure.EvaluationNode(){ ID = 5 },
+                        _ => null
+                    };
+                }
+            },
+            {
+                (typeof(Game.VisualProcedure.ResetSceneNode), 6), portId =>
+                {
+                    return portId switch
+                    {
+                        0 => new Game.VisualProcedure.WaitingStartNode(){ ID = 3 },
                         _ => null
                     };
                 }

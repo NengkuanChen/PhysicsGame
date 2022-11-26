@@ -18,4 +18,4 @@ MonoBehaviour:
   - ballType: 2
     windForce: 1
   - ballType: 1
-    windForce: 8
+    windForce: 2

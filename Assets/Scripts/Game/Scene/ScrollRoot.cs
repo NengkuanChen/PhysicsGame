@@ -7,10 +7,11 @@ using UnityEngine;
 
 namespace Game.Scene
 {
-    public class ScrollRoot: UniqueSceneElement<ScrollRoot>, ISceneElementUpdate
+    public class ScrollRoot: UniqueSceneElement<ScrollRoot>, ISceneElementUpdate, ISceneElementOnSceneReset
     {
         private bool hasStart = false;
         private float currentSpeed = 0f;
+        private Vector3 initialPos;
 
         private PlatformSetting setting;
         
@@ -19,6 +20,7 @@ namespace Game.Scene
             base.Awake();
             Framework.EventComponent.Subscribe(OnGameStartEventArgs.UniqueId, OnGameStart);
             setting = SettingUtility.PlatformSetting;
+            initialPos = transform.position;
         }
 
         private void OnGameStart(object o, GameEventArgs e)
@@ -36,6 +38,13 @@ namespace Game.Scene
                 transform.position += Vector3.up * currentSpeed * elapseSeconds;
             }
         }
+        
+        public void StopScroll()
+        {
+            hasStart = false;
+        }
+
+        
 
         protected override void OnDestroy()
         {
@@ -49,5 +58,11 @@ namespace Game.Scene
             DebugExtension.DrawWireSphere(transform.position, Color.magenta);
         }
 #endif
+        public void OnSceneReset()
+        {
+            hasStart = false;
+            currentSpeed = 0f;
+            transform.position = initialPos;
+        }
     }
 }

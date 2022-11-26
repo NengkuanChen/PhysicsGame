@@ -57,7 +57,7 @@ namespace Game.Ball
                 {
                     // ball.transform.position
                     ball.ActiveBall(playerCurrentBall.BallRigidBody.velocity, playerCurrentBall.transform.position);
-                    playerCurrentBall.DeActiveBall();
+                    playerCurrentBall.DeactiveBall();
                     playerCurrentBall = ball;
                     break;
                 }
@@ -81,7 +81,7 @@ namespace Game.Ball
             var results = await UniTask.WhenAll(loadTasks);
             foreach (var ball in results)
             {
-                ball.DeActiveBall();
+                ball.DeactiveBall();
                 allBalls.Add(ball);
             }
             currentIronBall = allBalls[0] as IronBall;
@@ -89,6 +89,15 @@ namespace Game.Ball
             return playerCurrentBall;
         }
         
+        public void Reset()
+        {
+            foreach (var ball in allBalls)
+            {
+                ball.DeactiveBall();
+            }
+            playerCurrentBall = currentIronBall;
+            playerCurrentBall.ActiveBall(Vector3.zero, Vector3.zero);
+        }
 
         public void OnWaitingGameStart()
         {
@@ -99,6 +108,10 @@ namespace Game.Ball
             currentIronBall.transform.parent = ScrollRoot.Current.transform;
             currentIronBall.transform.localPosition = Vector3.zero;
             currentIronBall.transform.rotation = Quaternion.identity;
+            if (!currentIronBall.ContainComponent(BallFixComponent.UniqueId))
+            {
+                currentIronBall.AddComponent(new BallFixComponent());
+            }
         }
 
         public void OnGameStart(object o, GameEventArgs args)

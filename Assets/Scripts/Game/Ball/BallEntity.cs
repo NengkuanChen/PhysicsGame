@@ -76,7 +76,7 @@ namespace Game.Ball
             transform.position = position;
         }
         
-        public virtual void DeActiveBall()
+        public virtual void DeactiveBall()
         {
             RemoveAllComponents();
             AddComponent(new BallFixComponent());

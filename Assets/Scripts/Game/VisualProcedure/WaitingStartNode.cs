@@ -3,6 +3,8 @@ using Game.Ball;
 using Game.GameEvent;
 using Game.GameSystem;
 using Game.Scene;
+using Game.UI.Form;
+using Game.Utility;
 using GameFramework.Event;
 using UnityEngine;
 using VisualProcedure.Runtime;
@@ -25,7 +27,9 @@ namespace Game.VisualProcedure
             base.OnEnter(parameter);
             var camera = GameCameraSystem.Get().GameCameraEntity;
             camera.transform.position = CameraSpawningPoint.Current.transform.position;
-            camera.transform.rotation = CameraSpawningPoint.Current.transform.rotation;
+            camera.transform.rotation = CameraSpawningPoint.Current.transform.rotation; 
+            UIUtility.OpenForm(WaitingStartForm.UniqueId);
+
             // var cannonTransform = CannonSystem.Get().CurrentCannon.transform;
             // cannonTransform.position = CannonSpawningPoint.Current.transform.position;
             // cannonTransform.rotation = CannonSpawningPoint.Current.transform.rotation;

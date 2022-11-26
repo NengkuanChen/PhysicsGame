@@ -64,16 +64,50 @@
             ]
         },
         {
+            "nodeId": 5,
+            "positionInGraph": {
+                "x": 925.7611083984375,
+                "y": 229.25685119628907
+            },
+            "nodeClassTypeName": "Game.VisualProcedure.EvaluationNode",
+            "flowOutPortInfoList": [
+                {
+                    "flowOutPortId": 0,
+                    "targetNodeList": [
+                        6
+                    ]
+                }
+            ]
+        },
+        {
             "nodeId": 4,
             "positionInGraph": {
-                "x": 771.1539306640625,
-                "y": 74.03846740722656
+                "x": 653.2504272460938,
+                "y": 196.3087921142578
             },
             "nodeClassTypeName": "Game.VisualProcedure.MainGameNode",
             "flowOutPortInfoList": [
                 {
                     "flowOutPortId": 0,
-                    "targetNodeList": []
+                    "targetNodeList": [
+                        5
+                    ]
+                }
+            ]
+        },
+        {
+            "nodeId": 6,
+            "positionInGraph": {
+                "x": 366.8110046386719,
+                "y": 478.1642761230469
+            },
+            "nodeClassTypeName": "Game.VisualProcedure.ResetSceneNode",
+            "flowOutPortInfoList": [
+                {
+                    "flowOutPortId": 0,
+                    "targetNodeList": [
+                        3
+                    ]
                 }
             ]
         }

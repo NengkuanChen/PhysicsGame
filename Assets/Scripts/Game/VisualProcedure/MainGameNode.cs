@@ -1,6 +1,8 @@
 ﻿using FlatNode.Runtime;
+using Game.GameEvent;
 using Game.UI.Form.Control;
 using Game.Utility;
+using GameFramework.Event;
 using VisualProcedure.Runtime;
 using VisualProcedure.Runtime.ProcedureNode;
 
@@ -23,6 +25,18 @@ namespace Game.VisualProcedure
 #else
             UIUtility.OpenForm(ControlForm.UniqueId);
 #endif
+            Framework.EventComponent.Subscribe(OnBallDeadEventArgs.UniqueId, OnBallDead);
+        }
+
+        private void OnBallDead(object sender, GameEventArgs e)
+        {
+            ExitProcedure(FlowOutPort.Evaluation);
+        }
+
+        public override void OnExit()
+        {
+            base.OnExit();
+            Framework.EventComponent.Unsubscribe(OnBallDeadEventArgs.UniqueId, OnBallDead);
         }
     }
 }
