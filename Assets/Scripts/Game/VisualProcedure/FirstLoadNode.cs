@@ -41,6 +41,7 @@ namespace Game.VisualProcedure
             new PlayerInputSystem();
             var ballSystem = new BallSystem();
             await ballSystem.LoadBallEntityAsync();
+            new GlobalWindZoneSystem();
             new ProceduralPlatformGenerateSystem();
             UIUtility.CloseForm(LoadingForm.UniqueId);
             ExitProcedure(FlowOutPort.LoadComplete);

@@ -3,6 +3,8 @@ using Cysharp.Threading.Tasks;
 using Game.Ball;
 using Game.GameEvent;
 using Game.PlatForm;
+using Game.UI.Form;
+using Game.Utility;
 using GameFramework.Event;
 using UnityEngine;
 
@@ -24,14 +26,39 @@ namespace Game.GameSystem
 
         private Vector3 currentWindDir;
         public Vector3 CurrentWindDir => currentWindDir;
+
+        private Vector3 indicatorEulerAngle;
+
+        private UniTask currentTask;
+
+        public static GlobalWindZoneSystem Get()
+        {
+            return SystemEntry.GetSystem(UniqueId) as GlobalWindZoneSystem;
+        }
         
         internal override void OnEnable()
         {
             base.OnEnable();
             Framework.EventComponent.Subscribe(OnGlobalWindZoneEventArgs.UniqueId, OnGlobalWindZoneEnable);
             // Framework.EventComponent.Subscribe(OnBallSwitchEventArgs.UniqueId, OnBallSwitch);
+            Framework.EventComponent.Subscribe(OnBallDeadEventArgs.UniqueId, OnBallDead);
         }
-        
+
+        private void OnBallDead(object sender, GameEventArgs e)
+        {
+            if (isCurrentlyActive)
+            {
+                isCurrentlyActive = false;
+                currentActiveSetting = null;
+                currentWindDir = Vector3.zero;
+                cumulateTime = 0f;
+                if (UIUtility.GetForm(WindIndicatorForm.UniqueId) != null)
+                {
+                    CloseWindForm();
+                }
+            }
+        }
+
         private void OnGlobalWindZoneEnable(object sender, GameEventArgs e)
         {
             if (isCurrentlyActive)
@@ -44,16 +71,20 @@ namespace Game.GameSystem
                 return;
             }
             isCurrentlyActive = true;
+            currentActiveSetting = arg.WindZone.Setting;
             var maxForce = Vector3.zero;
             var currentBall = BallSystem.Get().PlayerCurrentBall;
+            currentWindDir = arg.WindZone.WindDirection.up;
+            indicatorEulerAngle = arg.WindZone.WindDirection.eulerAngles;
             foreach (var force in arg.WindZone.Setting.WindForces)
             {
                 if (force.BallType == currentBall.BallType)
                 {
-                    maxForce = force.WindForce * arg.WindZone.WindDirection.up;
+                    maxForce = force.WindForce * currentWindDir;
                     break;
                 }
             }
+            Log.Info(maxForce);
             currentBall.AddComponent(new BallGlobalWindComponent(maxForce, arg.WindZone.Setting));
             WindZoneHandle(currentBall, arg.WindZone.Setting.TotalConstantTime).Forget();
         }
@@ -66,16 +97,29 @@ namespace Game.GameSystem
                 cumulateTime += elapseSeconds;
             }
         }
+        
+        
 
         private async UniTask WindZoneHandle(BallEntity ballEntity, float constTime)
         {
-            isCurrentlyActive = false;
             cumulateTime = 0f;
+            await OpenWindForm(indicatorEulerAngle);
+            await UniTask.Delay(TimeSpan.FromSeconds(constTime));
+            cumulateTime = 0f;
+            if (UIUtility.GetForm(WindIndicatorForm.UniqueId) != null)
+            {
+                CloseWindForm();
+            }
             BallSystem.Get().PlayerCurrentBall.RemoveComponent(BallGlobalWindComponent.UniqueId);
+            isCurrentlyActive = false;
         }
 
         public void OnBallSwitch(BallEntity before, BallEntity after)
         {
+            if (!isCurrentlyActive)
+            {
+                return;
+            }
             before.RemoveComponent(BallGlobalWindComponent.UniqueId);
             var maxForce = Vector3.zero;
             foreach (var force in currentActiveSetting.WindForces)
@@ -86,6 +130,7 @@ namespace Game.GameSystem
                     break;
                 }
             }
+            Log.Info(maxForce);
             after.AddComponent(new BallGlobalWindComponent(maxForce, currentActiveSetting, cumulateTime));
         }
 
@@ -93,7 +138,19 @@ namespace Game.GameSystem
         {
             base.OnDisable();
             Framework.EventComponent.Unsubscribe(OnGlobalWindZoneEventArgs.UniqueId, OnGlobalWindZoneEnable);
+            Framework.EventComponent.Unsubscribe(OnBallDeadEventArgs.UniqueId, OnBallDead);
             // Framework.EventComponent.Unsubscribe(OnBallSwitchEventArgs.UniqueId, OnBallSwitch);
+        }
+
+        public async UniTask OpenWindForm(Vector3 windDir)
+        {
+            var windIndicatorForm = await UIUtility.OpenFormAsync<WindIndicatorForm>(WindIndicatorForm.UniqueId);
+            windIndicatorForm.SetWindDirection(windDir);
+        }
+
+        public void CloseWindForm()
+        {
+            UIUtility.CloseForm(WindIndicatorForm.UniqueId);
         }
     }
 }

@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0ba856fb4c4ed6a0e980d94ee9a725, type: 3}
   m_Name: GlobalWindZoneSetting
   m_EditorClassIdentifier: 
-  windForces: []
+  windForces:
+  - ballType: 0
+    windForce: 0
+  - ballType: 2
+    windForce: 0.2
+  - ballType: 1
+    windForce: 0.4
   timeToMaxWind: 3
+  totalConstantTime: 5
   timeWindForceCurve:
     serializedVersion: 2
     m_Curve:

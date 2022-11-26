@@ -41,6 +41,12 @@ namespace Game.Ball
             base.OnEnable();
             Framework.EventComponent.Subscribe(OnGameStartEventArgs.UniqueId, OnGameStart);
             Framework.EventComponent.Subscribe(OnBallSwitchEventArgs.UniqueId, OnBallSwitch);
+            Framework.EventComponent.Subscribe(OnBallDeadEventArgs.UniqueId, OnBallDead);
+        }
+
+        private void OnBallDead(object sender, GameEventArgs e)
+        {
+            playerCurrentBall.DeactiveBall();
         }
 
         private void OnBallSwitch(object sender, GameEventArgs e)
@@ -58,6 +64,7 @@ namespace Game.Ball
                     // ball.transform.position
                     ball.ActiveBall(playerCurrentBall.BallRigidBody.velocity, playerCurrentBall.transform.position);
                     playerCurrentBall.DeactiveBall();
+                    GlobalWindZoneSystem.Get().OnBallSwitch(playerCurrentBall, ball);
                     playerCurrentBall = ball;
                     break;
                 }
@@ -126,6 +133,7 @@ namespace Game.Ball
             base.OnDisable();
             Framework.EventComponent.Unsubscribe(OnGameStartEventArgs.UniqueId, OnGameStart);
             Framework.EventComponent.Unsubscribe(OnBallSwitchEventArgs.UniqueId, OnBallSwitch);
+            Framework.EventComponent.Unsubscribe(OnBallDeadEventArgs.UniqueId, OnBallDead);
         }
     }
 }

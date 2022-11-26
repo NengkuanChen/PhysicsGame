@@ -30,6 +30,7 @@ namespace Game.Ball
             var curForce =
                 setting.TimeWindForceCurve.Evaluate(Mathf.Clamp(cumulateTime / setting.TimeToMaxWind, 0, 1)) *
                 maxForce;
+            OwnerEntityType.BallRigidBody.AddForce(curForce, ForceMode.VelocityChange);
         }
     }
 }

@@ -1,7 +1,9 @@
 using System;
 using Game.GameEvent;
+using Game.Utility;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Game.PlatForm
 {
@@ -18,6 +20,22 @@ namespace Game.PlatForm
         [SerializeField, LabelText("Wind Direction"), Required]
         private Transform windDirection;
         public Transform WindDirection => windDirection;
+        
+        [SerializeField, LabelText("Is Random Direction"), Required]
+        private bool isRandomDirection;
+        
+        [SerializeField, LabelText("Is Random 2-way"), Required]
+        private bool isRandom2way;
+
+
+        public override void OnPlatformShow()
+        {
+            base.OnPlatformShow();
+            if (isRandom2way)
+            {
+                windDirection.eulerAngles = new Vector3(0, 0, 90 + Random.Range(0, 2) * 180);
+            }
+        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -26,5 +44,18 @@ namespace Game.PlatForm
                 Framework.EventComponent.Fire(this, OnGlobalWindZoneEventArgs.Create(this));
             }
         }
+
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            if (windDirection == null || entryTrigger == null)
+            {
+                return;
+            }
+            
+            DebugExtension.DebugArrow(windDirection.position, windDirection.up * 3, Color.red);
+            DebugExtension.DrawBounds(entryTrigger.bounds, Color.magenta);
+        }
+#endif
     }
 }

@@ -1,5 +1,8 @@
-﻿using Game.Entity;
+﻿using Cysharp.Threading.Tasks;
+using Game.Entity;
 using Game.GameEvent;
+using Game.GameSystem;
+using Game.PlatForm;
 using GameFramework.Event;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -50,6 +53,7 @@ namespace Game.Ball
                 {
                     if (windForce.BallType == ballType)
                     {
+                        // GlobalWindZoneSystem.Get().OpenWindForm(arg.WindZone.WindDirection.eulerAngles).Forget();
                         AddComponent(new BallWindZoneComponent(windForce.WindForce * arg.WindZone.WindDirection.up));
                         break;
                     }
@@ -57,6 +61,7 @@ namespace Game.Ball
             }
             else
             {
+                // GlobalWindZoneSystem.Get().CloseWindForm();
                 RemoveComponent(BallWindZoneComponent.UniqueId);
             }
         }
