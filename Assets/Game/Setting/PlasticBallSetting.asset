@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushForce: 1
   maxHorizontalSpeed: 5
-  maxVerticalSpeed: 3
+  maxVerticalSpeed: 5
   inputForceCurve:
     serializedVersion: 2
     m_Curve:

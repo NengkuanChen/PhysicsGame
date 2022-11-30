@@ -47,7 +47,7 @@ namespace Game.Ball
             var curVelocity = OwnerEntityType.BallRigidBody.velocity;
             curVelocity.x = Mathf.Clamp(curVelocity.x, -setting.MaxHorizontalSpeed, setting.MaxHorizontalSpeed);
             curVelocity.y = Mathf.Clamp(curVelocity.y, -setting.MaxVerticalSpeed, setting.MaxVerticalSpeed);
-
+            OwnerEntityType.BallRigidBody.velocity = curVelocity;
         }
     }
 }

@@ -326,4 +326,20 @@ namespace Game.GameEvent
             return arg;
         }
     }
+
+    public class OnBallHitFlamePlatformEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+        
+        public static OnBallHitFlamePlatformEventArgs Create()
+        {
+            var arg = ReferencePool.Acquire<OnBallHitFlamePlatformEventArgs>();
+            return arg;
+        }
+    }
 }
