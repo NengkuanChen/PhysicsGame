@@ -18,7 +18,7 @@ MonoBehaviour:
   - ballType: 2
     windForce: 0.2
   - ballType: 1
-    windForce: 0.4
+    windForce: 0.6
   timeToMaxWind: 3
   totalConstantTime: 5
   timeWindForceCurve:

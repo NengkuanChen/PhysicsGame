@@ -56,6 +56,25 @@ namespace Game.PlatForm
             DebugExtension.DebugArrow(windDirection.position, windDirection.up * 3, Color.red);
             DebugExtension.DrawBounds(entryTrigger.bounds, Color.magenta);
         }
+
+        [Button(ButtonSizes.Large, Name = "Quick Setup")]
+        public void QuickSetup()
+        {
+            if (windDirection == null)
+            {
+                windDirection = new GameObject("WindDir").transform;
+                windDirection.parent = transform;
+                windDirection.localPosition = Vector3.zero;
+            }
+
+            if (entryTrigger == null)
+            {
+                entryTrigger = gameObject.AddComponent<BoxCollider>();
+                entryTrigger.isTrigger = true;
+                entryTrigger.size = new Vector3(20, 1, 20);
+            }
+        }
 #endif
+        
     }
 }

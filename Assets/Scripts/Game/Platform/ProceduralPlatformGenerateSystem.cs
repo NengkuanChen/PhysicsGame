@@ -21,7 +21,7 @@ namespace Game.PlatForm
             return SystemEntry.GetSystem(UniqueId) as ProceduralPlatformGenerateSystem;
         }
 
-        private int currentTableId = 1;
+        private int currentTableId = 0;
         
         private List<PlatformGroupEntity> platformGroupEntities = new List<PlatformGroupEntity>();
         public List<PlatformGroupEntity> PlatformGroupEntities => platformGroupEntities;
