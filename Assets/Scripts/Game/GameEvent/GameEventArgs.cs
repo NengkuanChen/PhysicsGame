@@ -342,4 +342,23 @@ namespace Game.GameEvent
             return arg;
         }
     }
+    
+    public class OnBallHitBreakablePlatformEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public bool IsExceedSpeed;
+        
+        public static OnBallHitBreakablePlatformEventArgs Create(bool isExceedSpeed)
+        {
+            var arg = ReferencePool.Acquire<OnBallHitBreakablePlatformEventArgs>();
+            arg.IsExceedSpeed = isExceedSpeed;
+            return arg;
+        }
+    }
 }

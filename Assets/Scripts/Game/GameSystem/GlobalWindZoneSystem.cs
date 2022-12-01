@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Game.Ball;
 using Game.GameEvent;
 using Game.PlatForm;
+using Game.Sound;
 using Game.UI.Form;
 using Game.Utility;
 using GameFramework.Event;
@@ -56,6 +57,7 @@ namespace Game.GameSystem
                 {
                     CloseWindForm();
                 }
+                SoundSystem.Get().StopPlay(SettingUtility.SoundSet.GetAudio(0));
             }
         }
 
@@ -104,6 +106,7 @@ namespace Game.GameSystem
         {
             cumulateTime = 0f;
             await OpenWindForm(indicatorEulerAngle);
+            SoundSystem.Get().Play(SettingUtility.SoundSet.GetAudio(0));
             await UniTask.Delay(TimeSpan.FromSeconds(constTime));
             cumulateTime = 0f;
             if (UIUtility.GetForm(WindIndicatorForm.UniqueId) != null)
@@ -111,6 +114,7 @@ namespace Game.GameSystem
                 CloseWindForm();
             }
             BallSystem.Get().PlayerCurrentBall.RemoveComponent(BallGlobalWindComponent.UniqueId);
+            SoundSystem.Get().StopPlay(SettingUtility.SoundSet.GetAudio(0));
             isCurrentlyActive = false;
         }
 

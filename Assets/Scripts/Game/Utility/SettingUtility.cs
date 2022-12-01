@@ -5,6 +5,7 @@ using Game.GameSystem;
 using Game.PlatForm;
 using Game.Report;
 using Game.Setting;
+using Game.Sound;
 using UnityEngine;
 
 namespace Game.Utility
@@ -20,6 +21,8 @@ namespace Game.Utility
 
         public static PlayerInputSetting PlayerInputSetting { get; private set; }
         
+        public static SoundResourceSet SoundSet { get; private set; }
+
         public static async UniTask LoadSettingsAsync()
         {
             var loadTasks = new List<UniTask<ScriptableObject>>
@@ -30,6 +33,7 @@ namespace Game.Utility
                 ResourceUtility.LoadAssetAsync<ScriptableObject>("Setting/AdvertisementSetting.asset"),
                 ResourceUtility.LoadAssetAsync<ScriptableObject>("Setting/PlatformSetting.asset"),
                 ResourceUtility.LoadAssetAsync<ScriptableObject>("Setting/PlayerInputSetting.asset"),
+                ResourceUtility.LoadAssetAsync<ScriptableObject>("Setting/SoundSet.asset"),
             };
 
             var results = await UniTask.WhenAll(loadTasks);
@@ -41,6 +45,7 @@ namespace Game.Utility
             AdvertisementSetting = results[index++] as AdvertisementSetting;
             PlatformSetting = results[index++] as PlatformSetting;
             PlayerInputSetting = results[index++] as PlayerInputSetting;
+            SoundSet = results[index++] as SoundResourceSet;
         }
     }
 }

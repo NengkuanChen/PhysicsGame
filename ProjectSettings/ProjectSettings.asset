@@ -145,6 +145,8 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -166,10 +168,10 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.TrippleBStudio.Prototype
     Standalone: com.DefaultCompany.RR
-    iPhone: com.DefaultCompany.RR
+    iPhone: com.TrippleBStudio.Prototype
   buildNumber:
     Standalone: 0
-    iPhone: 0
+    iPhone: 31374
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 986335
@@ -284,7 +286,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 05cfe010378336646ad6c721f66543d1, type: 3}
+      m_Icon: {fileID: 2800000, guid: abe07bc040eff524eb2e03d5fbbbd902, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -494,6 +496,7 @@ PlayerSettings:
   - m_BuildTarget: WebGL
     m_StaticBatching: 0
     m_DynamicBatching: 0
+  m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
     m_GraphicsJobs: 0
@@ -545,6 +548,8 @@ PlayerSettings:
     m_Devices:
     - Oculus
     - OpenVR
+  m_DefaultShaderChunkSizeInMB: 16
+  m_DefaultShaderChunkCount: 0
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
@@ -566,7 +571,7 @@ PlayerSettings:
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
   cameraUsageDescription: 
-  locationUsageDescription: 
+  locationUsageDescription: This game needs location for better experience
   microphoneUsageDescription: 
   bluetoothUsageDescription: 
   switchNMETAOverride: 
@@ -806,6 +811,7 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
+  webGLPowerPreference: 2
   scriptingDefineSymbols:
     Android: ODIN_INSPECTOR;ODIN_INSPECTOR_3;DREAMTECK_SPLINES;ENABLE_LOG;OCF_REPORT_AD_ENABLE;OBI_ONI_SUPPORTED;ODIN_INSPECTOR_EDITOR_ONLY;ODIN_INSPECTOR_3_1
     Standalone: DREAMTECK_SPLINES;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ENABLE_LOG;OCF_REPORT_AD_ENABLE;ODIN_INSPECTOR_EDITOR_ONLY;ODIN_INSPECTOR_3_1;OBI_ONI_SUPPORTED
@@ -823,6 +829,7 @@ PlayerSettings:
   allowUnsafeCode: 1
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
+  selectedPlatform: 3
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
@@ -901,6 +908,7 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 2
+  windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []

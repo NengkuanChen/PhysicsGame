@@ -77,6 +77,7 @@ namespace Game.Ball
             RemoveAllComponents();
             AddComponent(new BallMoveComponent());
             AddComponent(new BallSwitchComponent());
+            AddComponent(new BallBreakPlatformComponent());
             AddComponent(new BallClampComponent());
             ballRigidBody.velocity = rigidBodyVelocity;
             transform.position = position;

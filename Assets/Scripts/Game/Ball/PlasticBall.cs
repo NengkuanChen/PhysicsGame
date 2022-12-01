@@ -11,9 +11,7 @@ namespace Game.Ball
             base.ActiveBall(rigidBodyVelocity, position);
             AddComponent(new BallFlameDetectionComponent());
         }
-
         
-
         public override void DeactiveBall()
         {
             base.DeactiveBall();
