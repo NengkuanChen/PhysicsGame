@@ -17,7 +17,7 @@ namespace Game.Ball
         
         private void OnBallHitFlamePlatform(object sender, GameEventArgs e)
         {
-            Framework.EventComponent.Fire(this, OnBallDeadEventArgs.Create());
+            Framework.EventComponent.Fire(this, OnBallDeadEventArgs.Create(true));
         }
 
 

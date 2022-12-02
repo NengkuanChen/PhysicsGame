@@ -46,7 +46,34 @@ namespace Game.Ball
 
         private void OnBallDead(object sender, GameEventArgs e)
         {
+            var ballDeadEventArgs = e as OnBallDeadEventArgs;
+            if (ballDeadEventArgs == null)
+            {
+                return;
+            }
+
+            if (ballDeadEventArgs.IsBurned)
+            {
+                PlayBallBurnParticle().Forget();
+
+            }
+            else
+            {
+                playerCurrentBall.Hide();
+            }
+        }
+
+        private async UniTask PlayBallBurnParticle()
+        {
+            var particle =
+                await EntityUtility.ShowEntityAsync<BallFireDestroyParticleEntity>("Ball/Fireball",
+                    EntityGroupName.Ball);
+            particle.transform.position = playerCurrentBall.transform.position;
             playerCurrentBall.DeactiveBall();
+            particle.FireParticle.Play();
+            await UniTask.WaitUntil(() => !particle.FireParticle.isPlaying);
+            await UniTask.Delay(TimeSpan.FromSeconds(2));
+            particle.Hide();
         }
 
         private void OnBallSwitch(object sender, GameEventArgs e)

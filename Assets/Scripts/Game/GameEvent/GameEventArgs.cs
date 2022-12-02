@@ -299,10 +299,13 @@ namespace Game.GameEvent
 
         public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
         public override int Id => UniqueId;
+
+        public bool IsBurned;
         
-        public static OnBallDeadEventArgs Create()
+        public static OnBallDeadEventArgs Create(bool isBurned = false)
         {
             var arg = ReferencePool.Acquire<OnBallDeadEventArgs>();
+            arg.IsBurned = isBurned;
             return arg;
         }
     }
