@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbb49debacb40e9aeefe446ed770c93, type: 3}
   m_Name: QualitySetting
   m_EditorClassIdentifier: 
-  testFrameRate: 60
+  testFrameRate: 120
   testConfigIndex: -1
-  disableQualityDegrade: 0
+  disableQualityDegrade: 1
   configs:
-  - targetFrameRate: 45
+  - targetFrameRate: 60
     resolution: 1080
     enableHDR: 1
     enableSoftShadow: 1
     enableShadow: 1
-  - targetFrameRate: 35
+  - targetFrameRate: 40
     resolution: 720
     enableHDR: 0
     enableSoftShadow: 0
     enableShadow: 1
-  - targetFrameRate: 1
+  - targetFrameRate: 30
     resolution: 360
     enableHDR: 0
     enableSoftShadow: 0
