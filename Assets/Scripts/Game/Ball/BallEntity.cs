@@ -24,6 +24,10 @@ namespace Game.Ball
         [SerializeField, LabelText("Ball Type")]
         private BallType ballType;
         public BallType BallType => ballType;
+
+        [SerializeField, LabelText("Ball Collider"), Required]
+        private SphereCollider ballCollider;
+        public SphereCollider BallCollider => ballCollider;
         
         private bool isBallActive;
         public bool IsBallActive => isBallActive;
@@ -32,6 +36,26 @@ namespace Game.Ball
         {
             base.OnShow(userData);
             Framework.EventComponent.Subscribe(OnBallEnterWindZoneEventArgs.UniqueId, OnBallEnterWindZone);
+            Framework.EventComponent.Subscribe(OnBallEnterWaterEventArgs.UniqueId, OnBallEnterWater);
+        }
+
+        private void OnBallEnterWater(object sender, GameEventArgs e)
+        {
+            var args = e as OnBallEnterWaterEventArgs;
+            if (args == null)
+            {
+                return;
+            }
+
+            var pool = sender as WaterPoolPlatform;
+            if (args.IsEnter)
+            {
+                AddComponent(new BallWaterHandleComponent(pool.transform, pool.Setting));
+            }
+            else
+            {
+                RemoveComponent(BallWaterHandleComponent.UniqueId);
+            }
         }
 
         public virtual void OnBallEnterWindZone(object sender, GameEventArgs e)
@@ -70,6 +94,8 @@ namespace Game.Ball
         {
             base.OnHide(isShutdown, userData);
             Framework.EventComponent.Unsubscribe(OnBallEnterWindZoneEventArgs.UniqueId, OnBallEnterWindZone);
+            Framework.EventComponent.Subscribe(OnBallEnterWaterEventArgs.UniqueId, OnBallEnterWater);
+
         }
 
         public virtual void ActiveBall(Vector3 rigidBodyVelocity, Vector3 position)

@@ -9,11 +9,6 @@ namespace Game.PlatForm
     public abstract class PlatformEntity: MonoBehaviour
     {
 
-        [SerializeField] 
-        private Rigidbody platformRigidbody;
-
-        public Rigidbody PlatformRigidbody => platformRigidbody;
-
         [SerializeField, LabelText("Random Position On X Axis")]
         private bool isRandomX = false;
         public bool IsRandomX => isRandomX;

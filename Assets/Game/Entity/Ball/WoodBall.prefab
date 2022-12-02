@@ -130,3 +130,4 @@ MonoBehaviour:
   ballRigidBody: {fileID: 7827420719457466179}
   setting: {fileID: 11400000, guid: 93ab0c631bff3a94387d35438a00729c, type: 2}
   ballType: 2
+  ballCollider: {fileID: 3108116384372143452}

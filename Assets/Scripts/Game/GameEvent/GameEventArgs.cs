@@ -361,4 +361,26 @@ namespace Game.GameEvent
             return arg;
         }
     }
+    
+    public class OnBallEnterWaterEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public bool IsEnter;
+        
+        public string BallName;
+        
+        public static OnBallEnterWaterEventArgs Create(bool isEnter, string ballName)
+        {
+            var arg = ReferencePool.Acquire<OnBallEnterWaterEventArgs>();
+            arg.IsEnter = isEnter;
+            arg.BallName = ballName;
+            return arg;
+        }
+    }
 }
