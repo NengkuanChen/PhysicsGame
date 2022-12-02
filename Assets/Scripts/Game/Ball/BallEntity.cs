@@ -94,7 +94,7 @@ namespace Game.Ball
         {
             base.OnHide(isShutdown, userData);
             Framework.EventComponent.Unsubscribe(OnBallEnterWindZoneEventArgs.UniqueId, OnBallEnterWindZone);
-            Framework.EventComponent.Subscribe(OnBallEnterWaterEventArgs.UniqueId, OnBallEnterWater);
+            Framework.EventComponent.Unsubscribe(OnBallEnterWaterEventArgs.UniqueId, OnBallEnterWater);
 
         }
 

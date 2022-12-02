@@ -130,7 +130,7 @@ namespace Game.Ball
                 ball.DeactiveBall();
             }
             playerCurrentBall = currentIronBall;
-            playerCurrentBall.ActiveBall(Vector3.zero, Vector3.zero);
+            playerCurrentBall.ActiveBall(Vector3.zero, ScrollRoot.Current.transform.position);
         }
 
         public void OnWaitingGameStart()
