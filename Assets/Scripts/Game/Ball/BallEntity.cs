@@ -113,7 +113,7 @@ namespace Game.Ball
         {
             RemoveAllComponents();
             AddComponent(new BallFixComponent());
-            transform.position = new Vector3(0, 0, 20);
+            transform.position = new Vector3(0, -50f, 20);
             transform.rotation = Quaternion.identity;
         }
     }

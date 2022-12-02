@@ -52,6 +52,11 @@ namespace Game.Ball
             var sunkPortion = 1 - Mathf.Clamp01(ballTopY - waterLevel) / ballDiameter;
             var buoyancyForce = buoyancySetting.DepthForceCurve.Evaluate(sunkPortion) * buoyancySetting.MaxBuoyancyForce;
             OwnerEntityType.BallRigidBody.AddForce(buoyancyForce * Vector3.up, ForceMode.Impulse);
+            var currentVelocity = OwnerEntityType.BallRigidBody.velocity;
+            var dragForce = -currentVelocity.normalized * buoyancySetting.MaxBuoyancyForce *
+                            buoyancySetting.SpeedDragForceCurve.Evaluate(currentVelocity.magnitude /
+                                                                         buoyancySetting.MaxDragAtSpeed);
+            OwnerEntityType.BallRigidBody.AddForce(dragForce, ForceMode.Impulse);
         }
     }
 }
