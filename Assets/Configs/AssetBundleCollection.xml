@@ -10,6 +10,7 @@
       <Resource Name="Entity/PlatformGroup" LoadType="0" Packed="False" />
       <Resource Name="GameResources/0" LoadType="0" Packed="False" />
       <Resource Name="GameResources/1" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/10" LoadType="0" Packed="False" />
       <Resource Name="GameResources/2" LoadType="0" Packed="False" />
       <Resource Name="GameResources/3" LoadType="0" Packed="False" />
       <Resource Name="GameResources/4" LoadType="0" Packed="False" />
@@ -17,7 +18,9 @@
       <Resource Name="GameResources/6" LoadType="0" Packed="False" />
       <Resource Name="GameResources/7" LoadType="0" Packed="False" />
       <Resource Name="GameResources/8" LoadType="0" Packed="False" />
-      <Resource Name="Scene" LoadType="0" Packed="False" />
+      <Resource Name="GameResources/9" LoadType="0" Packed="False" />
+      <Resource Name="Scene/Prototype" LoadType="0" Packed="False" />
+      <Resource Name="Scene_base" LoadType="0" Packed="False" />
       <Resource Name="Setting" LoadType="0" Packed="False" />
       <Resource Name="Shader" LoadType="0" Packed="False" />
       <Resource Name="Sound" LoadType="0" Packed="False" />
@@ -37,25 +40,32 @@
       <Asset Guid="0b2ce40fac7b97e488b38d7dd3e3733f" ResourceName="Setting" />
       <Asset Guid="0ed00aa9ac09644d88a26a8785a7d86f" ResourceName="GameResources/7" />
       <Asset Guid="16b283fd703a61640854c5208e8733ba" ResourceName="Setting" />
+      <Asset Guid="174232eeaeed9e5418262fac4f4ebf5a" ResourceName="GameResources/8" />
       <Asset Guid="193fe1214cb9f2f4692f9f47cb5fefb6" ResourceName="GameResources/0" />
       <Asset Guid="1a79744c94af1c64fa7c06a81f291047" ResourceName="UI/Form" />
       <Asset Guid="1f984f536d18c421fb045aa19cffbeea" ResourceName="Entity/Platform" />
+      <Asset Guid="20399d2737cab214195ed395c5b8bb20" ResourceName="Entity/PlatformGroup" />
       <Asset Guid="269ac9e0bfc88464d8e3abcd189d4405" ResourceName="Setting" />
+      <Asset Guid="2756c25f81fb13a48acf8cde26e53a67" ResourceName="Entity/Platform" />
       <Asset Guid="2856a34e2d1c2be4c9377462138be63b" ResourceName="UI/Font/Materials" />
-      <Asset Guid="2b88e3be96b3041d5b8401c21c8121ec" ResourceName="GameResources/4" />
+      <Asset Guid="2a8df748a84a8414a9b6524d00b20c4a" ResourceName="Entity/Ball" />
       <Asset Guid="2dc996edfdfc3f34b9befeb7fd232bce" ResourceName="Entity/Ball" />
       <Asset Guid="2dcccfce5bc845b43bf801fc1ca39393" ResourceName="GameResources/2" />
       <Asset Guid="2dcd1f3c9c3bbb64d8574406965848dd" ResourceName="UI/Font/Materials" />
       <Asset Guid="31134029353ab4b0f9981ec37a1ed6e9" ResourceName="Setting" />
       <Asset Guid="319fef60ff2174c46acb37455138ab1c" ResourceName="Shader" />
+      <Asset Guid="31d3f50da4da4084db979b3b3f83c84a" ResourceName="Setting" />
       <Asset Guid="325317f1c5160f348b45a8b9b9a398e0" ResourceName="GameResources/5" />
       <Asset Guid="3530254ccd72ab942bda5b6562978ab2" ResourceName="Table" />
-      <Asset Guid="35f44114bfc3b9c418089f37ca492420" ResourceName="Scene" />
-      <Asset Guid="37ecff71e21b62d4d930a7059bfed425" ResourceName="Scene" />
+      <Asset Guid="35eddd3a31101f44c8f8627c574303bf" ResourceName="GameResources/4" />
+      <Asset Guid="35f44114bfc3b9c418089f37ca492420" ResourceName="Scene_base" />
+      <Asset Guid="37ecff71e21b62d4d930a7059bfed425" ResourceName="Scene_base" />
       <Asset Guid="39a5bc6bf515b1248b9e50a3ae6bfcba" ResourceName="Shader" />
+      <Asset Guid="3f45a5bbec96a334ab938ef1c2bd4052" ResourceName="GameResources/9" />
       <Asset Guid="4b90488410ed8c140b7af3cf459bf3e5" ResourceName="Shader" />
       <Asset Guid="549ef949623372f4796f7597d40b1a4c" ResourceName="UI/Font_base" />
-      <Asset Guid="5d813e6ae8d9c4b40959aaf27a87c3a7" ResourceName="GameResources/6" />
+      <Asset Guid="58d060e406956f148a8f5b7d7812a0ec" ResourceName="GameResources/4" />
+      <Asset Guid="5d813e6ae8d9c4b40959aaf27a87c3a7" ResourceName="GameResources/3" />
       <Asset Guid="5e1aad114ac85014d886b26171a12f3a" ResourceName="UI/Font/Materials" />
       <Asset Guid="5e2afd3eb5a4f7b42aabaa9aa16c05c6" ResourceName="Setting" />
       <Asset Guid="5fd535272d2bdbb459fb8d6be1ae8203" ResourceName="Setting" />
@@ -65,6 +75,7 @@
       <Asset Guid="6b76d9d1feeff45c0a41a824e4bd9f95" ResourceName="UI/Form" />
       <Asset Guid="6e9596cfd6ebbd347a4c49ccc6506878" ResourceName="Shader" />
       <Asset Guid="6f55cc93a876edf4db29865861f28304" ResourceName="UI/Font/Materials" />
+      <Asset Guid="758944edcb34f814a9e92c99ab7455c3" ResourceName="GameResources/6" />
       <Asset Guid="7ac8b1eeaee3f4c4aa89aed58419c3fa" ResourceName="Entity/PlatformGroup" />
       <Asset Guid="7e8b53cd25392394287b52873d478d41" ResourceName="Shader" />
       <Asset Guid="7f8cbf13e525141728a83b7253c04c67" ResourceName="Setting" />
@@ -86,13 +97,14 @@
       <Asset Guid="b48502d08bcc44344aaac3dfca9f0dc6" ResourceName="GameResources/2" />
       <Asset Guid="b4b78034333f1aa489572ceb4fe4d4cb" ResourceName="Shader" />
       <Asset Guid="b56b31fa7e5562b4d9e4846f990c2a6f" ResourceName="Entity/Camera" />
+      <Asset Guid="b921955b0bf97d94bb10e96061050483" ResourceName="Entity/Platform" />
       <Asset Guid="ba656ae8dd0e9ab4cb5139f176113c62" ResourceName="Setting" />
       <Asset Guid="c2fbd1ebdba46b347a3e5db8d978ba01" ResourceName="UI/Form" />
       <Asset Guid="c62877170fd79004a8acd14744ef3b90" ResourceName="UI/Font/Materials" />
       <Asset Guid="d224a92008926a94fa83c8ebc1535a10" ResourceName="GameResources/0" />
-      <Asset Guid="d5fbb8e0930873e4da54748fc070b75c" ResourceName="Scene" />
+      <Asset Guid="d5fbb8e0930873e4da54748fc070b75c" ResourceName="Scene_base" />
       <Asset Guid="d90c5965a08d0b941b8f602ee5274108" ResourceName="Shader" />
-      <Asset Guid="dabecdf2e4d6c4884b90670c8b145265" ResourceName="GameResources/8" />
+      <Asset Guid="dabecdf2e4d6c4884b90670c8b145265" ResourceName="GameResources/10" />
       <Asset Guid="dc2df4ba8330d7047b29ff57a173b613" ResourceName="Entity/PlatformGroup" />
       <Asset Guid="de8e6d655ccfa41a088a7583c6bd6330" ResourceName="Setting" />
       <Asset Guid="e483e9895a10b06469f1758cf802878a" ResourceName="Entity/Ball" />
@@ -102,6 +114,7 @@
       <Asset Guid="f2006eabb8a33a04a99a9e09a19648bb" ResourceName="GameResources/2" />
       <Asset Guid="f2b9a250f4c36c3408965222f5369f20" ResourceName="UI/Form" />
       <Asset Guid="f2bb3e366b522504b84bab90a103d51b" ResourceName="Entity/Cannon" />
+      <Asset Guid="f5862218c0909cf41b5091add966997d" ResourceName="Scene/Prototype" />
       <Asset Guid="f9c2744c4487cdb469cd4b29cccaaaaf" ResourceName="Setting" />
       <Asset Guid="fbb89966f74f86946bfd81edad785998" ResourceName="Table" />
     </Assets>
