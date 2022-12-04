@@ -38,7 +38,15 @@ namespace Game.PlatForm
             base.OnEnable();
             Framework.EventComponent.Subscribe(OnPlayerEnterPlatformGroupEventArgs.UniqueId, OnPlayerEnterPlatformGroup);
             setting = SettingUtility.PlatformSetting;
-            for (int i = 0; i < setting.PlatformFront; i++)
+            if (!GameDataSystem.Get().HasFinishedTutorial)
+            {
+                GenerateTutorialPlatformGroup().Forget();
+            }
+            else
+            {
+                RandomGeneratePlatformGroup().Forget();
+            }
+            for (int i = 0; i < setting.PlatformFront - 1; i++)
             {
                 RandomGeneratePlatformGroup().Forget();
             }
@@ -98,6 +106,17 @@ namespace Game.PlatForm
             return await GeneratePlatformGroup(platformId);
         }
 
+        private async UniTask<PlatformGroupEntity> GenerateTutorialPlatformGroup()
+        {
+            var tutorialPlatforms =
+                await EntityUtility.ShowEntityAsync<PlatformGroupEntity>($"PlatformGroup/Tutorial", EntityGroupName.Platform);
+            tutorialPlatforms.transform.parent = ScrollRoot.Current.transform;
+            tutorialPlatforms.transform.position += (PlatformInitialPosition.Current.transform.position -
+                                                     tutorialPlatforms.EnterPoistion.position);
+            platformGroupEntities.Add(tutorialPlatforms);
+            return tutorialPlatforms;
+        }
+
         public async UniTask ResetScene()
         {
             foreach (var entity in platformGroupEntities)
@@ -106,9 +125,17 @@ namespace Game.PlatForm
             }
             platformGroupEntities.Clear();
             playerPassedEntities.Clear();
-            for (int i = 0; i < setting.PlatformFront; i++)
+            if (!GameDataSystem.Get().HasFinishedTutorial)
             {
-                await RandomGeneratePlatformGroup();
+                GenerateTutorialPlatformGroup().Forget();
+            }
+            else
+            {
+                RandomGeneratePlatformGroup().Forget();
+            }
+            for (int i = 0; i < setting.PlatformFront - 1; i++)
+            {
+                RandomGeneratePlatformGroup().Forget();
             }
         }
         

@@ -43,6 +43,7 @@ namespace Game.VisualProcedure
             await ballSystem.LoadBallEntityAsync();
             new GlobalWindZoneSystem();
             new ProceduralPlatformGenerateSystem();
+            new AchievementTrackingSystem();
             UIUtility.CloseForm(LoadingForm.UniqueId);
             ExitProcedure(FlowOutPort.LoadComplete);
             

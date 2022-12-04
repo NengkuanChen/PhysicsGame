@@ -201,7 +201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282ce3874bb740ddb639dfb455a41767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRigidbody: {fileID: 1212097045337632109}
   isRandomX: 1
   randomXRange: {x: -4, y: 4}
 --- !u!54 &1212097045337632109
@@ -421,7 +420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282ce3874bb740ddb639dfb455a41767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRigidbody: {fileID: 1721856396576131537}
   isRandomX: 1
   randomXRange: {x: -4, y: 4}
 --- !u!54 &1721856396576131537
@@ -552,7 +550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8f79c595324ed29a01f70fec8f9951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRigidbody: {fileID: 5597235249260002313}
   isRandomX: 0
   randomXRange: {x: -4, y: 4}
   magneticTrigger: {fileID: 5500863522836156067}
@@ -697,7 +694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282ce3874bb740ddb639dfb455a41767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRigidbody: {fileID: 23397777466253020}
   isRandomX: 1
   randomXRange: {x: -4, y: 4}
 --- !u!54 &23397777466253020

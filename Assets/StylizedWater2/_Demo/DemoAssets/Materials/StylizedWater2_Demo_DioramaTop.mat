@@ -2,16 +2,26 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: StylizedWater2_Demo_DioramaTop
   m_Shader: {fileID: 4800000, guid: f04c9486b297dd848909db26983c9ddb, type: 3}
-  m_ShaderKeywords: ADVANCED_LIGHTING _ADVANCED_SHADING _CAUSTICS _DEPTH_TEX _FOAM
-    _NORMALMAP _REFRACTION _SIMPLE_LIGHTING _SMOOTH_INTERSECTION _TRANSLUCENCY _WAVES
-    _WORLDSPACEUV_ON
+  m_ValidKeywords:
+  - _CAUSTICS
+  - _FOAM
+  - _NORMALMAP
+  - _REFRACTION
+  - _SMOOTH_INTERSECTION
+  - _TRANSLUCENCY
+  - _WAVES
+  m_InvalidKeywords:
+  - ADVANCED_LIGHTING
+  - _DEPTH_TEX
+  - _SIMPLE_LIGHTING
+  - _WORLDSPACEUV_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -85,6 +95,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Vector1_1942CF3A: 1
     - Vector1_BE75C478: 32
@@ -167,7 +178,7 @@ Material:
     - _RimRize: 1
     - _RimTiling: 0.025
     - _SHARP_INERSECTIONOn: 1
-    - _ShadingMode: 1
+    - _ShadingMode: 0
     - _ShadowStrength: 0.6
     - _ShoreLineLength: 3.1
     - _ShoreLineWaveDistance: 6
@@ -193,8 +204,8 @@ Material:
     - _UnderwaterRefractionOffset: 0.2
     - _UnderwaterSurfaceSmoothness: 0.8
     - _WaveCount: 3
-    - _WaveDistance: 0.96
-    - _WaveHeight: 1.22
+    - _WaveDistance: 0.5
+    - _WaveHeight: 0.2
     - _WaveNormalStr: 6
     - _WaveSpeed: 1.75
     - _WaveSteepness: 0

@@ -19,7 +19,7 @@ namespace Game.Ball
 
         private void OnControlFormHit(object sender, GameEventArgs e)
         {
-            // Framework.EventComponent.Fire(this, OnBallSwitchEventArgs.Create());
+            Framework.EventComponent.Fire(this, OnBallSwitchEventArgs.Create((OwnerEntity is IronBall)? BallType.WoodBall : BallType.IronBall));
         }
 
 

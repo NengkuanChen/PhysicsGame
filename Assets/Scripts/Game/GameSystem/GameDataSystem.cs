@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Game.GameEvent;
@@ -58,8 +59,45 @@ namespace Game.GameSystem
             /// </summary>
             public double lastLeaveGameUtcTime = -1;
 
+            public AchievementData Achievement = new AchievementData();
+
+            public bool hasFinishedTutorial = false;
+
             public int QualityLevel;
             public bool isMute;
+        }
+        
+        [Serializable]
+        public class AchievementData
+        {
+            public Dictionary<AchievementType, bool> AllAchievements = new Dictionary<AchievementType, bool>();
+
+            public AchievementData()
+            {
+                AllAchievements = new Dictionary<AchievementType, bool>();
+                foreach (var achievement in Enum.GetValues(typeof(AchievementType)))
+                {
+                    AllAchievements.Add((AchievementType)achievement, false);
+                }
+            }
+            
+            public void CompleteAchievement(AchievementType achievementType)
+            {
+                if (AllAchievements.ContainsKey(achievementType))
+                {
+                    AllAchievements[achievementType] = true;
+                }
+            }
+            
+            public bool IsAchievementCompleted(AchievementType achievementType)
+            {
+                if (AllAchievements.ContainsKey(achievementType))
+                {
+                    return AllAchievements[achievementType];
+                }
+                Log.Error($"Achievement {achievementType} not found");  
+                return false;
+            }
         }
 
         private float autoSaveTimer;
@@ -75,7 +113,9 @@ namespace Game.GameSystem
         /// 游戏运行次数
         /// </summary>
         public uint GameLaunchTimes => persistenceData.gameLaunchTimes;
-
+        
+        public AchievementData Achievement => persistenceData.Achievement;
+        
         private PersistenceData persistenceData;
 
         internal override void OnEnable()
@@ -264,6 +304,13 @@ namespace Game.GameSystem
             get => persistenceData.variantVersion;
             set => persistenceData.variantVersion = value;
         }
+        
+        public bool HasFinishedTutorial
+        {
+            get => persistenceData.hasFinishedTutorial;
+            set => persistenceData.hasFinishedTutorial = value;
+        }
+
 
         public int QualityLevel
         {
