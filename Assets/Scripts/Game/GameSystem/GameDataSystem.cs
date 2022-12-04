@@ -62,6 +62,8 @@ namespace Game.GameSystem
             public AchievementData Achievement = new AchievementData();
 
             public bool hasFinishedTutorial = false;
+            
+            public float highestScore = 0;
 
             public int QualityLevel;
             public bool isMute;
@@ -326,6 +328,12 @@ namespace Game.GameSystem
                 persistenceData.isMute = value;
                 Framework.EventComponent.Fire(this, OnAudioStatusChangedEventArgs.Create(!value));
             }
+        }
+        
+        public float HighestScore
+        {
+            get => persistenceData.highestScore;
+            set => persistenceData.highestScore = value;
         }
 
         public void ClearSaveData()

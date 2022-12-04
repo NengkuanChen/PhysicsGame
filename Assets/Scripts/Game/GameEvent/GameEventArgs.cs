@@ -386,4 +386,23 @@ namespace Game.GameEvent
             return arg;
         }
     }
+    
+    public class OnGamePauseEventArgs : GameEventArgs
+    {
+        public override void Clear()
+        {
+            
+        }
+        public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
+        public override int Id => UniqueId;
+
+        public bool IsPause;
+        
+        public static OnGamePauseEventArgs Create(bool isPause)
+        {
+            var arg = ReferencePool.Acquire<OnGamePauseEventArgs>();
+            arg.IsPause = isPause;
+            return arg;
+        }
+    }
 }

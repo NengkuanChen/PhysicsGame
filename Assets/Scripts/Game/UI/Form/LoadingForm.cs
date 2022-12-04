@@ -2,6 +2,7 @@
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.UI.Form
 {
@@ -18,6 +19,9 @@ namespace Game.UI.Form
         [SerializeField, Required]
         private TextMeshProUGUI progressText;
         private int currentProgress;
+
+        [SerializeField, Required] 
+        private Image progressBar;
 
         protected override void OnOpen(object userData)
         {
@@ -44,6 +48,7 @@ namespace Game.UI.Form
                              {
                                  currentProgress = Mathf.RoundToInt(value);
                                  progressText.text = $"{currentProgress:00}%";
+                                 progressBar.fillAmount = currentProgress / 100f;
                              })
                          .SetTarget(progressText);
             }
