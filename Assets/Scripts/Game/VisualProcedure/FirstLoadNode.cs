@@ -32,8 +32,10 @@ namespace Game.VisualProcedure
         private async UniTaskVoid LoadAsync()
         {
             LoadingForm loadingForm = await UIUtility.OpenFormAsync<LoadingForm>(LoadingForm.UniqueId);
+            loadingForm.UpdateProgress(26);
             //载入场景
             await SceneUtility.LoadSceneAsync("Prototype");
+            loadingForm.UpdateProgress(78);
             var cameraSystem = new GameCameraSystem();
             // var cannonSystem = new CannonSystem();
             await cameraSystem.LoadCameraAsync();
@@ -41,6 +43,7 @@ namespace Game.VisualProcedure
             new PlayerInputSystem();
             var ballSystem = new BallSystem();
             await ballSystem.LoadBallEntityAsync();
+            loadingForm.UpdateProgress(100);
             new GlobalWindZoneSystem();
             new ProceduralPlatformGenerateSystem();
             new AchievementTrackingSystem();
