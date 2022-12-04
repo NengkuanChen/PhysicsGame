@@ -70,26 +70,27 @@ namespace Game.UI.Form
 
         private async UniTaskVoid StartEvaluate()
         {
+            var setting = SettingUtility.GameSetting;
             await UniTask.Delay(700);
             var score = 0f;
-            DOVirtual.Float(score, currentScore, 1f, (value) =>
+            DOVirtual.Float(score, currentScore, 2f, (value) =>
             {
                 score = value;
                 currentScoreText.text = $"{Mathf.CeilToInt(score) / 60:D2}:{Mathf.CeilToInt(score) % 60:D2}";
             }).SetEase(Ease.OutExpo);
             
-            currentScoreText.DOScale(1.2f, 0.3f).SetEase(Ease.OutBack);
+            currentScoreText.DOScale(1.2f, 0.3f).SetEase(setting.ScoreShowCurve);
             await UniTask.Delay(1500);
             var highScoreShow = (float)currentHighScore;
             if (hasRefreshedScore)
             {
-                DOVirtual.Float(highScoreShow, currentScore, 1f, (value) =>
+                DOVirtual.Float(highScoreShow, currentScore, 2f, (value) =>
                 {
                     highScoreShow = value;
                     highestScoreText.text = $"{Mathf.CeilToInt(highScoreShow) / 60:D2}:{Mathf.CeilToInt(highScoreShow) % 60:D2}";
-                }).SetEase(Ease.OutExpo).OnComplete((() =>
+                }).SetEase(setting.ScoreShowCurve).OnComplete((() =>
                 {
-                    newScoreText.transform.DOScale(1.3f, 0.5f).SetEase(Ease.InOutBounce);
+                    newScoreText.transform.DOScale(1.3f, 0.5f).SetEase(setting.NewScoreBounceCurve);
                 }));
                 await UniTask.Delay(1500);
             }
