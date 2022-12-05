@@ -140,6 +140,7 @@ namespace Game.PlatForm
                 case PlatformDebugMode.Wind:
                     newPlatform = await EntityUtility.ShowEntityAsync<PlatformGroupEntity>("PlatformGroup/Wind",
                         EntityGroupName.Platform);
+                    break;
             }
 
             if (newPlatform == null)
