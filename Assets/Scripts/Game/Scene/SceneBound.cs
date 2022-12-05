@@ -30,9 +30,9 @@ namespace Game.Scene
             bottomBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.BottomBound.localPosition + offSet) +
                                    Vector3.down * .5f;
             leftBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.LeftBound.localPosition + offSet) +
-                                 Vector3.left * .5f;
+                                 Vector3.left * 1.5f;
             rightBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.RightBound.localPosition + offSet) +
-                                  Vector3.right * .5f;
+                                  Vector3.right * 1.5f;
         }
     }
 }
