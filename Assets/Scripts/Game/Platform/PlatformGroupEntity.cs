@@ -85,11 +85,11 @@ namespace Game.PlatForm
             base.OnDrawGizmos();
             if (enterPoistion != null)
             {
-                DebugExtension.DrawLine(enterPoistion.position - Vector3.right * 10, enterPoistion.position + Vector3.right * 10, Color.green);
+                DebugExtension.DrawLine(enterPoistion.position - Vector3.right * 5, enterPoistion.position + Vector3.right * 5, Color.green);
             }
             if (exitPoistion != null)
             {
-                DebugExtension.DrawLine(exitPoistion.position - Vector3.right * 10, exitPoistion.position + Vector3.right * 10, Color.red);
+                DebugExtension.DrawLine(exitPoistion.position - Vector3.right * 5, exitPoistion.position + Vector3.right * 5, Color.red);
             }
         }
 #endif
