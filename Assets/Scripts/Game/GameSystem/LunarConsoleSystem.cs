@@ -1,5 +1,6 @@
 ﻿using Game.GameSystem;
 using Game.PlatForm;
+using Game.Scene;
 using LunarConsolePlugin;
 using UnityEngine;
 
@@ -43,6 +44,22 @@ namespace Game.GameSystem
                     var playerInputSystem = PlayerInputSystem.Get();
                     playerInputSystem?.RebootGyroscope();
                 }));
+            LunarConsole.RegisterAction("Stop Scroll", () =>
+            {
+                if (ScrollRoot.Current != null)
+                {
+                    ScrollRoot.Current.StopScroll();
+                }
+            });
+            
+            LunarConsole.RegisterAction("Start Scroll", (() =>
+            {
+                if (ScrollRoot.Current != null)
+                {
+                    ScrollRoot.Current.ContinueScroll();
+                }
+            }));
+            
             LunarDebugVariables.PlatformDebug.AddDelegate((debugMode) =>
             {
                 if (ProceduralPlatformGenerateSystem.Get() != null)

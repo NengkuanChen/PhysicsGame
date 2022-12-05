@@ -13,6 +13,7 @@ namespace Game.Scene
         private float currentSpeed = 0f;
         private Vector3 initialPos;
         private float scrollSpeed = 0f;
+        private bool isStop = false;
 
         private PlatformSetting setting;
         
@@ -33,7 +34,7 @@ namespace Game.Scene
         
         public void OnUpdate(float elapseSeconds, float realElapseSeconds)
         {
-            if (hasStart)
+            if (hasStart && !isStop)
             {
                 currentSpeed = Mathf.MoveTowards(currentSpeed, scrollSpeed,
                     setting.ScrollAcceleration * elapseSeconds);
@@ -44,7 +45,12 @@ namespace Game.Scene
         
         public void StopScroll()
         {
-            hasStart = false;
+            isStop = true;
+        }
+
+        public void ContinueScroll()
+        {
+            isStop = false;
         }
 
         
