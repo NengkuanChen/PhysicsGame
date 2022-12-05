@@ -7,5 +7,6 @@
         FlameBoard,
         Magnetic,
         PaperBoard,
+        Wind,
     }
 }

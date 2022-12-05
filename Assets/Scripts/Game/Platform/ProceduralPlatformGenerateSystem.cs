@@ -137,6 +137,9 @@ namespace Game.PlatForm
                         await EntityUtility.ShowEntityAsync<PlatformGroupEntity>("PlatformGroup/WaterPool",
                             EntityGroupName.Platform);
                     break;
+                case PlatformDebugMode.Wind:
+                    newPlatform = await EntityUtility.ShowEntityAsync<PlatformGroupEntity>("PlatformGroup/Wind",
+                        EntityGroupName.Platform);
             }
 
             if (newPlatform == null)
