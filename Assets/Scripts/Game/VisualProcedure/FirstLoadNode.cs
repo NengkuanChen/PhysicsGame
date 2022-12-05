@@ -6,6 +6,7 @@ using Game.Entity;
 using Game.GameCamera;
 using Game.GameSystem;
 using Game.PlatForm;
+using Game.Scene;
 using Game.UI.Form;
 using Game.Utility;
 using VisualProcedure.Runtime;
@@ -32,7 +33,10 @@ namespace Game.VisualProcedure
         private async UniTaskVoid LoadAsync()
         {
             LoadingForm loadingForm = await UIUtility.OpenFormAsync<LoadingForm>(LoadingForm.UniqueId);
+            var boundForm = await UIUtility.OpenFormAsync<BoundForm>(BoundForm.UniqueId);
+            
             loadingForm.UpdateProgress(26);
+
             //载入场景
             await SceneUtility.LoadSceneAsync("Prototype");
             loadingForm.UpdateProgress(78);
@@ -48,6 +52,7 @@ namespace Game.VisualProcedure
             new ProceduralPlatformGenerateSystem();
             new AchievementTrackingSystem();
             UIUtility.CloseForm(LoadingForm.UniqueId);
+            SceneBound.Current.SetBound();
             ExitProcedure(FlowOutPort.LoadComplete);
             
             
