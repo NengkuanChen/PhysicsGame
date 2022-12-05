@@ -21,14 +21,16 @@ namespace Game.Ball
         private void OnBallHitBreakablePlatform(object sender, GameEventArgs e)
         {
             var breakablePlatform = sender as BreakablePlatform;
-            if (OwnerEntityType.BallType == BallType.WoodBall)
-            {
-                if ((e as OnBallHitBreakablePlatformEventArgs).IsExceedSpeed)
-                {
-                    breakablePlatform.PlatformBreak();
-                }
-            }
-            else if (OwnerEntityType.BallType == BallType.IronBall)
+            
+            // if (OwnerEntityType.BallType == BallType.WoodBall)
+            // {
+            //     if ((e as OnBallHitBreakablePlatformEventArgs).IsExceedSpeed)
+            //     {
+            //         breakablePlatform.PlatformBreak();
+            //     }
+            // }
+            // else 
+            if (OwnerEntityType.BallType == BallType.IronBall)
             {
                 breakablePlatform.PlatformBreak();
             }
