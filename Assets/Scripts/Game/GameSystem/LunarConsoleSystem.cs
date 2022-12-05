@@ -1,4 +1,5 @@
 ﻿using Game.GameSystem;
+using Game.PlatForm;
 using LunarConsolePlugin;
 using UnityEngine;
 
@@ -14,11 +15,16 @@ namespace Game.GameSystem
         public static readonly int UniqueId = UniqueIdGenerator.GetUniqueId();
         internal override int ID => UniqueId;
         
+        
+        
         [CVarContainer]
         public static class LunarDebugVariables
         {
-            
+            public static readonly CEnumVar<PlatformDebugMode> PlatformDebug =
+                new CEnumVar<PlatformDebugMode>("Platform Debug Mode", PlatformDebugMode.Disabled);
         }
+        
+
 
         internal override void OnEnable()
         {
@@ -31,7 +37,20 @@ namespace Game.GameSystem
                     gameDataSystem?.ClearSaveData();
                     Application.Quit();
                 });
-            
+            LunarConsole.RegisterAction("Reboot Gyroscope",
+                (() =>
+                {
+                    var playerInputSystem = PlayerInputSystem.Get();
+                    playerInputSystem?.RebootGyroscope();
+                }));
+            LunarDebugVariables.PlatformDebug.AddDelegate((debugMode) =>
+            {
+                if (ProceduralPlatformGenerateSystem.Get() != null)
+                {
+                    ProceduralPlatformGenerateSystem.Get()
+                        .EnablePlatformDebugMode(((CEnumVar<PlatformDebugMode>)debugMode).EnumValue);
+                }
+            });
         }
     }
 }

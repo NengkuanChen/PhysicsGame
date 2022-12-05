@@ -72,6 +72,12 @@ namespace Game.GameSystem
             
         }
         
+        public void RebootGyroscope()
+        {
+            InputSystem.DisableDevice(Gyroscope.current);
+            InputSystem.EnableDevice(Gyroscope.current);
+        }
+        
 
         internal override void OnDisable()
         {

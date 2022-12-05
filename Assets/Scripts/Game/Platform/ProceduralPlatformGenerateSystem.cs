@@ -31,6 +31,8 @@ namespace Game.PlatForm
 
         private PlatformSetting setting;
 
+        private PlatformDebugMode debugMode;
+
 
 
         internal override void OnEnable()
@@ -103,8 +105,63 @@ namespace Game.PlatForm
             int[] currentPlatformIds = PlatformGenerationTable.GetValueOrThrErr(currentTableId).PlatformIdArray;
             int randomIndex = Random.Range(0, currentPlatformIds.Length);
             int platformId = currentPlatformIds[randomIndex];
+            if (debugMode != PlatformDebugMode.Disabled)
+            {
+                return await GenerateDebugPlatformGroup();
+            }
             return await GeneratePlatformGroup(platformId);
         }
+
+        private async UniTask<PlatformGroupEntity> GenerateDebugPlatformGroup()
+        {
+            PlatformGroupEntity newPlatform = null;
+            switch (debugMode)
+            {
+                case PlatformDebugMode.Magnetic:
+                    newPlatform =
+                        await EntityUtility.ShowEntityAsync<PlatformGroupEntity>($"PlatformGroup/Magnetic",
+                            EntityGroupName.Platform);
+                    break;
+                case PlatformDebugMode.FlameBoard:
+                    newPlatform =
+                        await EntityUtility.ShowEntityAsync<PlatformGroupEntity>("PlatformGroup/Flame",
+                            EntityGroupName.Platform);
+                    break;
+                case PlatformDebugMode.PaperBoard:
+                    newPlatform =
+                        await EntityUtility.ShowEntityAsync<PlatformGroupEntity>("PlatformGroup/Paper",
+                            EntityGroupName.Platform);
+                    break;
+                case PlatformDebugMode.WaterPool:
+                    newPlatform =
+                        await EntityUtility.ShowEntityAsync<PlatformGroupEntity>("PlatformGroup/WaterPool",
+                            EntityGroupName.Platform);
+                    break;
+            }
+
+            if (newPlatform == null)
+            {
+                return null;
+            }
+            
+            newPlatform.transform.parent = ScrollRoot.Current.transform;
+            
+            if (platformGroupEntities.Count > 0)
+            {
+                newPlatform.transform.position += (platformGroupEntities[^1].ExitPoistion.position -
+                                                   newPlatform.EnterPoistion.position);
+            }
+            else
+            {
+                newPlatform.transform.position += (PlatformInitialPosition.Current.transform.position -
+                                                   newPlatform.EnterPoistion.position);
+            }
+            platformGroupEntities.Add(newPlatform);
+            return newPlatform;
+            
+        }
+
+
 
         private async UniTask<PlatformGroupEntity> GenerateTutorialPlatformGroup()
         {
@@ -137,6 +194,11 @@ namespace Game.PlatForm
             {
                 RandomGeneratePlatformGroup().Forget();
             }
+        }
+
+        public void EnablePlatformDebugMode(PlatformDebugMode debugMode)
+        {
+            this.debugMode = debugMode;
         }
         
         internal override void OnDisable()

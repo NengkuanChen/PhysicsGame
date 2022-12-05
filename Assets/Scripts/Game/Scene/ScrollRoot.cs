@@ -12,6 +12,7 @@ namespace Game.Scene
         private bool hasStart = false;
         private float currentSpeed = 0f;
         private Vector3 initialPos;
+        private float scrollSpeed = 0f;
 
         private PlatformSetting setting;
         
@@ -26,6 +27,7 @@ namespace Game.Scene
         private void OnGameStart(object o, GameEventArgs e)
         {
             hasStart = true;
+            scrollSpeed = setting.ScrollSpeed;
         }
 
         
@@ -33,8 +35,9 @@ namespace Game.Scene
         {
             if (hasStart)
             {
-                currentSpeed = Mathf.MoveTowards(currentSpeed, setting.ScrollSpeed,
+                currentSpeed = Mathf.MoveTowards(currentSpeed, scrollSpeed,
                     setting.ScrollAcceleration * elapseSeconds);
+                scrollSpeed += setting.ScrollBattleAcceleration * elapseSeconds;
                 transform.position += Vector3.up * currentSpeed * elapseSeconds;
             }
         }

@@ -16,3 +16,4 @@ MonoBehaviour:
   scrollAcceleration: 0.5
   platformFront: 5
   platformBehind: 3
+  scrollBattleAcceleration: 0.025

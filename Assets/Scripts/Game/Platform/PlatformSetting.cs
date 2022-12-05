@@ -26,5 +26,9 @@ namespace Game.PlatForm
         [SerializeField, LabelText("At most how many platform groups behind of player"), Required, Min(1)]
         private int platformBehind;
         public int PlatformBehind => platformBehind;
+        
+        [SerializeField, LabelText("Scroll Battle Acceleration")]
+        private float scrollBattleAcceleration;
+        public float ScrollBattleAcceleration => scrollBattleAcceleration;
     }
 }

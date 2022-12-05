@@ -23,6 +23,8 @@ namespace Game.Scene
         public void SetBound()
         {
             var boundForm = UIUtility.GetForm<BoundForm>(BoundForm.UniqueId);
+            Log.Info($"{boundForm.Canvas.pixelRect.height}, {boundForm.Canvas.pixelRect.width}");
+            Log.Info($"{boundForm.TopBound.localPosition}");
             var offSet = new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
             topBound.position =
                 GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.TopBound.localPosition + offSet) +
@@ -33,6 +35,7 @@ namespace Game.Scene
                                  Vector3.left * 1.5f;
             rightBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.RightBound.localPosition + offSet) +
                                   Vector3.right * 1.5f;
+            
         }
     }
 }
