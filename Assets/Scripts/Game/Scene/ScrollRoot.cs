@@ -45,9 +45,14 @@ namespace Game.Scene
         
         public void StopScroll()
         {
-            isStop = true;
+            hasStart = false;
         }
 
+        public void PauseScroll()
+        {
+            isStop = true;
+        }
+        
         public void ContinueScroll()
         {
             isStop = false;

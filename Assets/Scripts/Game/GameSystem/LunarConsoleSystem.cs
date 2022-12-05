@@ -48,7 +48,7 @@ namespace Game.GameSystem
             {
                 if (ScrollRoot.Current != null)
                 {
-                    ScrollRoot.Current.StopScroll();
+                    ScrollRoot.Current.PauseScroll();
                 }
             });
             
