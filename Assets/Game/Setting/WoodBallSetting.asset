@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushForce: 1
   maxHorizontalSpeed: 5
-  maxVerticalSpeed: 10
+  maxVerticalSpeed: 5
   inputForceCurve:
     serializedVersion: 2
     m_Curve:
@@ -39,4 +39,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  nextBall: 0
+  ballHorizontalRange: {x: -5, y: 5}
