@@ -23,6 +23,11 @@ namespace Game.GameSystem
         {
             public static readonly CEnumVar<PlatformDebugMode> PlatformDebug =
                 new CEnumVar<PlatformDebugMode>("Platform Debug Mode", PlatformDebugMode.Disabled);
+
+
+            public static readonly CVar PlatformGroupTest = new CVar("PlatformGroup Test", -1);
+            
+
         }
         
 
@@ -72,6 +77,11 @@ namespace Game.GameSystem
                     ProceduralPlatformGenerateSystem.Get()
                         .EnablePlatformDebugMode(((CEnumVar<PlatformDebugMode>)debugMode).EnumValue);
                 }
+            });
+            
+            LunarDebugVariables.PlatformGroupTest.AddDelegate((platformGroup) =>
+            {
+                
             });
         }
     }

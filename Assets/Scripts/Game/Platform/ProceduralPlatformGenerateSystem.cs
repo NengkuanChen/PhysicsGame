@@ -33,6 +33,8 @@ namespace Game.PlatForm
 
         private PlatformDebugMode debugMode;
 
+        private int platformGroupTest = -1;
+
 
 
         internal override void OnEnable()
@@ -111,6 +113,17 @@ namespace Game.PlatForm
             int[] currentPlatformIds = PlatformGenerationTable.GetValueOrThrErr(currentTableId).PlatformIdArray;
             int randomIndex = Random.Range(0, currentPlatformIds.Length);
             int platformId = currentPlatformIds[randomIndex];
+            if (platformId != -1)
+            {
+                platformId = platformGroupTest;
+            }
+
+            if (platformId == 0)
+            {
+                return await GenerateTutorialPlatformGroup();
+            }
+            
+
             if (debugMode != PlatformDebugMode.Disabled)
             {
                 return await GenerateDebugPlatformGroup();
@@ -199,6 +212,12 @@ namespace Game.PlatForm
         {
             this.debugMode = debugMode;
         }
+
+        public void SetPlatformGroupTest(int platformId)
+        {
+            platformGroupTest = platformId;
+        }
+
         
         internal override void OnDisable()
         {
