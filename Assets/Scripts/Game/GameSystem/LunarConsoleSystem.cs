@@ -60,6 +60,11 @@ namespace Game.GameSystem
                 }
             }));
             
+            LunarConsole.RegisterAction("Enable Input Log", (() =>
+            {
+                PlayerInputSystem.Get()?.EnableInputLog();
+            }));
+
             LunarDebugVariables.PlatformDebug.AddDelegate((debugMode) =>
             {
                 if (ProceduralPlatformGenerateSystem.Get() != null)

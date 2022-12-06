@@ -19,6 +19,8 @@ namespace Game.GameSystem
         
         private PlayerInputSetting playerInputSetting;
 
+        private bool isInputLogEnable = false;
+
         public static PlayerInputSystem Get()
         {
             return SystemEntry.GetSystem(UniqueId) as PlayerInputSystem;
@@ -52,6 +54,11 @@ namespace Game.GameSystem
             }
         }
 
+        public void EnableInputLog()
+        {
+            isInputLogEnable = true;
+        }
+
         private void OnPlayerMoveBall(InputAction.CallbackContext context)
         {
             var rot = context.ReadValue<Quaternion>();
@@ -59,7 +66,10 @@ namespace Game.GameSystem
             deviceRotate = deviceRotate > 180 ? deviceRotate - 360 : deviceRotate;
             deviceRotate = Mathf.Clamp(deviceRotate, -playerInputSetting.MaxDeviceInputAngle,
                 playerInputSetting.MaxDeviceInputAngle);
-            Log.Info(deviceRotate);
+            if (isInputLogEnable)
+            {
+                Log.Info($"Device Rotate: {deviceRotate}");
+            }
         }
 
         private void OnPlayerMoveBallEditor(object sender, GameEventArgs e)

@@ -66,6 +66,7 @@ namespace Game.PlatForm
             {
                 playerPassedEntities.Add(arg.PlatformGroup);
             }
+            Log.Info($"PlayerEnterPlatformGroup {arg.PlatformGroup.name}");
 
             var platFront = platformGroupEntities.Count - platformGroupEntities.IndexOf(arg.PlatformGroup);
             if (platFront < setting.PlatformFront)
