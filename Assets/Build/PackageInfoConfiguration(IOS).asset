@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2f390131f5438ebdc3d7a382c278b0, type: 3}
   m_Name: PackageInfoConfiguration(IOS)
   m_EditorClassIdentifier: 
-  appName: Prototype
+  appName: Magic Marble
   companyName: TrippleBStudio
-  icon: {fileID: 2800000, guid: abe07bc040eff524eb2e03d5fbbbd902, type: 3}
+  icon: {fileID: 2800000, guid: a0a854897f2c0c443832762489aff90b, type: 3}
   packageName: com.TrippleBStudio.Prototype
   version: 0.0.1
   bundleVersionCode: 31374

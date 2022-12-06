@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d451b6343644e0b9169da3c025403a, type: 3}
   m_Name: WaterPoolPlatformSetting
   m_EditorClassIdentifier: 
-  maxBuoyancyForce: 7
+  maxBuoyancyForce: 8
   depthForceCurve:
     serializedVersion: 2
     m_Curve:
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  waterDragForceMax: 2.5
+  waterDragForceMax: 4
   maxDragAtSpeed: 20
   speedDragForceCurve:
     serializedVersion: 2

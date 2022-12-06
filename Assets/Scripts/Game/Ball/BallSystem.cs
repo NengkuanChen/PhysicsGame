@@ -31,6 +31,8 @@ namespace Game.Ball
         private List<BallEntity> allBalls = new List<BallEntity>();
         public List<BallEntity> AllBalls => allBalls;
 
+        private BallSwitchEntity ballSwitchEntity;
+
         public static BallSystem Get()
         {
             return SystemEntry.GetSystem(UniqueId) as BallSystem;
@@ -93,6 +95,7 @@ namespace Game.Ball
                     playerCurrentBall.DeactiveBall();
                     GlobalWindZoneSystem.Get().OnBallSwitch(playerCurrentBall, ball);
                     playerCurrentBall = ball;
+                    ballSwitchEntity.OnBallSwitch(arg.BallType);
                     break;
                 }
             }
@@ -110,7 +113,6 @@ namespace Game.Ball
                 EntityUtility.ShowEntityAsync<BallEntity>("Ball/IronBall", EntityGroupName.Ball),
                 EntityUtility.ShowEntityAsync<BallEntity>("Ball/WoodBall", EntityGroupName.Ball),
                 EntityUtility.ShowEntityAsync<BallEntity>("Ball/PlasticBall", EntityGroupName.Ball),
-                
             };
             var results = await UniTask.WhenAll(loadTasks);
             foreach (var ball in results)
@@ -120,6 +122,8 @@ namespace Game.Ball
             }
             currentIronBall = allBalls[0] as IronBall;
             playerCurrentBall = currentIronBall;
+            ballSwitchEntity = await EntityUtility.ShowEntityAsync<BallSwitchEntity>("Ball/BallSwitcher", EntityGroupName.Ball);
+            
             return playerCurrentBall;
         }
         
@@ -129,6 +133,7 @@ namespace Game.Ball
             {
                 ball.DeactiveBall();
             }
+            ballSwitchEntity.Reset();
             playerCurrentBall = currentIronBall;
             // playerCurrentBall.ActiveBall(Vector3.zero, ScrollRoot.Current.transform.position);
         }

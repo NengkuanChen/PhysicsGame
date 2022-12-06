@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc1210badc041be938ff31ecc90af9e, type: 3}
   m_Name: PlatformSetting
   m_EditorClassIdentifier: 
-  scrollSpeed: 1
-  scrollAcceleration: 0.5
+  scrollSpeed: 0.9
+  scrollAcceleration: 0.6
   platformFront: 5
   platformBehind: 3
-  scrollBattleAcceleration: 0.025
+  scrollBattleAcceleration: 0.04
