@@ -113,12 +113,12 @@ namespace Game.PlatForm
             int[] currentPlatformIds = PlatformGenerationTable.GetValueOrThrErr(currentTableId).PlatformIdArray;
             int randomIndex = Random.Range(0, currentPlatformIds.Length);
             int platformId = currentPlatformIds[randomIndex];
-            if (platformId != -1)
+            if (platformGroupTest != -1)
             {
                 platformId = platformGroupTest;
             }
 
-            if (platformId == 0)
+            if (platformGroupTest == 0)
             {
                 return await GenerateTutorialPlatformGroup();
             }
