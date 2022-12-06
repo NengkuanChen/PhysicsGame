@@ -40,17 +40,22 @@ namespace Game.PlatForm
             base.OnEnable();
             Framework.EventComponent.Subscribe(OnPlayerEnterPlatformGroupEventArgs.UniqueId, OnPlayerEnterPlatformGroup);
             setting = SettingUtility.PlatformSetting;
+            GenerateInitialPlatforms().Forget();
+        }
+
+        private async UniTask GenerateInitialPlatforms()
+        {
             if (!GameDataSystem.Get().HasFinishedTutorial)
             {
-                GenerateTutorialPlatformGroup().Forget();
+                await GenerateTutorialPlatformGroup();
             }
             else
             {
-                RandomGeneratePlatformGroup().Forget();
+                await RandomGeneratePlatformGroup();
             }
             for (int i = 0; i < setting.PlatformFront - 1; i++)
             {
-                RandomGeneratePlatformGroup().Forget();
+                await RandomGeneratePlatformGroup();
             }
         }
 
@@ -186,18 +191,7 @@ namespace Game.PlatForm
             }
             platformGroupEntities.Clear();
             playerPassedEntities.Clear();
-            if (!GameDataSystem.Get().HasFinishedTutorial)
-            {
-                GenerateTutorialPlatformGroup().Forget();
-            }
-            else
-            {
-                RandomGeneratePlatformGroup().Forget();
-            }
-            for (int i = 0; i < setting.PlatformFront - 1; i++)
-            {
-                RandomGeneratePlatformGroup().Forget();
-            }
+            await GenerateInitialPlatforms();
         }
 
         public void EnablePlatformDebugMode(PlatformDebugMode debugMode)
