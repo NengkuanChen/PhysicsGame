@@ -6,7 +6,7 @@
             "id": "21cc4b47-40de-4d6f-9121-578a1c6b5756",
             "actions": [
                 {
-                    "name": "Fire",
+                    "name": "ChangeBallEditor",
                     "type": "Button",
                     "id": "2d4c2e3a-3cd6-4b9d-a58e-3bbd8e0e2fd5",
                     "expectedControlType": "Button",
@@ -37,11 +37,11 @@
                 {
                     "name": "",
                     "id": "ac07559e-06c5-48b8-8bd4-4ff6023fea4d",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fire",
+                    "action": "ChangeBallEditor",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -31,6 +31,8 @@ namespace Game.GameSystem
             playerInput = new PlayerInputAction();
 #if UNITY_EDITOR
             Framework.EventComponent.Subscribe(OnEditorPlayerMoveBallEventArgs.UniqueId, OnPlayerMoveBallEditor);
+            playerInput.Editor.Enable();
+            playerInput.Editor.ChangeBallEditor.performed += OnPlayerChangeBallEditor;
 #else
             playerInput.Player.Enable();
             InputSystem.EnableDevice(Gyroscope.current);
@@ -64,6 +66,11 @@ namespace Game.GameSystem
         {
             var arg = e as OnEditorPlayerMoveBallEventArgs;
             deviceRotate = arg.Axis;
+        }
+        
+        private void OnPlayerChangeBallEditor(InputAction.CallbackContext context)
+        {
+            Framework.EventComponent.Fire(this, OnControlFormHitEventArgs.Create());
         }
 
         private void OnDeviceRotate(InputAction.CallbackContext context)
