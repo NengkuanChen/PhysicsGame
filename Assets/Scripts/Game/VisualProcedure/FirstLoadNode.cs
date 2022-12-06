@@ -7,6 +7,7 @@ using Game.GameCamera;
 using Game.GameSystem;
 using Game.PlatForm;
 using Game.Scene;
+using Game.Sound;
 using Game.UI.Form;
 using Game.Utility;
 using VisualProcedure.Runtime;
@@ -53,6 +54,7 @@ namespace Game.VisualProcedure
             new AchievementTrackingSystem();
             UIUtility.CloseForm(LoadingForm.UniqueId);
             SceneBound.Current.SetBound();
+            SoundSystem.Get().Play(SettingUtility.SoundSet.GetAudio(1));
             ExitProcedure(FlowOutPort.LoadComplete);
             
             

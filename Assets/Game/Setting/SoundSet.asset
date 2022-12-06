@@ -21,3 +21,11 @@ MonoBehaviour:
     fadeOutTime: 0.6
     canDuplicate: 0
     isLoop: 1
+  - description: BGM
+    index: 1
+    clip: {fileID: 8300000, guid: 5e764427456fb794e94ce5a732fdf452, type: 3}
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    canDuplicate: 1
+    isLoop: 0
