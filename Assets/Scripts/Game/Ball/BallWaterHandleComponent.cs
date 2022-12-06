@@ -53,7 +53,7 @@ namespace Game.Ball
             var buoyancyForce = buoyancySetting.DepthForceCurve.Evaluate(sunkPortion) * buoyancySetting.MaxBuoyancyForce;
             OwnerEntityType.BallRigidBody.AddForce(buoyancyForce * Vector3.up, ForceMode.Impulse);
             var currentVelocity = OwnerEntityType.BallRigidBody.velocity;
-            var dragForce = -currentVelocity.normalized * buoyancySetting.MaxBuoyancyForce *
+            var dragForce = -currentVelocity.normalized * buoyancySetting.WaterDragForceMax *
                             buoyancySetting.SpeedDragForceCurve.Evaluate(currentVelocity.magnitude /
                                                                          buoyancySetting.MaxDragAtSpeed);
             OwnerEntityType.BallRigidBody.AddForce(dragForce, ForceMode.Impulse);
