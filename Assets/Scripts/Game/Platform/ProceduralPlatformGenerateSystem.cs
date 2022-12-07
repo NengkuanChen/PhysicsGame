@@ -160,6 +160,10 @@ namespace Game.PlatForm
                     newPlatform = await EntityUtility.ShowEntityAsync<PlatformGroupEntity>("PlatformGroup/Wind",
                         EntityGroupName.Platform);
                     break;
+                case PlatformDebugMode.Seesaw:
+                    newPlatform = await EntityUtility.ShowEntityAsync<PlatformGroupEntity>("PlatformGroup/seesaw",
+                        EntityGroupName.Platform);
+                    break;
             }
 
             if (newPlatform == null)

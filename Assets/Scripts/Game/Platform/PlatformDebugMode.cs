@@ -8,5 +8,6 @@
         Magnetic,
         PaperBoard,
         Wind,
+        Seesaw
     }
 }
