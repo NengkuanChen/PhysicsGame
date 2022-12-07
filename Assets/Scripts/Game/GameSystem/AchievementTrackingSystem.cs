@@ -19,7 +19,9 @@
 
     public enum AchievementType
     {
-        PlatformBreaker,
+        NoRegrets,
+        SinkingFeeling,
+        CrashAndBurn,
         
     }
 }
