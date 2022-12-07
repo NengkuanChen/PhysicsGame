@@ -152,6 +152,7 @@ namespace Game.Utility
             {
                 // {"BoostUpgrade", BoostUpgradeTable.Parse},
                 {"PlatformGeneration", PlatformGenerationTable.Parse},
+                {"ScrollSpeed", ScrollSpeedTable.Parse},
             };
 
             foreach (var kv in tableLoadDictionary)

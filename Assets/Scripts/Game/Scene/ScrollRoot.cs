@@ -3,6 +3,7 @@ using Game.GameEvent;
 using Game.PlatForm;
 using Game.Utility;
 using GameFramework.Event;
+using Table;
 using UnityEngine;
 
 namespace Game.Scene
@@ -14,6 +15,12 @@ namespace Game.Scene
         private Vector3 initialPos;
         private float scrollSpeed = 0f;
         private bool isStop = false;
+
+        private int currentScrollTableId = 0;
+
+        private float cumulateTime = 0;
+        
+        private float currentTableMaxTime = 0;
 
         private PlatformSetting setting;
         
@@ -28,7 +35,11 @@ namespace Game.Scene
         private void OnGameStart(object o, GameEventArgs e)
         {
             hasStart = true;
-            scrollSpeed = setting.ScrollSpeed;
+            // scrollSpeed = setting.ScrollSpeed;
+            cumulateTime = 0;
+            currentScrollTableId = 0;
+            scrollSpeed = ScrollSpeedTable.GetValueOrThrErr(currentScrollTableId).ScrollSpeed;
+            currentTableMaxTime = ScrollSpeedTable.GetValueOrThrErr(currentScrollTableId).MaxTime;
         }
 
         
@@ -38,8 +49,14 @@ namespace Game.Scene
             {
                 currentSpeed = Mathf.MoveTowards(currentSpeed, scrollSpeed,
                     setting.ScrollAcceleration * elapseSeconds);
-                scrollSpeed += setting.ScrollBattleAcceleration * elapseSeconds;
                 transform.position += Vector3.up * currentSpeed * elapseSeconds;
+                cumulateTime += elapseSeconds;
+                if (cumulateTime >= currentTableMaxTime && !Mathf.Approximately(-1, currentTableMaxTime))
+                {
+                    currentScrollTableId++;
+                    scrollSpeed = ScrollSpeedTable.GetValueOrThrErr(currentScrollTableId).ScrollSpeed;
+                    currentTableMaxTime = ScrollSpeedTable.GetValueOrThrErr(currentScrollTableId).MaxTime;
+                }
             }
         }
         
