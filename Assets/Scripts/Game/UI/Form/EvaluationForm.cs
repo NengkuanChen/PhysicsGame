@@ -65,6 +65,8 @@ namespace Game.UI.Form
             currentScore = GameEvaluationSystem.Get().CurrentSurvivalTime;
             hasRefreshedScore = currentScore > currentHighScore;
             newScoreText.transform.localScale = Vector3.zero;
+            highestScoreText.transform.localScale = Vector3.one;
+            currentScoreText.transform.localScale = Vector3.one;
             StartEvaluate().Forget();
         }
 
@@ -77,9 +79,8 @@ namespace Game.UI.Form
             {
                 score = value;
                 currentScoreText.text = $"{Mathf.CeilToInt(score) / 60:D2}:{Mathf.CeilToInt(score) % 60:D2}";
-            }).SetEase(Ease.OutExpo);
-            
-            currentScoreText.DOScale(1.2f, 0.3f).SetEase(setting.ScoreShowCurve);
+            }).SetEase(Ease.OutExpo).OnComplete(() =>
+                currentScoreText.transform.DOScale(1.2f, 0.3f).SetEase(setting.ScoreShowCurve));
             await UniTask.Delay(2200);
             var highScoreShow = (float)currentHighScore;
             if (hasRefreshedScore)
@@ -90,9 +91,10 @@ namespace Game.UI.Form
                     highestScoreText.text = $"{Mathf.CeilToInt(highScoreShow) / 60:D2}:{Mathf.CeilToInt(highScoreShow) % 60:D2}";
                 }).SetEase(setting.ScoreShowCurve).OnComplete((() =>
                 {
+                    highestScoreText.transform.DOScale(1.2f, 0.3f).SetEase(setting.ScoreShowCurve);
                     newScoreText.transform.DOScale(1.3f, 0.5f).SetEase(setting.NewScoreBounceCurve);
                 }));
-                await UniTask.Delay(1500);
+                await UniTask.Delay(1200);
             }
             continueButton.interactable = true;
         }
