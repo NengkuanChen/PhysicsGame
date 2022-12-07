@@ -80,11 +80,11 @@ namespace Game.UI.Form
             }).SetEase(Ease.OutExpo);
             
             currentScoreText.DOScale(1.2f, 0.3f).SetEase(setting.ScoreShowCurve);
-            await UniTask.Delay(1500);
+            await UniTask.Delay(2200);
             var highScoreShow = (float)currentHighScore;
             if (hasRefreshedScore)
             {
-                DOVirtual.Float(highScoreShow, currentScore, 2f, (value) =>
+                DOVirtual.Float(highScoreShow, currentScore, 1.5f, (value) =>
                 {
                     highScoreShow = value;
                     highestScoreText.text = $"{Mathf.CeilToInt(highScoreShow) / 60:D2}:{Mathf.CeilToInt(highScoreShow) % 60:D2}";
