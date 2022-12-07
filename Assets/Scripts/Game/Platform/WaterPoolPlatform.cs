@@ -1,5 +1,7 @@
 ﻿using System;
 using Game.GameEvent;
+using Game.Sound;
+using Game.Utility;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -16,6 +18,7 @@ namespace Game.PlatForm
         {
             if (other.CompareTag("Player"))
             {
+                SoundSystem.Get()?.Play(SettingUtility.SoundSet.GetAudio(4));
                 Framework.EventComponent.Fire(this, OnBallEnterWaterEventArgs.Create(true, other.name));
             }
         }

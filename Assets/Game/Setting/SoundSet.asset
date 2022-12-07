@@ -29,3 +29,43 @@ MonoBehaviour:
     fadeOutTime: 0
     canDuplicate: 0
     isLoop: 1
+  - description: WoodHit
+    index: 2
+    clip: {fileID: 8300000, guid: bd530c2fa9d43c940a0132d5b43d71b7, type: 3}
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    canDuplicate: 1
+    isLoop: 0
+  - description: IronHit
+    index: 3
+    clip: {fileID: 8300000, guid: 441ad72f93919384d8be61833c2d82bb, type: 3}
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    canDuplicate: 1
+    isLoop: 0
+  - description: PaperRip
+    index: 4
+    clip: {fileID: 8300000, guid: 78bf660f71cf92447ad44d5c353c978d, type: 3}
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    canDuplicate: 1
+    isLoop: 0
+  - description: "----------\u65B0\u97F3\u9891\u5C5E\u6027----------"
+    index: 5
+    clip: {fileID: 8300000, guid: d980d25e3d30ace4e840cfb08f35d380, type: 3}
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    canDuplicate: 1
+    isLoop: 0
+  - description: Burn
+    index: 6
+    clip: {fileID: 8300000, guid: 76d23890bc4d2574d84e7eb954c679db, type: 3}
+    volume: 1
+    fadeInTime: 0
+    fadeOutTime: 0
+    canDuplicate: 1
+    isLoop: 0

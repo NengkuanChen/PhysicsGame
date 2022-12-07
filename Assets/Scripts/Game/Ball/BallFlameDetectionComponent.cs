@@ -1,5 +1,7 @@
 ﻿using Game.Entity;
 using Game.GameEvent;
+using Game.Sound;
+using Game.Utility;
 using GameFramework.Event;
 
 namespace Game.Ball
@@ -17,6 +19,7 @@ namespace Game.Ball
         
         private void OnBallHitFlamePlatform(object sender, GameEventArgs e)
         {
+            SoundSystem.Get().Play(SettingUtility.SoundSet.GetAudio(6));
             Framework.EventComponent.Fire(this, OnBallDeadEventArgs.Create(true));
         }
 

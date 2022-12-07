@@ -1,5 +1,7 @@
 using System;
 using Game.GameEvent;
+using Game.Sound;
+using Game.Utility;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -28,6 +30,7 @@ namespace Game.PlatForm
         
         public void PlatformBreak()
         {
+            SoundSystem.Get()?.Play(SettingUtility.SoundSet.GetAudio(5));
             gameObject.SetActive(false);
         }
     }
