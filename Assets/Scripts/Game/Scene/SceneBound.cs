@@ -22,20 +22,18 @@ namespace Game.Scene
 
         public void SetBound()
         {
-            var boundForm = UIUtility.GetForm<BoundForm>(BoundForm.UniqueId);
-            var offSet = new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
-            Log.Info($"{boundForm.BottomBound.localPosition + offSet}");
-
-            topBound.position =
-                GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.TopBound.localPosition + offSet) +
-                Vector3.up * .5f;
-            bottomBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.BottomBound.localPosition + offSet) +
-                                   Vector3.down * .5f;
-            leftBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.LeftBound.localPosition + offSet) +
-                                 Vector3.left * 1.5f;
-            rightBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.RightBound.localPosition + offSet) +
-                                  Vector3.right * 1.5f;
+            var ratio = (float)Screen.width/Screen.height;
+            ratio = Mathf.Min(ratio, 1080f / 1920f);
+            // topBound.position =
+            //     GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.TopBound.localPosition + offSet) +
+            //     Vector3.up * .5f;
             
+            // leftBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.LeftBound.localPosition + offSet) +
+            //                      Vector3.left * 1.5f;
+            // rightBound.position = GameMainCamera.Current.Camera.ScreenToWorldPoint(boundForm.RightBound.localPosition + offSet) +
+            //                       Vector3.right * 1.5f;
+            leftBound.position = new Vector3(-10.48f * ratio, 0, 0) - Vector3.right * 0.25f;
+            rightBound.position = new Vector3(10.48f * ratio, 0, 0) + Vector3.right * 0.25f;
         }
     }
 }
