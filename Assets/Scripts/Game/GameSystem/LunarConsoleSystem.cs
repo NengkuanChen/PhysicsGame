@@ -81,7 +81,7 @@ namespace Game.GameSystem
             
             LunarDebugVariables.PlatformGroupTest.AddDelegate((platformGroup) =>
             {
-                
+                ProceduralPlatformGenerateSystem.Get()?.SetPlatformGroupTest(platformGroup);
             });
         }
     }
