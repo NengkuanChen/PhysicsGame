@@ -1158,6 +1158,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7428347802153369014}
     m_Modifications:
+    - target: {fileID: 841195534678310296, guid: 2756c25f81fb13a48acf8cde26e53a67, type: 3}
+      propertyPath: isRandomX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2160678689994029836, guid: 2756c25f81fb13a48acf8cde26e53a67, type: 3}
       propertyPath: m_Name
       value: WaterPool (1)
