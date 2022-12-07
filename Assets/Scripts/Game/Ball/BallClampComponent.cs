@@ -30,8 +30,8 @@ namespace Game.Ball
                 // OwnerEntity.transform.position =
                 //     new Vector3(Mathf.Clamp(position.x, setting.BallHorizontalRange.x, setting.BallHorizontalRange.y),
                 //         position.y, position.z);
-                OwnerEntityType.BallRigidBody.position = new Vector3(Mathf.Clamp(position.x, setting.BallHorizontalRange.x, setting.BallHorizontalRange.y),
-                    position.y, position.z);
+                // OwnerEntityType.BallRigidBody.position = new Vector3(Mathf.Clamp(position.x, setting.BallHorizontalRange.x, setting.BallHorizontalRange.y),
+                //     position.y, position.z);
             }
         }
     }
