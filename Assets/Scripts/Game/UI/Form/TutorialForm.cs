@@ -15,7 +15,7 @@ namespace Game.UI.Form
 
         static TutorialForm()
         {
-            UIConfig.RegisterForm(UniqueId, nameof(TutorialForm), UiDepth.Common);
+            UIConfig.RegisterForm(UniqueId, nameof(TutorialForm), UiDepth.Highest);
         }
 
 

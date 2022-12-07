@@ -55,6 +55,10 @@ namespace Game.VisualProcedure
             UIUtility.CloseForm(LoadingForm.UniqueId);
             SceneBound.Current.SetBound();
             SoundSystem.Get().Play(SettingUtility.SoundSet.GetAudio(1));
+            if (GameDataSystem.Get().GameLaunchTimes == 1)
+            {
+                await UIUtility.OpenFormAsync<TutorialForm>(TutorialForm.UniqueId);
+            }
             ExitProcedure(FlowOutPort.LoadComplete);
             
             
